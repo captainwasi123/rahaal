@@ -1,0 +1,247 @@
+@media (max-width: 1200px) {
+	.hide-mobile{
+		display: none;
+	}
+
+	.hero-img {
+	    height: 350px;
+        width: 275px;
+    	padding: 10px;
+    	margin-bottom: -30px;
+	}
+
+	.col-sm-6 {
+		width: 50%;
+	}
+
+	.service-card-last{
+		margin: auto;
+	}
+
+	.service-cards h2 {
+	    font-size: 24px !important;
+	    margin-top: 10px !important;
+	}
+
+	.service-cards .first-row{
+		flex-direction: column-reverse;
+	}
+
+	.clientele-section .container .sub-section {
+        margin-left: -13px;
+        padding: 15px 28px !important;
+        margin-top: -85px !important;
+    }
+    .page-title {
+	    padding: 150px 0 70px 0;
+	}
+
+	.faq-sec {
+	    margin-left: 0px !important;
+	}
+	.faq-heading {
+		margin-left: 0px !important;
+	}
+
+	.blog-share .blog-share-content a span{
+		display: none;
+	}
+
+	.blog-share .blog-share-content a{
+		padding: 7px 10px;
+	}
+	.blog-share .blog-share-content p {
+	    margin-bottom: 12px;
+	}
+	.visible-mobile{
+	    display: block;
+	}
+	.case-studies-frame{
+	    width: 100%;
+	    height: 265px;
+	}
+}
+
+@media (max-width: 1399px) {
+	.case-studies-frame{
+	    width: 100%;
+	    height: 265px;
+	}
+
+}
+@media (max-width: 1199px) {
+	.case-studies-frame{
+	    width: 100%;
+	    height: 225px;
+	}
+
+	.hero-item-icon{
+	    display: block;
+	}
+	.hero-item-title {
+		display: none;
+	}
+	.hero-grid .hero-item:hover .hero-item-text .hero-item-title {
+		display: block;
+	}
+	.hero-grid .hero-item:hover .hero-item-text .hero-item-icon {
+		display: none;
+	}
+	.post.row a h4 {
+	    margin-top: 16px;
+	}
+
+}
+@media (max-width: 767px) {
+	.case-studies-frame{
+	    width: 100%;
+	    height: 325px;
+	}
+	.hero-item-icon {
+	    background-color: #ffffff00;
+	    padding: 9px 10px;
+	    border-radius: 50%;
+	    margin: 9px -4px;
+	    font-size: 10px;
+	}
+	.post.row a h4 {
+	    margin-top: 16px;
+	}
+	.hero-img{
+		display: none;
+	}
+	.hero-title-sec {
+	    margin-top: -135px;
+	}
+	.hero-title-sec p {
+	    font-size: 28px;
+	    line-height: 36px;
+	    color: #fff;
+	}
+	.home-business{
+		margin-top: 0;
+	}
+	.hero-img-bg{
+		display: none !important;
+	}
+	.home-business{
+		display: none;
+	}
+	.mob-text-center{
+		text-align: center;
+	}
+	.section-title{
+		padding-bottom: 20px;
+	}
+	.services .service-item{
+		margin-bottom: 5px;
+	}
+	.box-circle{
+		width: 60%;
+	}
+	.circle-border{
+		top: 0;
+    	left: 24%;
+    	height: 77%;
+	}
+	.wwd-para {
+	    margin-top: -16px !important;
+	}
+	.post-container figure, .post-container img {
+	    width: 100% !important;
+	}
+	.blog-page .detail-post-image img, .detail-post-image img{
+		width: 100% !important;
+	}
+	.detail-post-image .detail-post-summary{
+		width: 100%;
+		border: none;
+		margin-top: 5px;
+	}
+	.detail-post-image{
+		height: auto !important;
+		flex-direction: column;
+	}
+	.blog-section {
+	    padding-top: 15px;
+	}
+	.page-title h1 {
+		font-size: 28px;
+	}
+	.post-title{
+		font-size: 28px;
+	}
+	.whatsapp-chat{
+		left: 15px;
+		right: auto;
+	}
+	.m-footer-bg {
+		display: block;
+	    background-image: linear-gradient(#ff000000, #ffffff);
+	    position: fixed;
+	    bottom: 0;
+	    height: 75px;
+	    width: 100%;
+	}
+}
+@media (max-width: 575px) {
+	.case-studies-frame{
+	    width: 100%;
+	    height: 345px;
+	}
+	.header-info span:first-child{
+		display: none;
+	}
+	.m-phone-link{
+		display: block;
+	}
+	#newsletter-modal .popup-des{
+		display: none;
+	}
+	#newsletter-modal .popup-mob{
+		display: block;
+	}
+	#newsletter-modal .details {
+	    padding: 30px 20px;
+	}
+	#newsletter-modal .form-control {
+		width: 100%;
+	}
+	.footer-contact-block p {
+	    display: flex;
+	    justify-content: center;
+	}
+	.header-info .para{
+	    width: 75%;
+	    padding-right: 10px;
+	}
+	#newsletter-modal .modal-dialog {
+	    transform: translate(0, 25%) !important;
+	}
+	#newsletter-modal .close{
+		color: #fff;
+	}
+
+}
+@media (max-width: 430px) {
+	.case-studies-frame{
+	    width: 100%;
+	    height: 265px;
+	}
+
+}
+@media (max-width: 390px) {
+	.case-studies-frame{
+	    width: 100%;
+	    height: 245px;
+	}
+
+}
+
+@media (max-width: 375px) {
+	.case-studies-frame{
+	    width: 100%;
+	    height: 235px;
+	}
+
+}
