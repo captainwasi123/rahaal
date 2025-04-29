@@ -10,7 +10,7 @@
 
   <!-- Favicons -->
   <link href="{{URL::to('/public')}}/favicon.png" rel="icon">
-  <link href="{{URL::to('/public')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{URL::to('/public')}}/favicon.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
   <link href="{{URL::to('/public')}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
