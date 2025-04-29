@@ -1,51 +1,13 @@
-var host = $("meta[name='home_url']").attr("content");
-
+/**
+* Template Name: Kelly
+* Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+* Updated: Aug 07 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 (function() {
   "use strict";
-
-
-  $.get(host+"/get-aside", function(data, status){
-      $('.aside-block').html(data);
-      /*$(".phone-input").inputmask("+\\971-599999999");*/
-  });
-
-
-
-  $('.share-copy').click(function(){
-    var $temp = $("<input>");
-    var val = $(this).data('link');
-    $("body").append($temp);
-    $temp.val(val).select();
-    document.execCommand("copy");
-    $temp.remove();
-
-    Toast.fire({
-        icon: "success",
-        title: "Link Copied",
-    });
-  });
-
-  $('.open-newsletter').click(function(){
-    openNewsletterModal();
-  });
-
-  $('.close').click(function(){
-    closeNewsletterModal();
-  });
-  $('.cancel').click(function(){
-    closeNewsletterModal();
-  });
-
-  function closeNewsletterModal(){
-
-    $('#newsletter-modal').removeClass('show');
-    $('#newsletter-modal').css({display: 'none'});
-  }
-  function openNewsletterModal(){
-    $('#newsletter-modal').addClass('show');
-    $('#newsletter-modal').css({display: 'block'});
-  }
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -116,7 +78,13 @@ var host = $("meta[name='home_url']").attr("content");
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
- 
+  scrollTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -135,11 +103,26 @@ var host = $("meta[name='home_url']").attr("content");
   window.addEventListener('load', aosInit);
 
   /**
-   * Initiate glightbox
+   * Animate the skills items on reveal
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
+  let skillsAnimation = document.querySelectorAll('.skills-animation');
+  skillsAnimation.forEach((item) => {
+    new Waypoint({
+      element: item,
+      offset: '80%',
+      handler: function(direction) {
+        let progress = item.querySelectorAll('.progress .progress-bar');
+        progress.forEach(el => {
+          el.style.width = el.getAttribute('aria-valuenow') + '%';
+        });
+      }
+    });
   });
+
+  /**
+   * Initiate Pure Counter
+   */
+  new PureCounter();
 
   /**
    * Init swiper sliders
@@ -159,6 +142,13 @@ var host = $("meta[name='home_url']").attr("content");
   }
 
   window.addEventListener("load", initSwiper);
+
+  /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
 
   /**
    * Init isotope layout and filters
@@ -194,18 +184,3 @@ var host = $("meta[name='home_url']").attr("content");
   });
 
 })();
-
-function copyEmail(copytext, ele){
-  var $temp = $("<div>");
-  $("body").append($temp);
-  $temp.attr("contenteditable", true)
-       .html(copytext).select()
-       .on("focus", function() { document.execCommand('selectAll',false,null); })
-       .focus();
-  document.execCommand("copy");
-  $temp.remove();
-  $(ele).html('<span class="bi bi-check"></span>&nbsp;&nbsp;Copied.');
-  setTimeout(function(){
-    $(ele).html('<span class="bi bi-copy"></span>&nbsp;&nbsp;Copy');
-  }, 5000);
-}

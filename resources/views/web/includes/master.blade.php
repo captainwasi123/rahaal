@@ -4,116 +4,118 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}</title>
-  <meta name="description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}">
-  <meta name="keywords" content="{{@$metaTags->keywords}}{{@$ametaTags['keywords']}}">
-  @yield('metaAddition')
-  <!-- Basic OG Tags -->
-  <meta property="og:title" content="{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
-  <meta property="og:description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}" />
-  <meta property="og:url" content="{{@URL::current()}}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="DataMySite" />
+  <title>{{env('APP_NAME')}}</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-  <!-- Image OG Tag -->
-  <meta property="og:image" content="{{empty($og_img) ? URL::to('/public/og-logo.jpeg') : $og_img}}" />
-  <meta property="og:image:alt" content="DataMySite Logo and Services" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="620" />
-  <meta property="og:image:height" content="340" />
+  <!-- Favicons -->
+  <link href="{{URL::to('/public')}}/favicon.png" rel="icon">
+  <link href="{{URL::to('/public')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Additional Tags for Social Platforms -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
-  <meta name="twitter:description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}" />
-  <meta name="twitter:image" content="{{empty($og_img) ? URL::to('/public/og-logo.jpeg') : $og_img}}" />
-  <meta name="twitter:site" content="@DataMySite" />
+  <!-- Vendor CSS Files -->
+  <link href="{{URL::to('/public')}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{URL::to('/public')}}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="{{URL::to('/public')}}/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{URL::to('/public')}}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{URL::to('/public')}}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <meta property="fb:app_id" content="1234567890" />
-  
-  <link rel="canonical" href="{{@URL::current()}}" />
+  <!-- Main CSS File -->
+  <link href="{{URL::to('/public')}}/assets/css/main.css" rel="stylesheet">
 
-  <meta name="home_url" content="{{@URL::to('/')}}">
-
-  @include('web.includes.style')
-  @yield('addStyle')
-  
-  @foreach($headSnippet as $val)
-    @if($val->position == 'Head')
-      <!-- {{$val->name}} // Start -->
-          {!! $val->snippet_code !!}
-      <!-- {{$val->name}} // End -->
-    @endif
-  @endforeach
 </head>
 
 <body class="index-page">
 
-  @include('web.includes.header')
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-  @yield('content')
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{{URL::to('/public')}}/logo-black.png" alt="">
+      </a>
 
-  @include('web.includes.footer')
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{{URl::to('/')}}" class="active">Home</a></li>
+          <li><a href="">About Me</a></li>
+          <li><a href="">Blogs</a></li>
+          <li><a href="">Episodes</a></li>
+          <li><a href="">Collaborate</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-  <div class="m-footer-bg"></div>
-  <a href="https://api.whatsapp.com/send/?phone=971525287259" aria-label="Whatsapp Chat" id="whatsapp-chat" class="whatsapp-chat" target="_blank">
-    <img src="{{URL::to('/public/whatsapp-new.gif')}}" alt="Whatsapp Chat">
-  </a>
-
-  <div class="modal fade" id="newsletter-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header"> 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
-                  <span aria-hidden="true">&times;</span> 
-                </button> 
-              </div>
-              <div class="modal-body p-0 row">
-                  <div class="col-12 col-lg-5 ad p-0"> 
-                    <img src="{{URL::to('/public/popup-min.png')}}" class="popup-des" alt="Need a Help?"  loading="lazy" /> 
-                    <img src="{{URL::to('/public/popup-m.jpg')}}" class="popup-mob" width="100%" alt="Need a Help?" loading="lazy" /> 
-                  </div>
-                  <div class="details col-12 col-lg-7">
-                    <form action="{{route('enquiry.help.submit')}}" id="enquiry-help-form">
-                      @csrf
-                      <h2>Need a Help?</h2>
-                      <p>
-                        <small class="para">
-                          Looking for a Custom <strong>Marketing Plan</strong>? 
-                        <br>
-                          Get expert guidance tailored to your brand’s success!</small>
-                      </p>
-                      <div class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="Name" required>
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" name="phone" placeholder="Phone (e.g. +971000000000)" required>
-                      </div>
-                      <div class="form-group">
-                        <input type="email" class="form-control help-email" name="email" placeholder="Email" required>
-                      </div>
-                      <br>
-                      <div class="form-group">
-                        <button type="reset" class="btn btn-sm btn-default cancel">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</button>&nbsp;&nbsp;
-                        <input type="submit" class="btn btn-sm btn-theme" value="Proceed">
-                      </div>
-                      <img src="{{URL::to('/public/loader-gif-m.gif')}}"  alt="Loader gif" class="help-loading">
-                    </form>
-                  </div>
-              </div>
-          </div>
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
-  </div>
 
-  @foreach($bodySnippet as $val)
-    @if($val->position == 'Body')
-      <!-- {{$val->name}} // Start -->
-          {!! $val->snippet_code !!}
-      <!-- {{$val->name}} // End -->
-    @endif
-  @endforeach
-  
-  @include('web.includes.scripts')
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="{{URL::to('/public')}}/rahaal-bg3.jpg" alt="" data-aos="fade-in">
+
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="text-white text-shadow">Rahaal <small>- The Explorer</small></h2>
+            <p class="text-shadow text-white">
+              I'm a <span class="text-theme2 text-bold text-italic">travel filmmaker</span> on a mission to <span class="text-theme text-bold text-italic">explore the world</span>, <br>
+              tell raw human stories and <br>
+              uncover the unseen.
+            </p>
+            <a href="" class="btn-get-started box-shadow text-shadow">Watch My Journey</a>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Rahaal - The Explorer</strong>. <span>All Rights Reserved<br></span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{URL::to('/public')}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/aos/aos.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="{{URL::to('/public')}}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="{{URL::to('/public')}}/assets/js/main.js"></script>
 
 </body>
 
