@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'thorn';
+  src: url('../font/THORN.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'secrets';
+  src: url('../font/secrets.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DirtyTown';
+  src: url('../font/DirtyTown.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GamblerTown';
+  src: url('../font/GamblerTown.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GoodExplorer';
+  src: url('../font/GoodExplorer.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Off-Road';
+  src: url('../font/Off-Road.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.text-thorn{
+  font-family: 'thorn' !important;
+}
+.text-dirtytown{
+  font-family: 'DirtyTown' !important;
+}
+.text-secrets{
+  font-family: 'secrets' !important;
+}
+.text-GamblerTown{
+  font-family: 'GamblerTown' !important;
+}
+.text-GoodExplorer{
+  font-family: 'GoodExplorer' !important;
+}
+.text-Off-Road{
+  font-family: 'Off-Road' !important;
+}
+
+
+
+
+.text-theme{
+  color: #0f7dc2;
+}
+.text-theme2{
+  color: #83c341;
+}
+.text-bold {
+    font-weight: 600;
+}
+.text-italic {
+    font-style: italic;
+}
+.text-shadow{
+  text-shadow: 2px 8px 4px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+.box-shadow{
+  box-shadow: 2px 8px 4px rgba(0,0,0,0.2),
+                 20px 20px 35px rgba(255,255,255,0.3);
+}
+
+.hero-hr {
+    border: 1px solid #fff;
+    opacity: .4;
+    margin-left: -325px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: -1px;
+    margin-top: 6px;
+}
+.bi-youtube{
+  color:  #FF0000;
+}

@@ -21,6 +21,7 @@
 
   <!-- Main CSS File -->
   <link href="{{URL::to('/public')}}/assets/css/main.css" rel="stylesheet">
+  <link href="{{URL::to('/public')}}/assets/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -66,13 +67,13 @@
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="text-white text-shadow">Rahaal <small>- The Explorer</small></h2>
+            <h2 class="text-theme2 text-shadow text-GamblerTown">Rahaal - The Explorer</h2>
             <p class="text-shadow text-white">
               I'm a <span class="text-theme2 text-bold text-italic">travel filmmaker</span> on a mission to <span class="text-theme text-bold text-italic">explore the world</span>, <br>
               tell raw human stories and <br>
               uncover the unseen.
             </p>
-            <a href="" class="btn-get-started box-shadow text-shadow">Watch My Journey</a>
+            <a href="" class="btn-get-started text-secrets text-shadow"><i class="bi bi-youtube"></i> Watch My Journey</a>
           </div>
         </div>
       </div>
@@ -86,12 +87,6 @@
     <div class="container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Rahaal - The Explorer</strong>. <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
 
