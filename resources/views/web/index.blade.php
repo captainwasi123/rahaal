@@ -10,7 +10,7 @@
 
 	        <div class="row hero-content">
 	          <div class="col-lg-12">
-	            <h2 class="text-theme2 text-shadow text-GamblerTown">Rahaal - The Explorer</h2>
+	            <h2 class="text-theme2 text-shadow text-thorn">Rahaal - The Explorer</h2>
 	            <p class="text-shadow text-white">
 	              I'm a <span class="theme-badge">travel filmmaker</span> on a mission to <span class="theme-badge">explore the world</span>, <br>
 	              tell raw <span class="theme-badge2">human stories</span> and uncover <br>
