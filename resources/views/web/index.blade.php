@@ -11,9 +11,9 @@
 	      <div class="container" data-aos="zoom-out" data-aos-delay="100">
 	        <div class="row">
 	          <div class="col-lg-8">
-	            <h2 class="text-theme2 text-shadow text-GamblerTown">Rahaal - The Explorer</h2>
+	            <h2 class="text-theme text-shadow text-GamblerTown">Rahaal - The Explorer</h2>
 	            <p class="text-shadow text-white">
-	              I'm a <span class="text-theme2 text-bold text-italic">travel filmmaker</span> on a mission to <span class="text-theme text-bold text-italic">explore the world</span>, <br>
+	              I'm a <span class="text-theme text-bold text-italic">travel filmmaker</span> on a mission to <span class="text-theme text-bold text-italic">explore the world</span>, <br>
 	              tell raw human stories and <br>
 	              uncover the unseen.
 	            </p>
