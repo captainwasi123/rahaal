@@ -17,7 +17,7 @@
 	              tell raw human stories and <br>
 	              uncover the unseen.
 	            </p>
-	            <a href="" class="btn-get-started text-secrets text-shadow"><i class="bi bi-youtube"></i> Watch My Journey</a>
+	            <a href="https://www.youtube.com/@rahaal_01" target="_blank" class="btn-get-started text-secrets text-shadow"><i class="bi bi-youtube"></i> Watch My Journey</a>
 	          </div>
 	        </div>
 	      </div>

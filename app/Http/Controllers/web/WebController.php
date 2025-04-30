@@ -17,15 +17,12 @@ class WebController extends Controller
     }
 
 
-    public function services(){
-        $data['nav'] = 'services';
+    public function collaborate(){
+        $data['nav'] = 'collaborate';
         $data['titleImg'] = 'services.jpg';
-        $data['title'] = 'Services';
-        $data['services'] = Services::where('parent_id', '0')->get();
-        $data['sub_footer'] = 'visible';
         
 
-        return view('web.services')->with($data);
+        return view('web.collaborate')->with($data);
     }
 
 

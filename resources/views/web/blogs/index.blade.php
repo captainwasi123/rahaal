@@ -1,73 +1,156 @@
 @extends('web.includes.master')
-@section('metaAddition')
-@if(!empty($tags))
-<meta name="robots" content="noindex, follow">
-@endif
-@endsection
+
 @section('content')
+  <main class="main">
 
-	<main class="main">
+      <!-- About Section -->
+      <section id="about" class="about section">
 
-	    <!-- Page Title -->
-          <div class="page-title dark-background" data-aos="fade" style="background-image: url('{{URL::to('/public/assets/img/title/'.$titleImg)}}');">
-            <div class="container">
-              <h1>{{$title}} {{@$page}}</h1>
-              <nav class="breadcrumbs">
-                <ol>
-                  <li><a href="{{route('home')}}">Home</a></li>
-                  @if(!empty($type))
-                  <li><a href="{{route('blogs')}}">Blogs</a></li>
-                  @endif
-                  <li class="current">{{$title}}</li>
-                </ol>
-              </nav>
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Blogs</h2>
+          <p>
+            Discover the untold stories, behind-the-scenes moments, and raw experiences from every adventure.
+            <br>
+            From remote mountain trails to local street stories, this blog is where the camera stops rolling—but the real journey continues. Dive deeper into each episode with personal insights, travel tips, survival lessons, and the emotional moments that didn’t make it to the final cut.
+          </p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row g-3">
+
+          <div class="col-lg-4 d-flex flex-column gap-3">
+            <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
+              <div class="featured-overlay">
+                <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+              </div>
             </div>
-          </div><!-- End Page Title -->
+            <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
+              <div class="featured-overlay">
+                <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+              </div>
+            </div>
+          </div>
+            
+          <div class="col-lg-8">
+            <div class="featured-card blog-card-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
+              <div class="featured-overlay">
+                <h4 class="mt-2">Anna Lora Stuns In White At Her Australian Premiere</h4>
+                <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+              </div>
+            </div>
+          </div>
 
-	    <section id="service-cards" class="blog-section section">
+        </div>
 
-	      <div class="container">
+        </div>
 
-	        <div class="row gy-4 first-row">
+      </section><!-- /About Section -->
 
-	          <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
-	          	<div class="post-container">
-                    @foreach($data as $val)
-                      <div class="post row">
-                        <div class="col-lg-4">
-                            <div class="post-image">
-                                <a href="{{route('blogs.detail', [$val->slug])}}" target="_blank"><img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <a href="{{route('blogs.detail', [$val->slug])}}" target="_blank"><h4>{{$val->heading}}</h4></a>
-                            <p class="date">Published On - {{date('F d, Y', strtotime($val->created_at))}}</p>
-                            <div class="post-content">
-                              <p>{{$val->short_description}}</p> 
+      <!-- About Section -->
+      <section id="about" class="about section collab-section">
 
-                            </div>
-                            <div class="post-footer">
-                                <p ><i class="bi bi-person"></i> {{$val->author->name}} </p>
-                                <a href="{{route('blogs.detail', [$val->slug])}}" target="_blank">► Read More</a>
-                            </div>
-                        </div>
-                      </div>
-                      <hr />
-                  @endforeach
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                  {!! $data->withQueryString()->links('pagination::bootstrap-5') !!}
-                </div>  
-	        </div>
+          <div class="row g-3">
 
-            <div class="col-lg-3 aside-block" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-9">
+
+          </div>
+
+          <div class="col-lg-3 d-flex flex-column gap-3">
+            <div class="blog-aside">
+              
+              <div class="social-follow">
+                <div>
+                  <a href="https://www.youtube.com/@rahaal_01" target="_blank">
+                    <span class="bi bi-youtube"></span>
+                    <div class="text">
+                      12000 +
+                      <small>Fans</small>
+                    </div>
+                  </a>
+                  <a href="https://www.instagram.com/rahaal_01" target="_blank">
+                    <span class="bi bi-instagram"></span>
+                    <div class="text">
+                      135 +
+                      <small>Fans</small>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.facebook.com/rahaal01" target="_blank">
+                    <span class="bi bi-facebook"></span>
+                    <div class="text">
+                      800 +
+                      <small>Fans</small>
+                    </div>
+                  </a>
+                  <a href="https://www.tiktok.com/@rahaal_01" target="_blank">
+                    <span class="bi bi-tiktok"></span>
+                    <div class="text">
+                      2600 +
+                      <small>Fans</small>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="popular-section">
+                <h5 class="text-thorn">Popular Series</h5>
+
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  <div class="popular-text">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </div>
+
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  <div class="popular-text">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </div>
+
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  <div class="popular-text">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </div>
+
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  <div class="popular-text">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </div>
                 
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  <div class="popular-text">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </div>
+              </div>
+
             </div>
+          </div>
+        </div>
 
-	      </div>
+        </div>
 
-	    </section>
+      </section><!-- /About Section -->
 
-	</main>
-
-
+    </main>
 @endsection
