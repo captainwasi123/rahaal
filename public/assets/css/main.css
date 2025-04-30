@@ -753,10 +753,9 @@ section,
       width: 200%;
       margin-left: -350px;
   }
-  section#hero .col-lg-6 {
-      margin-top: -70px;
-            background-image: none !important;
-    box-shadow: none !important;
+  .hero-content{
+    background-position-x: -180px;
+    padding-left: 15px;
   }
 }
 
