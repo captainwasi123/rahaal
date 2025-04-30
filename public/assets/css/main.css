@@ -741,11 +741,16 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 62px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 21px;
+    padding-right: 82px;
+  }
+  .hero img {
+      width: 200%;
+      margin-left: -350px;
   }
 }
 
