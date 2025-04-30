@@ -15,13 +15,6 @@ class WebController extends Controller
         
         return view('web.index')->with($data);
     }
-    public function index_beta(){
-        $data['nav'] = 'home';
-        $data['services'] = Services::where('parent_id', '0')->get();
-        $data['sub_footer'] = 'visible';
-        
-        return view('web.index-beta')->with($data);
-    }
 
 
     public function services(){
