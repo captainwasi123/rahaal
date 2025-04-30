@@ -7,7 +7,9 @@
 	    <section id="hero" class="hero section">
 
 	      <img src="{{URL::to('/public')}}/rahaal-bg3.jpg" alt="" data-aos="fade-in">
-
+	      <div class="bubble-block">
+		      <div class='speech-bubble'>Every journey begins with a wild thought.</div>
+		  </div>
 	        <div class="row hero-content">
 	          <div class="col-lg-12">
 	            <h2 class="text-theme2 text-shadow text-thorn">Rahaal - The Explorer</h2>
