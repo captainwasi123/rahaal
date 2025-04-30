@@ -162,10 +162,12 @@ h6 {
 
 .header .header-social-links a {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding-left: 6px;
   display: inline-block;
   transition: 0.3s;
   font-size: 16px;
+  border: 1px solid;
+    padding: 0px 6px;
+    padding-top: 2px;
 }
 
 .header .header-social-links a:hover {
