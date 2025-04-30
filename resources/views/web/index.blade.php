@@ -13,8 +13,8 @@
 	            <h2 class="text-theme2 text-shadow text-GamblerTown">Rahaal - The Explorer</h2>
 	            <p class="text-shadow text-white">
 	              I'm a <span class="theme-badge">travel filmmaker</span> on a mission to <span class="theme-badge">explore the world</span>, <br>
-	              tell raw <span class="theme-badge2">human stories</span> and <br>
-	              uncover the unseen.
+	              tell raw <span class="theme-badge2">human stories</span> and uncover <br>
+	              the unseen.
 	            </p>
 	            <a href="https://www.youtube.com/@rahaal_01" target="_blank" class="btn-get-started text-secrets text-shadow"><i class="bi bi-youtube"></i> Watch My Journey</a>
 	          </div>
