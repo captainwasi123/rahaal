@@ -755,7 +755,7 @@ section,
   }
   .hero-content{
     background-position-x: -180px;
-    padding-left: 15px;
+    padding-left: 15px !important;
   }
 }
 
