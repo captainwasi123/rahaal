@@ -8,3 +8,4 @@
 <!-- Main CSS File -->
 <link href="{{URL::to('/public')}}/assets/css/main.css" rel="stylesheet">
 <link href="{{URL::to('/public')}}/assets/css/custom.css" rel="stylesheet">
+<link href="{{URL::to('/public')}}/assets/css/responsive.css" rel="stylesheet">

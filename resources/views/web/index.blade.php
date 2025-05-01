@@ -8,7 +8,7 @@
 
 	      <img src="{{URL::to('/public')}}/rahaal-bg3.jpg" alt="" data-aos="fade-in">
 	      <div class="bubble-block">
-		      <div class='speech-bubble'>Every journey begins with a wild thought.</div>
+		      <div class='speech-bubble text-GamblerTown'>Every <span class="text-theme">journey</span> begins with a <span class="text-theme">wild</span> thought.</div>
 		  </div>
 	        <div class="row hero-content">
 	          <div class="col-lg-12">
