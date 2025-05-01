@@ -14,6 +14,13 @@
 
   @include('web.includes.style')
 
+  @foreach($headSnippet as $val)
+    @if($val->position == 'Head')
+      <!-- {{$val->name}} // Start -->
+          {!! $val->snippet_code !!}
+      <!-- {{$val->name}} // End -->
+    @endif
+  @endforeach
 </head>
 
 <body class="index-page">
@@ -30,6 +37,14 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  @foreach($bodySnippet as $val)
+    @if($val->position == 'Body')
+      <!-- {{$val->name}} // Start -->
+          {!! $val->snippet_code !!}
+      <!-- {{$val->name}} // End -->
+    @endif
+  @endforeach
+  
   @include('web.includes.scripts')
 
 </body>
