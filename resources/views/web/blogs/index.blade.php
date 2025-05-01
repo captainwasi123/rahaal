@@ -58,7 +58,22 @@
           <div class="row g-3">
 
           <div class="col-lg-9">
+            <div class="blog-card">
+                <div class="blog-card-head">
+                  <h2 class="text-thorn">Trending</h2>
+                  <ul>
+                    <li><a href="">Adventures</a></li>
+                    <li><a href="">Travel Guides & Tips</a></li>
+                    <li><a href="">Gear & Reviews</a></li>
+                    <li><a href="">Hidden Destinations</a></li>
+                    <li><a href="">Human Stories</a></li>
+                  </ul>
+                </div>
 
+                <div class="blog-card-body">
+                  
+                </div>
+            </div>
           </div>
 
           <div class="col-lg-3 d-flex flex-column gap-3">
