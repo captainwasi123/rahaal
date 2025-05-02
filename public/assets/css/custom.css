@@ -55,7 +55,9 @@
 
 
 
-
+.padding-h-6 {
+    padding: 0 6px;
+}
 .text-theme{
   color: #0f7dc2;
 }
@@ -73,8 +75,7 @@
                  0px -5px 35px rgba(255,255,255,0.3);
 }
 .box-shadow{
-  box-shadow: 2px 8px 4px rgba(0,0,0,0.2),
-                 20px 20px 35px rgba(255,255,255,0.3);
+        box-shadow: 7px 6px 22px rgb(0 0 0 / 13%);
 }
 
 .hero-hr {
@@ -406,7 +407,16 @@
 .aside-ad .ad-item {
     margin-top: 14px;
 }
-
+.font-size-20{
+    font-size: 20px;
+}
+.line-break-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical;
+}
 
 
 

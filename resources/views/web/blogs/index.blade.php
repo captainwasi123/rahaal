@@ -57,103 +57,22 @@
 
           <div class="row g-3">
 
-          <div class="col-lg-9">
-            <div class="blog-card">
-                <div class="blog-card-head">
-                  <h2 class="text-thorn">Trending</h2>
-                  <ul>
-                    <li><a href="">Adventures</a></li>
-                    <li><a href="">Travel Guides</a></li>
-                    <li><a href="">Gear & Reviews</a></li>
-                    <li><a href="">Hidden Destinations</a></li>
-                  </ul>
-                </div>
+            <div class="col-lg-9">
+              <div class="blog-card">
+                  <div class="blog-card-head">
+                    <h2 class="text-thorn">What<small class="font-size-20">'s</small> Trending</h2>
+                    <ul>
+                      <li><a href="">Adventures</a></li>
+                      <li><a href="">Travel Guides</a></li>
+                      <li><a href="">Gear & Reviews</a></li>
+                      <li><a href="">Hidden Destinations</a></li>
+                    </ul>
+                  </div>
 
-                <div class="blog-card-body">
-                  <div class="row">
-                    <div class="col-lg-8">
+                  <div class="blog-card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
 
-                      <div class="popular-card blog-card-2 flex-grow-1">
-                        <div class="card-image">
-                          <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                        </div>
-                        <div class="popular-text">
-                          <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                        </div>
-                      </div>
-
-                      <div class="popular-card blog-card-2 flex-grow-1">
-                        <div class="card-image">
-                          <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                        </div>
-                        <div class="popular-text">
-                          <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                        </div>
-                      </div>
-
-                      <div class="popular-card blog-card-2 flex-grow-1">
-                        <div class="card-image">
-                          <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                        </div>
-                        <div class="popular-text">
-                          <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                        </div>
-                      </div>
-
-                      <div class="popular-card blog-card-2 flex-grow-1">
-                        <div class="card-image">
-                          <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                        </div>
-                        <div class="popular-text">
-                          <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                        </div>
-                      </div>
-
-                      <div class="popular-card blog-card-2 flex-grow-1">
-                        <div class="card-image">
-                          <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                        </div>
-                        <div class="popular-text">
-                          <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                        </div>
-                      </div>
-
-                      <div class="popular-card blog-card-2 flex-grow-1">
-                        <div class="card-image">
-                          <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                        </div>
-                        <div class="popular-text">
-                          <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                        </div>
-                      </div>
-
-                      <div class="popular-card blog-card-2 flex-grow-1">
-                        <div class="card-image">
-                          <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                        </div>
-                        <div class="popular-text">
-                          <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="blog-portrait-card">
-                        
                         <div class="popular-card blog-card-2 flex-grow-1">
                           <div class="card-image">
                             <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
@@ -165,7 +84,6 @@
                           </div>
                         </div>
 
-                        
                         <div class="popular-card blog-card-2 flex-grow-1">
                           <div class="card-image">
                             <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
@@ -177,7 +95,6 @@
                           </div>
                         </div>
 
-                        
                         <div class="popular-card blog-card-2 flex-grow-1">
                           <div class="card-image">
                             <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
@@ -186,115 +103,273 @@
                             <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                          </div>
+                        </div>
+
+                        <div class="popular-card blog-card-2 flex-grow-1">
+                          <div class="card-image">
+                            <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                          </div>
+                          <div class="popular-text">
+                            <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                          </div>
+                        </div>
+
+                        <div class="popular-card blog-card-2 flex-grow-1">
+                          <div class="card-image">
+                            <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                          </div>
+                          <div class="popular-text">
+                            <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                          </div>
+                        </div>
+
+                        <div class="popular-card blog-card-2 flex-grow-1">
+                          <div class="card-image">
+                            <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                          </div>
+                          <div class="popular-text">
+                            <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                          </div>
+                        </div>
+
+                        <div class="popular-card blog-card-2 flex-grow-1">
+                          <div class="card-image">
+                            <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                          </div>
+                          <div class="popular-text">
+                            <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="blog-portrait-card">
+                          
+                          <div class="popular-card blog-card-2 flex-grow-1">
+                            <div class="card-image">
+                              <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                            </div>
+                            <div class="popular-text">
+                              <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                              <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                              <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                            </div>
+                          </div>
+
+                          
+                          <div class="popular-card blog-card-2 flex-grow-1">
+                            <div class="card-image">
+                              <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                            </div>
+                            <div class="popular-text">
+                              <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                              <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                              <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                            </div>
+                          </div>
+
+                          
+                          <div class="popular-card blog-card-2 flex-grow-1">
+                            <div class="card-image">
+                              <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                            </div>
+                            <div class="popular-text">
+                              <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                              <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                              <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 d-flex flex-column gap-3">
+              <div class="blog-aside">
+                
+                <div class="social-follow">
+                  <div>
+                    <a href="https://www.youtube.com/@rahaal_01" target="_blank">
+                      <span class="bi bi-youtube"></span>
+                      <div class="text">
+                        12000 +
+                        <small>Fans</small>
+                      </div>
+                    </a>
+                    <a href="https://www.instagram.com/rahaal_01" target="_blank">
+                      <span class="bi bi-instagram"></span>
+                      <div class="text">
+                        135 +
+                        <small>Fans</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.facebook.com/rahaal01" target="_blank">
+                      <span class="bi bi-facebook"></span>
+                      <div class="text">
+                        800 +
+                        <small>Fans</small>
+                      </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@rahaal_01" target="_blank">
+                      <span class="bi bi-tiktok"></span>
+                      <div class="text">
+                        2600 +
+                        <small>Fans</small>
+                      </div>
+                    </a>
+                  </div>
                 </div>
+
+
+                <div class="aside-ad">
+                  <div class="ad-item">
+                    <img src="{{URL::to('public/your_ad_here.png')}}">
+                  </div>
+                </div>
+
+
+                <div class="popular-section">
+                  <h5 class="text-thorn">Popular Series</h5>
+
+                  <div class="popular-card blog-card-2 flex-grow-1">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                    <div class="popular-text">
+                      <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                      <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                    </div>
+                  </div>
+
+                  <div class="popular-card blog-card-2 flex-grow-1">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                    <div class="popular-text">
+                      <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                      <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                    </div>
+                  </div>
+
+                  <div class="popular-card blog-card-2 flex-grow-1">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                    <div class="popular-text">
+                      <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                      <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                    </div>
+                  </div>
+
+                  <div class="popular-card blog-card-2 flex-grow-1">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                    <div class="popular-text">
+                      <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                      <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                    </div>
+                  </div>
+                  
+                  <div class="popular-card blog-card-2 flex-grow-1">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                    <div class="popular-text">
+                      <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                      <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="aside-ad">
+                  <div class="ad-item">
+                    <img src="{{URL::to('public/your_ad_here.jpg')}}" height="105px">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-3 d-flex flex-column gap-3">
-            <div class="blog-aside">
-              
-              <div class="social-follow">
-                <div>
-                  <a href="https://www.youtube.com/@rahaal_01" target="_blank">
-                    <span class="bi bi-youtube"></span>
-                    <div class="text">
-                      12000 +
-                      <small>Fans</small>
-                    </div>
-                  </a>
-                  <a href="https://www.instagram.com/rahaal_01" target="_blank">
-                    <span class="bi bi-instagram"></span>
-                    <div class="text">
-                      135 +
-                      <small>Fans</small>
-                    </div>
-                  </a>
-                </div>
-                <div>
-                  <a href="https://www.facebook.com/rahaal01" target="_blank">
-                    <span class="bi bi-facebook"></span>
-                    <div class="text">
-                      800 +
-                      <small>Fans</small>
-                    </div>
-                  </a>
-                  <a href="https://www.tiktok.com/@rahaal_01" target="_blank">
-                    <span class="bi bi-tiktok"></span>
-                    <div class="text">
-                      2600 +
-                      <small>Fans</small>
-                    </div>
-                  </a>
-                </div>
-              </div>
+          <div class="row g-3 mt-4">
+            <div class="col-lg-12">
+              <h2 class="text-thorn">Top Stories</h2>
+            </div>
 
-
-              <div class="aside-ad">
-                <div class="ad-item">
-                  <img src="{{URL::to('public/your_ad_here.png')}}">
-                </div>
-              </div>
-
-
-              <div class="popular-section">
-                <h5 class="text-thorn">Popular Series</h5>
-
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  <div class="popular-text">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
-
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  <div class="popular-text">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
-
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  <div class="popular-text">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
-
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  <div class="popular-text">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
+            <div class="col-lg-3 mt-0">
+              <div class="blog-portrait-card box-shadow">
                 
                 <div class="popular-card blog-card-2 flex-grow-1">
-                  <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  <div class="popular-text">
+                  <div class="card-image">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  </div>
+                  <div class="popular-text padding-h-6">
                     <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
                   </div>
                 </div>
               </div>
+            </div>
 
+            <div class="col-lg-3 mt-0">
+              <div class="blog-portrait-card box-shadow">
+                
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <div class="card-image">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  </div>
+                  <div class="popular-text padding-h-6">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <div class="aside-ad">
-                <div class="ad-item">
-                  <img src="{{URL::to('public/your_ad_here.jpg')}}">
+            <div class="col-lg-3 mt-0">
+              <div class="blog-portrait-card box-shadow">
+                
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <div class="card-image">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  </div>
+                  <div class="popular-text padding-h-6">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 mt-0">
+              <div class="blog-portrait-card box-shadow">
+                
+                <div class="popular-card blog-card-2 flex-grow-1">
+                  <div class="card-image">
+                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+                  </div>
+                  <div class="popular-text padding-h-6">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+          <div class="row g-3 mt-4">
+            <div class="col-lg-12">
+              <img src="{{URL::to('/public/ad-banner.jpg')}}" width="100%">
+            </div>
+          </div>
         </div>
 
       </section><!-- /About Section -->
