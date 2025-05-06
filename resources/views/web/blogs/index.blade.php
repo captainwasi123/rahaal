@@ -21,26 +21,32 @@
           <div class="row g-3">
 
           <div class="col-lg-4 d-flex flex-column gap-3">
-            <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
-              <div class="featured-overlay">
-                <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
+                <a href="{{URL::to('blog/single')}}">
+                  <div class="featured-overlay">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </a>
               </div>
-            </div>
-            <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
-              <div class="featured-overlay">
-                <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
+                <a href="{{URL::to('blog/single')}}">
+                  <div class="featured-overlay">
+                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </a>
               </div>
-            </div>
           </div>
             
           <div class="col-lg-8">
             <div class="featured-card blog-card-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
-              <div class="featured-overlay">
-                <h4 class="mt-2">Anna Lora Stuns In White At Her Australian Premiere</h4>
-                <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
-              </div>
+                <a href="{{URL::to('blog/single')}}">
+                  <div class="featured-overlay">
+                    <h4 class="mt-2">Anna Lora Stuns In White At Her Australian Premiere</h4>
+                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                  </div>
+                </a>
             </div>
           </div>
 

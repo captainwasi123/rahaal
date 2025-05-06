@@ -24,6 +24,18 @@ class BlogController extends Controller
         return view('web.blogs.index')->with($data);
     }
 
+    public function indexSingle(){
+        $data['nav'] = 'blogs';
+        $data['titleImg'] = 'services.jpg';
+        $data['title'] = 'Blogs';
+        if(!empty($_GET['page'])){
+            $data['tags'] = '1';
+        }
+        $data['data'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->paginate(8);
+
+        return view('web.blogs.details')->with($data);
+    }
+
     public function category($slug){
         $data['nav'] = 'blogs';
         $data['titleImg'] = 'services.jpg';
