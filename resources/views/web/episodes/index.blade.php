@@ -41,7 +41,7 @@
               <div class="episode-playlist">
                   <div class="playlist-heading">
                       <h3 class="text-thorn">Highlighted Places in Dubai</h3>
-                      <a href="">Open on Youtube  <i class="bi bi-box-arrow-up-right"></i></a>
+                      <a href="https://www.youtube.com/@rahaal_01">Open on Youtube  <i class="bi bi-box-arrow-up-right"></i></a>
                   </div>
                   <br>
                   <div class="playlist-data row">
@@ -77,7 +77,7 @@
               <div class="episode-playlist">
                   <div class="playlist-heading">
                       <h3 class="text-thorn">Northern Pakistan Series</h3>
-                      <a href="">Open on Youtube  <i class="bi bi-box-arrow-up-right"></i></a>
+                      <a href="https://www.youtube.com/@rahaal_01">Open on Youtube  <i class="bi bi-box-arrow-up-right"></i></a>
                   </div>
                   <br>
                   <div class="playlist-data row">
