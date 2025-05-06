@@ -11,7 +11,7 @@
         <li><a href="{{URl::to('/')}}"  class="{{!empty($nav) && $nav == 'home' ? 'active' : ''}}">Home</a></li>
         <li><a href="{{route('about')}}"  class="{{!empty($nav) && $nav == 'about' ? 'active' : ''}}">About Me</a></li>
         <li><a href="{{route('blogs')}}"  class="{{!empty($nav) && $nav == 'blogs' ? 'active' : ''}}">Blogs</a></li>
-        <li><a href=""  class="{{!empty($nav) && $nav == 'episodes' ? 'active' : ''}}">Episodes</a></li>
+        <li><a href="{{route('episodes')}}"  class="{{!empty($nav) && $nav == 'episodes' ? 'active' : ''}}">Episodes</a></li>
         <li><a href="{{route('collaborate')}}"  class="{{!empty($nav) && $nav == 'collaborate' ? 'active' : ''}}">Collaborate</a></li>
         <li><a href="{{route('contact')}}"  class="{{!empty($nav) && $nav == 'contact' ? 'active' : ''}}">Contact</a></li>
       </ul>

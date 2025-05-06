@@ -28,6 +28,8 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
     Route::get('/client-case-studies', 'WebController@caseStudies')->name('caseStudies');
 
 
+    //Episodes
+    Route::get('/episodes', 'EpisodeController@index')->name('episodes');
 
     //Newsletter
     Route::post('/subscribe', 'NewsletterController@subscribe')->name('newsletter.subscribe');
@@ -46,6 +48,7 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
     Route::get('/tag/{slug}', 'BlogController@tags');
 
     Route::get('/blog/single', 'BlogController@indexSingle')->name('blogs.single');
+
 });
 
 
