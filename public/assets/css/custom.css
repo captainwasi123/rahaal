@@ -53,6 +53,9 @@
   font-family: 'Off-Road' !important;
 }
 
+a > * {
+    color: #696969;
+}
 
 
 .padding-h-6 {
@@ -497,30 +500,33 @@
 }
 .blog-share .share-linkedin {
     background-color: #0077B5;
-    color: #fff;
+    color: #fff !important;
 }
 .blog-share .share-facebook {
     background-color: #1877F2;
-    color: #fff;
+    color: #fff !important;
 }
 .blog-share .share-twitter {
     background-color: #1DA1F2;
-    color: #fff;
+    color: #fff !important;
 }
 .blog-share .share-whatsapp {
     background-color: #25d366;
-    color: #fff;
+    color: #fff !important;
 }
 .blog-share .share-copy {
     background-color: #fff;
-    color: #0f7dc2;
+    color: #0f7dc2 !important;
 }
-a > * {
-    color: #696969;
+.blog-share span, .blog-share i{
+    color: #fff !important;
 }
-
-
-
+.blog-share .share-copy span, .blog-share .share-copy i {
+    color: #0f7dc2 !important;
+}
+.mmb-5{
+    margin-bottom: -5px !important;
+}
 
 
 /* Episodes */

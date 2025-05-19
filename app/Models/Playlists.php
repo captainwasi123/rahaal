@@ -16,4 +16,8 @@ class Playlists extends Model
     public function episodes(){
         return $this->hasMany(Episodes::class, 'playlist_id', 'id');
     }
+
+    public function episodes_desc(){
+        return $this->hasMany(Episodes::class, 'playlist_id', 'id')->orderBy('id', 'desc');
+    }
 }

@@ -71,10 +71,10 @@ class BlogController extends Controller
         
         $data['data'] = Blogs::where('slug', $blog_slug)->where('status', '1')->first();
 
-        $data['related'] = Blogs::where('slug', '!=', $blog_slug)->orderBy('created_at', 'desc')->limit(3)->get();
-        if(empty($data['data']->id)){
-            return redirect(route('blogs'));
-        }
+
+        $data['popular_series'] = Playlists::where('popular', '1')->first();
+        $data['top_stories'] = TopStories::all();
+
         return view('web.blogs.details')->with($data);
     }
 
