@@ -8,6 +8,8 @@ use App\Models\Blogs;
 use App\Models\BlogTags;
 use App\Models\TagData;
 use App\Models\Categories;
+use App\Models\Episodes;
+use App\Models\Playlists;
 
 class BlogController extends Controller
 {
@@ -19,8 +21,9 @@ class BlogController extends Controller
         if(!empty($_GET['page'])){
             $data['tags'] = '1';
         }
-        $data['data'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->paginate(8);
-
+        $data['data'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->paginate(10);
+        $data['popular_series'] = Playlists::where('popular', '1')->first();
+        //dd($data['data']);
         return view('web.blogs.index')->with($data);
     }
 

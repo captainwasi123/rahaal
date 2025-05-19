@@ -92,6 +92,22 @@ Route::prefix('admin/panel')->namespace('App\Http\Controllers\admin')->group(fun
         });
 
 
+
+        
+        //Episodes
+        Route::prefix('episodes')->group(function () {
+
+            Route::get('/', 'EpisodeController@index')->name('admin.episodes');
+            Route::get('/load', 'EpisodeController@load')->name('admin.episodes.load');
+            Route::get('/search/{val}', 'EpisodeController@search');
+            Route::post('/create', 'EpisodeController@create')->name('admin.episodes.create');
+            Route::get('/delete/{id}', 'EpisodeController@delete');
+            Route::get('/edit/{id}', 'EpisodeController@edit');
+            Route::post('/update', 'EpisodeController@update_blog')->name('admin.episodes.update');
+
+        });
+
+
         //SEO Tools
         Route::prefix('seo')->group(function () {
             Route::prefix('meta')->group(function () {

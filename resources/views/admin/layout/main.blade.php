@@ -15,7 +15,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{URL::to('/public')}}/Icon-Black.png" alt="AdminLTELogo" height="60" width="100">
+    <img class="animation__shake" src="{{URL::to('/public/favicon.png')}}" alt="AdminLTELogo" height="60">
   </div>
 
   <!-- Navbar -->

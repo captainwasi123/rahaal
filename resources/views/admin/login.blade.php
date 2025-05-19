@@ -22,7 +22,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="{{URL::to('/')}}/" class="h1"><img src="{{URL::to('/public/assets/img/logo.png')}}" height="50px"></a>
+      <a href="{{URL::to('/')}}/" class="h1"><img src="{{URL::to('/public/logo-black.png')}}" height="40px"></a>
       <br>
     </div>
     <div class="card-body">
