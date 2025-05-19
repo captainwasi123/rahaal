@@ -10,6 +10,8 @@ use App\Models\TagData;
 use App\Models\Categories;
 use App\Models\Episodes;
 use App\Models\Playlists;
+use App\Models\FeaturedBlogs;
+use App\Models\TopStories;
 
 class BlogController extends Controller
 {
@@ -23,6 +25,9 @@ class BlogController extends Controller
         }
         $data['data'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->paginate(10);
         $data['popular_series'] = Playlists::where('popular', '1')->first();
+
+        $data['featured'] = FeaturedBlogs::all();
+        $data['top_stories'] = TopStories::all();
         //dd($data['data']);
         return view('web.blogs.index')->with($data);
     }

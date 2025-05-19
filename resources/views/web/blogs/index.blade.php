@@ -25,30 +25,30 @@
           <div class="row g-3">
 
           <div class="col-lg-4 d-flex flex-column gap-3">
-              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
-                <a href="{{URL::to('blog/single')}}">
+              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[0]->blog->banner)}}');">
+                <a href="{{URL::to('/'.$featured[0]->blog->slug)}}">
                   <div class="featured-overlay">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                    <h6 class="mt-2">{{$featured[0]->blog->heading}}</h6>
+                    <small>by <font class="text-theme2">{{$featured[0]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
                   </div>
                 </a>
               </div>
-              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
-                <a href="{{URL::to('blog/single')}}">
+              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[1]->blog->banner)}}');">
+                <a href="{{URL::to('/'.$featured[1]->blog->slug)}}">
                   <div class="featured-overlay">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                    <h6 class="mt-2">{{$featured[1]->blog->heading}}</h6>
+                    <small>by <font class="text-theme2">{{$featured[1]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
                   </div>
                 </a>
               </div>
           </div>
             
           <div class="col-lg-8">
-            <div class="featured-card blog-card-1" style="background-image: url('{{URL::to('public/rahaal-bg3.jpg')}}');">
-                <a href="{{URL::to('blog/single')}}">
+            <div class="featured-card blog-card-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[2]->blog->banner)}}');">
+                <a href="{{URL::to('/'.$featured[2]->blog->slug)}}">
                   <div class="featured-overlay">
-                    <h4 class="mt-2">Anna Lora Stuns In White At Her Australian Premiere</h4>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                    <h4 class="mt-2">{{$featured[2]->blog->heading}}</h4>
+                    <small>by <font class="text-theme2">{{$featured[2]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
                   </div>
                 </a>
             </div>
@@ -86,7 +86,7 @@
                         @foreach($lastBlogChunk as $val)
                           <div class="popular-card blog-card-2 flex-grow-1">
                             <div class="card-image">
-                              <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}">
+                              <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}">
                             </div>
                             <div class="popular-text">
                               <h6 class="mt-2">{{$val->heading}}</h6>
@@ -104,7 +104,7 @@
                           @foreach($firstBlogChunk as $val)
                             <div class="popular-card blog-card-2 flex-grow-1">
                               <div class="card-image">
-                                <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}">
+                                <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}">
                               </div>
                               <div class="popular-text">
                                 <h6 class="mt-2">{{$val->heading}}</h6>
@@ -173,7 +173,7 @@
                   @foreach($popular_series->episodes as $val)
                     <a href="{{$val->visit_link}}" target="_blank">
                       <div class="popular-card blog-card-2 flex-grow-1">
-                        <img src="{{URL::to('public/storage/episodes/'.$val->image)}}">
+                        <img src="{{URL::to('public/storage/episodes/'.$val->image)}}" alt="{{$val->img_alt}}">
                         <div class="popular-text">
                           <h6 class="mt-2">{{$val->title}}</h6>
                           <small>by <font class="text-theme2">{{$val->user->fullname}}</font> - <font class="text-bold">{{date('M d, Y', strtotime($val->created_at))}}</font></small>
@@ -193,69 +193,26 @@
               <h2 class="text-thorn">Top Stories</h2>
             </div>
 
-            <div class="col-lg-3 mt-0">
-              <div class="blog-portrait-card box-shadow">
-                
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <div class="card-image">
-                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
+            @foreach($top_stories as $val)
+              <div class="col-lg-3 mt-0">
+                <a href="{{URL::to('/'.$val->blog->slug)}}">
+                  <div class="blog-portrait-card box-shadow">
+                    
+                    <div class="popular-card blog-card-2 flex-grow-1">
+                      <div class="card-image">
+                        <img src="{{URL::to('public/storage/blogs/'.$val->blog->banner)}}" alt="{{$val->blog->banner_alt}}">
+                      </div>
+                      <div class="popular-text padding-h-6">
+                        <h6 class="mt-2">{{$val->blog->heading}}</h6>
+                        <p class="line-break-3">{{$val->blog->short_description}}</p>
+                        <small>by <font class="text-theme2">{{@$val->blog->author->name}}</font> - <font class="text-bold">{{date('M d, Y', strtotime($val->blog->created_at))}}</font></small>
+                      </div>
+                    </div>
                   </div>
-                  <div class="popular-text padding-h-6">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
+                </a>
               </div>
-            </div>
+            @endforeach
 
-            <div class="col-lg-3 mt-0">
-              <div class="blog-portrait-card box-shadow">
-                
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <div class="card-image">
-                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  </div>
-                  <div class="popular-text padding-h-6">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 mt-0">
-              <div class="blog-portrait-card box-shadow">
-                
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <div class="card-image">
-                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  </div>
-                  <div class="popular-text padding-h-6">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 mt-0">
-              <div class="blog-portrait-card box-shadow">
-                
-                <div class="popular-card blog-card-2 flex-grow-1">
-                  <div class="card-image">
-                    <img src="{{URL::to('public/rahaal-bg3.jpg')}}">
-                  </div>
-                  <div class="popular-text padding-h-6">
-                    <h6 class="mt-2">Secretart for Economic Air plane that looks like</h6>
-                    <p class="line-break-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <small>by <font class="text-theme2">Alice Cloe</font> - <font class="text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div class="row g-3 mt-4">

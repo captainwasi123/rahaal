@@ -515,7 +515,9 @@
     background-color: #fff;
     color: #0f7dc2;
 }
-
+a > * {
+    color: #696969;
+}
 
 
 
