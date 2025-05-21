@@ -41,11 +41,14 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
     //Aside
     Route::get('/get-aside', 'WebController@getAside');
 
+
+    //Experience
+    Route::get('/experience', 'BlogController@experience')->name('experience');
+    
     //Blogs
     Route::get('/blogs', 'BlogController@index')->name('blogs');
-    Route::get('/blogs/{slug}', 'BlogController@category');
     Route::get('/{blog_slug}', 'BlogController@details')->name('blogs.detail');
-    Route::get('/tag/{slug}', 'BlogController@tags');
+
 
 });
 

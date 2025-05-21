@@ -122,7 +122,7 @@ class BlogController extends Controller
 
             //Meta Title -- Start
 
-                $meta_url = 'https://datamysite.com/'.$data['slug'];
+                $meta_url = 'https://rahaal-theexplorer.com/'.$data['slug'];
                 $mt = MetaTags::where('url', $meta_url)->first();
                 if(empty($mt->id)){
                     $mt = new MetaTags;
@@ -130,7 +130,7 @@ class BlogController extends Controller
                     $mt->created_by = Auth::guard('admin')->id();
                 }
                 $mt->title = $data['meta_title'];
-                $mt->keywords = $data['tags'];
+                $mt->keywords = '';
                 $mt->description = $data['short_description'];
                 $mt->created_by = Auth::guard('admin')->id();
                 $mt->save();
@@ -263,7 +263,7 @@ class BlogController extends Controller
         $data['authors'] = Author::get();
         $data['tags'] = '';
         
-        $meta_url = 'https://datamysite.com/';
+        $meta_url = 'https://rahaal-theexplorer.com/';
         
         $meta_url .= $data->slug;
 

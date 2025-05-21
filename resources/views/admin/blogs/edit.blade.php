@@ -20,6 +20,11 @@
           <label>Image alt:</label>
           <input type="text" class="form-control" name="banner_alt" value="{{$data->banner_alt}}" required>
         </div>
+
+        <div class="form-group">
+          <input type="checkbox" name="experience" id="eforexperience" {{$data->experience == '1' ? 'checked' : ''}} value="1" >
+          <label for="eforexperience">&nbsp;My Experience</label>
+        </div>
       </div>
     </div>
 
@@ -63,7 +68,7 @@
 
         <div class="form-group">
           <label>Meta Title:</label>
-          <input type="text" class="form-control blogMetaTitle" value="{{$data['meta_title']->title}}" name="meta_title" required>
+          <input type="text" class="form-control blogMetaTitle" value="{{@$data['meta_title']->title}}" name="meta_title" required>
         </div>
       </div>
     </div>
@@ -73,7 +78,7 @@
         <div class="form-group slug-field">
           <label>Slug</label>
           <div class="form-control">
-            <span>{{URL::to('/')}}/blogs/</span>
+            <span>{{URL::to('/')}}/</span>
             <input type="text" class="eblogSlug" name="slug" value="{{$data->slug}}" required>
           </div>
         </div>
@@ -84,15 +89,6 @@
         <div class="form-group">
           <label>Short Description</label>
           <textarea class="form-control" name="short_description" rows="3">{{$data->short_description}}</textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <label>Tags</label>
-          <input type="text" class="form-control" id="edit-tagsinput" name="tags" value="{{$data->tags}}" data-role="tagsinput" required>
         </div>
       </div>
     </div>

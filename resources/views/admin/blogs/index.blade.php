@@ -117,6 +117,11 @@
                 <label>Image alt:</label>
                 <input type="text" class="form-control" name="banner_alt" required>
               </div>
+
+              <div class="form-group">
+                <input type="checkbox" name="experience" id="forexperience" value="1">
+                <label for="forexperience">&nbsp;My Experience</label>
+              </div>
             </div>
           </div>
 
@@ -170,7 +175,7 @@
               <div class="form-group slug-field">
                 <label>Slug</label>
                 <div class="form-control">
-                  <span>{{URL::to('/')}}/blogs/</span>
+                  <span>{{URL::to('/')}}/</span>
                   <input type="text" class="blogSlug" name="slug" required>
                 </div>
               </div>
@@ -181,16 +186,6 @@
               <div class="form-group">
                 <label>Short Description</label>
                 <textarea class="form-control" name="short_description" rows="3"></textarea>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-
-              <div class="form-group">
-                <label>Tags</label>
-                <input class="form-control" id="inputTagfield" name="tags" required>
               </div>
             </div>
           </div>

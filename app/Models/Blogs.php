@@ -24,18 +24,12 @@ class Blogs extends Model
         $b->read_time = $data['read_time'];
         $b->short_description = $data['short_description'];
         $b->category_id = $data['category_id'];
+        $b->experience = !empty($data['experience']) ? '1' : '0';
         $b->author_id = $data['author_id'];
         $b->status = '1';
         $b->created_by = Auth::guard('admin')->id();
         $b->save();
 
-        $tags = explode(',',$data['tags']);
-        foreach ($tags as $key => $val) {
-            $t = new BlogTags;
-            $t->blog_id = $b->id;
-            $t->tag = $val;
-            $t->save();
-        }
 
         return $b->id;
     }
@@ -49,18 +43,11 @@ class Blogs extends Model
         $b->description = $data['description'];
         $b->read_time = $data['read_time'];
         $b->short_description = $data['short_description'];
+        $b->experience = !empty($data['experience']) ? '1' : '0';
         $b->category_id = $data['category_id'];
         $b->author_id = $data['author_id'];
         $b->save();
 
-        BlogTags::where('blog_id', $id)->delete();
-        $tags = explode(',',$data['tags']);
-        foreach ($tags as $key => $val) {
-            $t = new BlogTags;
-            $t->blog_id = $b->id;
-            $t->tag = $val;
-            $t->save();
-        }
 
         return $b->id;
     }
