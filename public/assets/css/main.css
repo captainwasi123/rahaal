@@ -222,20 +222,22 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-color);
-    font-size: 15px;
-    padding: 0 2px;
-    font-family: var(--nav-font);
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
-  }
+      .navmenu a, .navmenu a:focus {
+        color: var(--nav-color);
+        font-size: 16px;
+        padding: 0 2px;
+        font-family: 'calibri';
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+        font-weight: 600;
+        position: relative;
+                letter-spacing: 1px;
+                padding-bottom: 4px;
+                border-bottom: 1px solid transparent;
+    }
 
   .navmenu a i,
   .navmenu a:focus i {
@@ -245,30 +247,12 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
+  
 
-  .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
-  .navmenu .active:before {
-    visibility: visible;
-    width: 25px;
-  }
 
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
-  }
+      .navmenu li:hover>a, .navmenu .active, .navmenu .active:focus {
+        border-bottom: 1px solid #83c341;
+    }
 
   .navmenu .dropdown ul {
     margin: 0;
@@ -368,7 +352,7 @@ h6 {
     font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     white-space: nowrap;
     transition: 0.3s;
   }

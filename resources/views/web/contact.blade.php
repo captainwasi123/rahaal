@@ -8,7 +8,7 @@
 
 	      <!-- Section Title -->
 	      <div class="container section-title" data-aos="fade-up">
-	        <h2>Contact</h2>
+	        <h2>Reach Out</h2>
 	        <p>
 	        	I'm always excited to connect with fellow adventurers, creators, and brands. <br>
 	        	Whether you're interested in collaborating, supporting an upcoming journey, or simply want to reach out and say hello — feel free to drop a message. I'd love to hear from you!
