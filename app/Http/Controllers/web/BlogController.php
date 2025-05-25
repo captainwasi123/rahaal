@@ -28,6 +28,7 @@ class BlogController extends Controller
 
         $data['featured'] = FeaturedBlogs::all();
         $data['top_stories'] = TopStories::all();
+        $data['categories'] = Categories::all();
         //dd($data['data']);
         return view('web.blogs.index')->with($data);
     }
@@ -78,6 +79,7 @@ class BlogController extends Controller
         $data['popular_series'] = Playlists::where('popular', '1')->first();
 
         $data['top_stories'] = TopStories::all();
+        $data['categories'] = Categories::all();
         //dd($data['data']);
         return view('web.experience.index')->with($data);
     }

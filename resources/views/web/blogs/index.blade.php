@@ -72,10 +72,9 @@
                   <div class="blog-card-head">
                     <h2 class="text-thorn">What<small class="font-size-20">'s</small> Trending</h2>
                     <ul>
-                      <li><a href="">Adventures</a></li>
-                      <li><a href="">Travel Guides</a></li>
-                      <li><a href="">Gear & Reviews</a></li>
-                      <li><a href="">Hidden Destinations</a></li>
+                      @foreach($categories as $val)
+                        <li><a href="">{{$val->name}}</a></li>
+                      @endforeach
                     </ul>
                   </div>
 

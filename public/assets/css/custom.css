@@ -315,12 +315,25 @@ a > * {
 .blog-card .blog-card-head {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: stretch;
     border-bottom: 1px solid rgb(0 0 0 / 20%);
+    flex-direction: column;
+}
+.blog-card .blog-card-head ul {
+    padding: 0;
+    margin-bottom: 5px;
 }
 .blog-card .blog-card-head ul li {
     display: inline-block;
-    margin-left: 24px;
+}
+.blog-card .blog-card-head ul li a {
+    background-color: #e9e8e6;
+    padding: 6px 20px;
+    font-size: 14px;
+}
+.blog-card .blog-card-head ul li a.active {
+    background-color: #0f7dc2;
+    color: #fff;
 }
 .blog-card-body .popular-card .card-image{
     height: 90px;
