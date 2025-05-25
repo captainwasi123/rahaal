@@ -13,7 +13,7 @@ class EpisodeController extends Controller
     public function index(){
         $data['nav'] = 'episodes';
         $data['title'] = 'Episodes';
-        $data['playlists'] = Playlists::all();
+        $data['playlists'] = Playlists::orderby('id', 'desc')->get();
 
         $data['popular_series'] = Playlists::where('popular', '1')->first();
         $data['top_stories'] = TopStories::all();
