@@ -18,7 +18,6 @@ Route::get('/update-sitemap', function () {
 
 Route::namespace('App\Http\Controllers\web')->group(function(){
     Route::get('/', 'WebController@index')->name('home');
-    //Route::get('/beta', 'WebController@index_beta');
     Route::get('/collaborate', 'WebController@collaborate')->name('collaborate');
     Route::get('/faq', 'WebController@faq')->name('faq');
     Route::get('/about-us', 'WebController@about')->name('about');
@@ -29,7 +28,7 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
 
 
     //Episodes
-    Route::get('/youtube-episodes', 'EpisodeController@index')->name('episodes');
+    Route::get('/episodes', 'EpisodeController@index')->name('episodes');
 
     //Newsletter
     Route::post('/subscribe', 'NewsletterController@subscribe')->name('newsletter.subscribe');

@@ -35,22 +35,112 @@
 		        </div>
 	          </div>
 	          <div class="col-lg-6 content">
-	            <h2>Who I Am</h2>
-	            <p class="py-3">
-	              <strong class="fst-italic">Survivalist | Traveler | Human Stories Specialist</strong><Br>
-	              Each episode brings a new adventure, a new challenge, and a new perspective. I don’t just explore landscapes, I explore emotions, culture, and purpose.
-	            </p>
-	            <img class="ending-line" src="{{URL::to('public/ending-line.png')}}">
-	            <h2>My Mission</h2>
-	            <p class="py-3">
-	              To document powerful, inspiring stories that go beyond the surface — content that not only entertains but makes people think, feel, and act.<br>
-				<i><strong>"I want to inspire others to explore — not just the world, but themselves."</strong></i>
-	            </p>
+	            <a href="{{route('about')}}"><h2 class="text-thorn text-theme">About Me</h2></a>
+	            <p>
+		            <strong>Meet the Explorer Behind the Camera</strong>
+		            <br>
+					I'm <strong>Rahaal</strong>, a travel filmmaker and storyteller passionate about documenting the world’s raw beauty. Rahaal means <strong>“traveler”</strong> in Arabic/Urdu—a fitting name for a journey driven by curiosity and connection.
+					<br>
+					I believe travel is not about ticking boxes—it's about being present, learning from people, and embracing the unknown. Through my camera and my words, I aim to inspire others to explore beyond comfort zones and to see places with empathy and open eyes.
+					<br><br>
+					<strong>Get to know the person behind the lens.</strong>
+					<br>
+					Follow my journey on social media for daily updates and behind-the-scenes moments.
+				</p>
 	          </div>
 	        </div>
 
 	      </div>
 
 	    </section><!-- /About Section -->
+
+	     <!-- About Section -->
+	    <section id="about" class="about section-bg section-padding section">
+
+	      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+	        <div class="row gy-4 justify-content-center">
+	          	<div class="col-lg-12 text-center">
+				  <a href="{{route('episodes')}}"><h2 class="text-thorn text-theme">Watch the latest episodes now</h2></a>
+				  <p>
+				  	Real Stories. Unfiltered Journeys. Visually Told.
+					<br>
+					Each episode is more than just a travel vlog—it's a cinematic story blending raw landscapes, local characters, and immersive experiences.
+					<br>
+					<strong>Leave a comment</strong> and share your thoughts—I’d love to hear from you.
+
+				  </p>
+				</div>
+
+				<div class="col-lg-12">
+					<div class="playlist-data blog-portrait-card row">
+                        @foreach($episodes as $ep)
+                          <div class="col-lg-3">
+                            <a href="{{$ep->visit_link}}" target="_blank">
+                              <div class="popular-card blog-card-2 flex-grow-1">
+                                <div class="card-image">
+                                  <img src="{{URL::to('public/storage/episodes/'.$ep->image)}}" alt="{{$ep->img_alt}}">
+                                </div>
+                                <div class="popular-text">
+                                  <h6 class="mt-2 mmb-5">{{$ep->title}}</h6>
+                                  <small>by <font class="text-theme2">{{@$ep->user->fullname}}</font> - <font class="text-bold">{{date('d-M-Y', strtotime($ep->created_at))}}</font></small>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        @endforeach
+                     </div>
+				</div>
+	        </div>
+
+	      </div>
+
+	    </section><!-- /About Section -->
+
+	     <!-- About Section -->
+	    <section id="about" class="about section-padding section">
+
+	      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+	        <div class="row gy-4 justify-content-center">
+	          	<div class="col-lg-12 text-center">
+				  <a href="{{route('blogs')}}"><h2 class="text-thorn text-theme">Browse the latest travel blogs</h2></a>
+				  <p>
+				  	Travel Guides, Adventure Tips & Insider Knowledge
+					<br>
+					My blog is your resource for planning unforgettable journeys. Find detailed travel guides to Northern Pakistan, hidden locations, tips for budget adventuring, gear reviews, and storytelling insights from my filming expeditions.
+
+				  </p>
+				</div>
+
+				@foreach($blogs as $val)
+				    <div class="col-lg-3 mt-0">
+				      <a href="{{URL::to('/'.$val->slug)}}">
+				        <div class="blog-portrait-card box-shadow">
+				          
+				          <div class="popular-card blog-card-2 flex-grow-1">
+				            <div class="card-image">
+				              <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}">
+				            </div>
+				            <div class="popular-text padding-h-6">
+				              <h6 class="mt-2">{{$val->heading}}</h6>
+				              <p class="line-break-3">{{$val->short_description}}</p>
+				              <small>by <font class="text-theme2">{{@$val->author->name}}</font> - <font class="text-bold">{{date('M d, Y', strtotime($val->created_at))}}</font></small>
+				            </div>
+				          </div>
+				        </div>
+				      </a>
+				    </div>
+				@endforeach
+	        </div>
+
+	      </div>
+
+	    </section><!-- /About Section -->
+
+	    @include('web.includes.elements.youtube-statistics')
+
+	    
+	    @include('web.includes.elements.lets-connect')
 	</main>
 @endsection

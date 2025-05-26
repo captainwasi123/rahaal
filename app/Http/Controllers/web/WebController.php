@@ -6,12 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Categories;
 use App\Models\Services;
+use App\Models\Blogs;
+use App\Models\Episodes;
 
 class WebController extends Controller
 {
     public function index(){
         $data['nav'] = 'home';
         $data['sub_footer'] = 'visible';
+        $data['blogs'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->limit(4)->get();
+        $data['episodes'] = Episodes::orderBy('created_at', 'desc')->limit(8)->get();
         
         return view('web.index')->with($data);
     }
