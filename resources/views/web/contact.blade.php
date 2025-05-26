@@ -10,8 +10,15 @@
 	      <div class="container section-title" data-aos="fade-up">
 	        <h2>Reach Out</h2>
 	        <p>
-	        	I'm always excited to connect with fellow adventurers, creators, and brands. <br>
-	        	Whether you're interested in collaborating, supporting an upcoming journey, or simply want to reach out and say hello — feel free to drop a message. I'd love to hear from you!
+	        	Got a Story, Destination, or Idea? Let’s Talk.
+	        	<br>
+				Whether you’re a fellow traveler, filmmaker, guide, or someone with a story to share—I’d love to hear from you. Reach out for collaborations, questions, feedback, or just to say hello.
+				<br>
+				<strong>Send me a message using the form below.</strong><br>
+				Follow me on Instagram and YouTube for daily adventures and new releases.
+				Let’s connect—because every great journey starts with a conversation
+
+
 	        </p>
 	      </div><!-- End Section Title -->
 

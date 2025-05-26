@@ -8,9 +8,14 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Youtube Episodes</h2>
+            <h2>Watch the latest episodes now</h2>
             <p>
-                Dive into the official episodes from my YouTube channel—where every journey tells a story. From remote mountains to bustling cities, each episode captures raw human emotions, local cultures, survival challenges, and the thrill of exploration. Whether you're here for adventure, inspiration, or untold truths, these are the stories that shaped my path.
+                Real Stories. Unfiltered Journeys. Visually Told.
+                <br>
+                Each episode is more than just a travel vlog—it's a cinematic story blending raw landscapes, local characters, and immersive experiences.
+                <br>
+                Here, you'll find full travel episodes, expedition series, behind-the-scenes footage, and deep dives into the stories that rarely make it to the spotlight.
+
                 <br><br>
             </p>
             <div class="blog-header">
@@ -38,7 +43,6 @@
           <div class="row g-3">
 
             <div class="col-lg-9">
-
               @foreach($playlists as $val)
                 @if(count($val->episodes) !== 0)
                   @php $s = 1; @endphp
@@ -73,7 +77,10 @@
                   </div>
                 @endif
               @endforeach
-
+              <p class="text-center">
+                <br>
+                <strong>Leave a comment</strong> and share your thoughts—I’d love to hear from you.
+              </p>
             </div>
 
             <div class="col-lg-3 d-flex flex-column gap-3">

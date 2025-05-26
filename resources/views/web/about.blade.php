@@ -10,8 +10,13 @@
 	      <div class="container section-title" data-aos="fade-up">
 	        <h2>About Me</h2>
 	        <p>
-	        	See the world through my lens.<br>
-	        	I’m <strong class="text-theme">Rahaal — The Explorer</strong>, storyteller, and content creator who doesn’t just visit places but uncovers the people and stories behind them. From survival challenges in the wild to luxury experiences in Dubai, and heartwarming stories of resilience — my journey is all about capturing raw, real moments.
+	        	Meet the Explorer Behind the Camera<br>
+	        	I’m <strong class="text-theme">Rahaal</strong>, a travel filmmaker and storyteller passionate about documenting the world’s raw beauty. Rahaal means “traveler” in Arabic/Urdu—a fitting name for a journey driven by curiosity and connection.
+	        	I believe travel is not about ticking boxes—it's about being present, learning from people, and embracing the unknown. Through my camera and my words, I aim to inspire others to explore beyond comfort zones and to see places with empathy and open eyes.
+	        	<br>
+	        	<strong>Get to know the person behind the lens.</strong><br>
+				Follow my journey on social media for daily updates and behind-the-scenes moments.
+
 	        </p>
 	      </div><!-- End Section Title -->
 

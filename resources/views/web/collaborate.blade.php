@@ -9,7 +9,15 @@
 	      <div class="container section-title" data-aos="fade-up">
 	        <h2>Collaborate</h2>
 	        <p>
-	        	Together, We’ll Craft Moments That Move Audiences and Build Meaningful Brands	        	
+	        	Partner With Rahaal – Let’s Tell Stories Together
+	        	<br>
+				I collaborate with tourism boards, travel brands, NGOs, content platforms, and filmmakers to create impactful visual stories. From promotional films to documentary-style episodes, I bring a filmmaker’s eye and a storyteller’s heart to every project.
+				
+				If you're looking to showcase a destination, launch an experience, or tell a meaningful story—let’s connect and create something powerful.
+				
+				<strong>Reach out to discuss a collaboration.</strong>
+				View my portfolio of past work and visual storytelling.
+	        	
 	        </p>
 	      </div><!-- End Section Title -->
 

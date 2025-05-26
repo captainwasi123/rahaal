@@ -14,9 +14,11 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>My Experience</h2>
           <p>
-            Explore in-depth stories, detailed guides, and firsthand insights from my adventures across stunning landscapes and hidden gems. 
+            Years of Travel. Countless Stories. Real Encounters.
             <br>
-            This section is where I document each journey with precision—combining personal experience with practical information. From exploring rugged terrains to uncovering cultural treasures, these blogs are packed with real tips, place reviews, and everything you need to plan your own adventure with confidence.
+            My journey spans across Northern Pakistan’s hidden valleys to the deserts of Arabia, and beyond. Every location I visit adds depth to my storytelling—from scaling the icy trails of Fairy Meadows to navigating the busy bazaars of Skardu.
+            With a deep respect for cultures and a passion for adventure, I bring cinematic visuals and heartfelt narratives that reflect the reality of life on the road.
+
           </p>
         </div><!-- End Section Title -->
 
@@ -32,7 +34,8 @@
             <div class="col-lg-9">
               <div class="blog-card">
                   <div class="blog-card-head">
-                    <h2 class="text-thorn">My Diary</h2>
+                    <h2 class="text-thorn">See where I've been.</h2>
+                    <p>Explore the destinations I've filmed and be inspired to discover them for yourself.</p>
                     <ul>
                       @foreach($categories as $val)
                         <li><a href="">{{$val->name}}</a></li>

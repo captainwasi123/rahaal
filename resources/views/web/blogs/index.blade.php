@@ -14,48 +14,51 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Blogs</h2>
           <p>
-            Discover the untold stories, behind-the-scenes moments, and raw experiences from every adventure.
+            Travel Guides, Adventure Tips & Insider Knowledge
             <br>
-            From remote mountain trails to local street stories, this blog is where the camera stops rolling—but the real journey continues. Dive deeper into each episode with personal insights, travel tips, survival lessons, and the emotional moments that didn’t make it to the final cut.
+            My blog is your resource for planning unforgettable journeys. Find detailed travel guides to Northern Pakistan, hidden locations, tips for budget adventuring, gear reviews, and storytelling insights from my filming expeditions.
+            
+            Whether you're preparing your first trip to Hunza or want to know the real costs of traveling to Skardu—these blogs are crafted to help you travel smarter and deeper.
+
           </p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
+          @if(count($featured) > 0)
+            <div class="row g-3">
 
-          <div class="row g-3">
+              <div class="col-lg-4 d-flex flex-column gap-3">
+                  <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[0]->blog->banner)}}');">
+                    <a href="{{URL::to('/'.$featured[0]->blog->slug)}}">
+                      <div class="featured-overlay">
+                        <h6 class="mt-2">{{$featured[0]->blog->heading}}</h6>
+                        <small>by <font class="text-theme2">{{$featured[0]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[1]->blog->banner)}}');">
+                    <a href="{{URL::to('/'.$featured[1]->blog->slug)}}">
+                      <div class="featured-overlay">
+                        <h6 class="mt-2">{{$featured[1]->blog->heading}}</h6>
+                        <small>by <font class="text-theme2">{{$featured[1]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                      </div>
+                    </a>
+                  </div>
+              </div>
+                
+              <div class="col-lg-8">
+                <div class="featured-card blog-card-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[2]->blog->banner)}}');">
+                    <a href="{{URL::to('/'.$featured[2]->blog->slug)}}">
+                      <div class="featured-overlay">
+                        <h4 class="mt-2">{{$featured[2]->blog->heading}}</h4>
+                        <small>by <font class="text-theme2">{{$featured[2]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
+                      </div>
+                    </a>
+                </div>
+              </div>
 
-          <div class="col-lg-4 d-flex flex-column gap-3">
-              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[0]->blog->banner)}}');">
-                <a href="{{URL::to('/'.$featured[0]->blog->slug)}}">
-                  <div class="featured-overlay">
-                    <h6 class="mt-2">{{$featured[0]->blog->heading}}</h6>
-                    <small>by <font class="text-theme2">{{$featured[0]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </a>
-              </div>
-              <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[1]->blog->banner)}}');">
-                <a href="{{URL::to('/'.$featured[1]->blog->slug)}}">
-                  <div class="featured-overlay">
-                    <h6 class="mt-2">{{$featured[1]->blog->heading}}</h6>
-                    <small>by <font class="text-theme2">{{$featured[1]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </a>
-              </div>
-          </div>
-            
-          <div class="col-lg-8">
-            <div class="featured-card blog-card-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[2]->blog->banner)}}');">
-                <a href="{{URL::to('/'.$featured[2]->blog->slug)}}">
-                  <div class="featured-overlay">
-                    <h4 class="mt-2">{{$featured[2]->blog->heading}}</h4>
-                    <small>by <font class="text-theme2">{{$featured[2]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
-                  </div>
-                </a>
             </div>
-          </div>
-
-        </div>
-
+          @endif
         </div>
 
       </section><!-- /About Section -->
@@ -70,7 +73,8 @@
             <div class="col-lg-9">
               <div class="blog-card">
                   <div class="blog-card-head">
-                    <h2 class="text-thorn">What<small class="font-size-20">'s</small> Trending</h2>
+                    <h2 class="text-thorn">Browse the latest travel blogs</h2>
+                    <p>Search by destination or topic to find exactly what you need.</p>
                     <ul>
                       @foreach($categories as $val)
                         <li><a href="">{{$val->name}}</a></li>
