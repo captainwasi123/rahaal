@@ -621,7 +621,7 @@ a > * {
     padding: 75px 0;
 }
 .blog-content img {
-    width: 100% !important;
+    width: 100%;
 }
 
 
