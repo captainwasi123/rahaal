@@ -97,7 +97,7 @@ a > * {
     z-index: 9;
     position: absolute;
     left: 0;
-    padding-left: 60px;
+    padding-left: 10px;
     background-image: url(../../radial-bg.png);
     background-size: cover;
     height: -webkit-fill-available;
@@ -604,4 +604,19 @@ a > * {
   100% {
     transform: translatey(0px);
   }
+}
+.home-para {
+    font-size: 18px !important;
+}
+.about-img-div {
+    height: 330px;
+    width: 100%;
+}
+.about-img-div img {
+    height: 330px;
+    width: 100%;
+    object-fit: cover;
+}
+.section-padding {
+    padding: 75px 0;
 }
