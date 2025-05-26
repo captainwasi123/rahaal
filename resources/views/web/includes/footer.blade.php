@@ -47,9 +47,9 @@
               <button type="submit" class="btn btn-primary">Get in Touch</button>
             </div>
 
-
-            <p class="mt-4"><strong>Phone:</strong> <span>+971 00 0000000</span></p>
-            <p><strong>Email:</strong> <span>contact@rahaal-theexplorer.com</span></p>
+            
+            <!-- <p class="mt-4"><strong>Phone:</strong> <span>+971 00 0000000</span></p> -->
+            <p class="mt-4"><strong>Email:</strong> <span>contact@rahaal-theexplorer.com</span></p>
           </div>
 
         </div>
