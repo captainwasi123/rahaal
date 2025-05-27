@@ -48,7 +48,7 @@
                       <div class="col-lg-8">
 
                         @foreach($lastBlogChunk as $val)
-                          <a href="{{URL::to('/'.$val->slug)}}">
+                          <a href="{{URL::to('/blog/'.$val->slug)}}">
                             <div class="popular-card blog-card-2 flex-grow-1">
                               <div class="card-image">
                                 <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}">
@@ -68,7 +68,7 @@
                       <div class="col-lg-4">
                         <div class="blog-portrait-card">
                           @foreach($firstBlogChunk as $val)
-                            <a href="{{URL::to('/'.$val->slug)}}">
+                            <a href="{{URL::to('/blog/'.$val->slug)}}">
                               <div class="popular-card blog-card-2 flex-grow-1">
                                 <div class="card-image">
                                   <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}">

@@ -29,7 +29,7 @@
 
               <div class="col-lg-4 d-flex flex-column gap-3">
                   <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[0]->blog->banner)}}');">
-                    <a href="{{URL::to('/'.$featured[0]->blog->slug)}}">
+                    <a href="{{URL::to('/blog/'.$featured[0]->blog->slug)}}">
                       <div class="featured-overlay">
                         <h6 class="mt-2">{{$featured[0]->blog->heading}}</h6>
                         <small>by <font class="text-theme2">{{$featured[0]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
@@ -37,7 +37,7 @@
                     </a>
                   </div>
                   <div class="featured-card blog-card-2 flex-grow-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[1]->blog->banner)}}');">
-                    <a href="{{URL::to('/'.$featured[1]->blog->slug)}}">
+                    <a href="{{URL::to('/blog/'.$featured[1]->blog->slug)}}">
                       <div class="featured-overlay">
                         <h6 class="mt-2">{{$featured[1]->blog->heading}}</h6>
                         <small>by <font class="text-theme2">{{$featured[1]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
@@ -48,7 +48,7 @@
                 
               <div class="col-lg-8">
                 <div class="featured-card blog-card-1" style="background-image: url('{{URL::to('public/storage/blogs/'.$featured[2]->blog->banner)}}');">
-                    <a href="{{URL::to('/'.$featured[2]->blog->slug)}}">
+                    <a href="{{URL::to('/blog/'.$featured[2]->blog->slug)}}">
                       <div class="featured-overlay">
                         <h4 class="mt-2">{{$featured[2]->blog->heading}}</h4>
                         <small>by <font class="text-theme2">{{$featured[2]->blog->author->name}}</font> - <font class="text-white text-bold">Jun 19, 2020</font></small>
@@ -87,7 +87,7 @@
                       <div class="col-lg-8">
 
                         @foreach($lastBlogChunk as $val)
-                          <a href="{{URL::to('/'.$val->slug)}}">
+                          <a href="{{URL::to('/blog/'.$val->slug)}}">
                             <div class="popular-card blog-card-2 flex-grow-1">
                               <div class="card-image">
                                 <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}">
@@ -107,7 +107,7 @@
                       <div class="col-lg-4">
                         <div class="blog-portrait-card">
                           @foreach($firstBlogChunk as $val)
-                            <a href="{{URL::to('/'.$val->slug)}}">
+                            <a href="{{URL::to('/blog/'.$val->slug)}}">
                               <div class="popular-card blog-card-2 flex-grow-1">
                                 <div class="card-image">
                                   <img src="{{URL::to('public/storage/blogs/'.$val->banner)}}" alt="{{$val->banner_alt}}">

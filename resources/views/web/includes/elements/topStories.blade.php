@@ -5,7 +5,7 @@
 @foreach($top_stories as $val)
   @if(!empty($val->blog->heading))
     <div class="col-lg-3 mt-0">
-      <a href="{{URL::to('/'.$val->blog->slug)}}">
+      <a href="{{URL::to('/blog/'.$val->blog->slug)}}">
         <div class="blog-portrait-card box-shadow">
           
           <div class="popular-card blog-card-2 flex-grow-1">

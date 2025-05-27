@@ -42,7 +42,7 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
     
     //Blogs
     Route::get('/blogs', 'BlogController@index')->name('blogs');
-    Route::get('/{blog_slug}', 'BlogController@details')->name('blogs.detail');
+    Route::get('/blog/{blog_slug}', 'BlogController@details')->name('blogs.detail');
 
 
 });

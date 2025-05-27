@@ -115,7 +115,7 @@
 
 				@foreach($blogs as $val)
 				    <div class="col-lg-3 mt-0">
-				      <a href="{{URL::to('/'.$val->slug)}}">
+				      <a href="{{URL::to('/blog/'.$val->slug)}}">
 				        <div class="blog-portrait-card box-shadow">
 				          
 				          <div class="popular-card blog-card-2 flex-grow-1">
