@@ -30,7 +30,7 @@ class SeoController extends Controller
         $data = $request->all();
         $response = [];
 
-        if (empty($data['meta_title']) || empty($data['meta_keywords']) || empty($data['meta_description'])) {
+        if (empty($data['meta_title']) || empty($data['meta_description'])) {
             $response['success'] = false;
             $response['errors'] = 'Please Fill all required fields.';
         }else{
