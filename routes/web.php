@@ -28,7 +28,7 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
 
 
     //Episodes
-    Route::get('/episodes', 'EpisodeController@index')->name('episodes');
+    Route::get('/yt-episodes', 'EpisodeController@index')->name('episodes');
 
     //Newsletter
     Route::post('/subscribe', 'NewsletterController@subscribe')->name('newsletter.subscribe');
