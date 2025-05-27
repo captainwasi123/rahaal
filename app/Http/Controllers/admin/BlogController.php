@@ -269,15 +269,7 @@ class BlogController extends Controller
 
         $data['meta_title'] = MetaTags::where('url', $meta_url)->first();
         
-        $tagArr = array();
-        $tags = BlogTags::where('blog_id', $id)->get();
-
-        foreach($tags as $val){
-            $tagArr[] = $val->tag;
-        }
-
-        $data['tags'] = implode(',', $tagArr);
-
+       
 
         return view('admin.blogs.edit', ['data' => $data]);
     }

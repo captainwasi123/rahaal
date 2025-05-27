@@ -541,6 +541,35 @@ a > * {
     margin-bottom: -5px !important;
 }
 
+.blog-content ul {
+    background-color: #e9e8e6;
+    padding: 10px 30px;
+}
+.blog-content ul li {
+    padding-left: 0 !important;
+    font-style: italic !important;
+}
+.blog-content ul li span {
+    font-style: italic !important;
+}
+.blog-content a span {
+    font-weight: 600 !important;
+    color: #0f7dc2;
+}
+.blog-content h3 {
+    margin-top: 0 !important;
+}
+.blog-content h3 span {
+    color: #0f7dc2;
+}
+.blog-content p {
+    margin-bottom: 4px !important;
+    margin-top: 8px !important;
+}
+
+
+
+
 
 /* Episodes */
 
