@@ -37,30 +37,19 @@ class GenerateSitemap extends Command
 
             $sitmap = Sitemap::create();
             $sitmap->add(Url::create("/")->setPriority(1)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-            $sitmap->add(Url::create("/services")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-            $sitmap->add(Url::create("/faq")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-            $sitmap->add(Url::create("/blogs")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-            $sitmap->add(Url::create("/client-case-studies")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
+            $sitmap->add(Url::create("/collaborate")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
             $sitmap->add(Url::create("/about-us")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-            $sitmap->add(Url::create("/contact-us")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-            $sitmap->add(Url::create("/privacy-policy")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-            $sitmap->add(Url::create("/terms-conditions")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
-
-        //Services
-            Services::where('parent_id', '0')->get()->each(function (Services $service) use ($sitmap) {
-                $sitmap->add(Url::create("/".$service->slug)->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setLastModificationDate(Carbon::now()));
-
-                foreach ($service->subServices as $key => $val) {  
-                    $sitmap->add(Url::create("/".$service->slug."/".$val->slug)->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setLastModificationDate(Carbon::now()));
-                }
-            });
+            $sitmap->add(Url::create("/blogs")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
+            $sitmap->add(Url::create("/reach-out")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
+            $sitmap->add(Url::create("/yt-episodes")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
+            $sitmap->add(Url::create("/experience")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
 
         //Categories
-            Categories::get()->each(function (Categories $cat) use ($sitmap) {
+            /*Categories::get()->each(function (Categories $cat) use ($sitmap) {
                 if(count($cat->blogs) > 0){
                     $sitmap->add(Url::create("/blogs/".$cat->slug)->setPriority(0.51)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setLastModificationDate(Carbon::now()));
                 }
-            });
+            });*/
 
         //Blogs
             Blogs::get()->each(function (Blogs $blog) use ($sitmap) {
