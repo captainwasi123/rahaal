@@ -553,9 +553,12 @@ a > * {
     font-style: italic !important;
 }
 .blog-content a span {
-    font-weight: 600 !important;
+    color: #58a900;
+}
+.blog-content a:hover span {
     color: #0f7dc2;
 }
+
 .blog-content h3 {
     margin-top: 0 !important;
 }
