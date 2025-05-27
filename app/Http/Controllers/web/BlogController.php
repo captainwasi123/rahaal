@@ -12,6 +12,7 @@ use App\Models\Episodes;
 use App\Models\Playlists;
 use App\Models\FeaturedBlogs;
 use App\Models\TopStories;
+use URL;
 
 class BlogController extends Controller
 {
@@ -60,7 +61,7 @@ class BlogController extends Controller
         
         $data['data'] = Blogs::where('slug', $blog_slug)->where('status', '1')->first();
 
-
+        $data['og_img'] = URL::to('public/storage/blogs/'.$data['data']->banner);
         $data['popular_series'] = Playlists::where('popular', '1')->first();
         $data['top_stories'] = TopStories::all();
 

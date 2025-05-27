@@ -69,7 +69,7 @@ class BlogController extends Controller
 
                 //Meta Title -- Start
 
-                    $meta_url = 'https://datamysite.com/'.$data['slug'];
+                    $meta_url = 'https://rahaal-theexplorer.com/'.$data['slug'];
 
                     $mt = new MetaTags;
                     $mt->url = $meta_url;

@@ -4,9 +4,31 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>{{env('APP_NAME')}}</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}</title>
+  <meta name="description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}">
+  <meta name="keywords" content="{{@$metaTags->keywords}}{{@$ametaTags['keywords']}}">
+  @yield('metaAddition')
+  <!-- Basic OG Tags -->
+  <meta property="og:title" content="{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
+  <meta property="og:description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}" />
+  <meta property="og:url" content="{{@URL::current()}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rahaal - The Explorer" />
+
+  <!-- Image OG Tag -->
+  <meta property="og:image" content="{{empty($og_img) ? URL::to('/public/youtube-cover.jpg') : $og_img}}" />
+  <meta property="og:image:alt" content="Image - {{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
+  <meta property="og:image:type" content="image/*" />
+  <meta property="og:image:width" content="620" />
+  <meta property="og:image:height" content="340" />
+
+
+  <!-- Additional Tags for Social Platforms -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
+  <meta name="twitter:description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}" />
+  <meta name="twitter:image" content="{{empty($og_img) ? URL::to('/public/youtube-cover.jpg') : $og_img}}" />
+  <meta name="twitter:site" content="@RahaalTheExplorer" />
 
   <!-- Favicons -->
   <link href="{{URL::to('/public')}}/favicon.png" rel="icon">
