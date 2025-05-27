@@ -8,7 +8,7 @@
   <div class="col-md-7">
     <div class="form-group">
       <label>Meta Keywords</label>
-      <input type="text" class="form-control" name="meta_keywords" value="{{@$meta->keywords}}" required>
+      <input type="text" class="form-control" name="meta_keywords" value="{{@$meta->keywords}}">
     </div>
   </div>
 </div>
