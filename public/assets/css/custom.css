@@ -341,6 +341,10 @@ a > * {
     overflow: hidden;
     position: relative;
     margin-right: 8px;
+    flex-basis: 30%;
+}
+.blog-card-body .popular-card .popular-text {
+    flex-basis: 90%;
 }
 .blog-card-body .popular-card img {
         object-fit: cover;
