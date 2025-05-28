@@ -56,6 +56,24 @@
 	.hero-content{
 		padding-left: 26px;
 	}
+	.featured-card{
+		height: 215px;
+	}
+	.blog-card .blog-card-head ul {
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	.blog-card .blog-card-head ul li:nth-child(odd) {
+	    border-right: 3px solid #fff;
+	}
+	.blog-card .blog-card-head ul li:last-child {
+	    border-right: none;
+	}
+	.blog-card .blog-card-head ul li {
+	    display: inline-grid;
+	    flex: 50%;
+	    border-bottom: 3px solid #fff;
+	}
 }
 
 @media (max-width: 845px) {

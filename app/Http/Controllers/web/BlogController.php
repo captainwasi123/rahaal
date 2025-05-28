@@ -19,36 +19,32 @@ class BlogController extends Controller
     
     public function index(){
         $data['nav'] = 'blogs';
-        $data['titleImg'] = 'services.jpg';
         $data['title'] = 'Blogs';
         if(!empty($_GET['page'])){
-            $data['tags'] = '1';
+            $data['nofollow'] = '1';
         }
         $data['data'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->paginate(10);
-        $data['popular_series'] = Playlists::where('popular', '1')->first();
 
         $data['featured'] = FeaturedBlogs::all();
-        $data['top_stories'] = TopStories::all();
         $data['categories'] = Categories::all();
         //dd($data['data']);
         return view('web.blogs.index')->with($data);
     }
 
-    public function category($slug){
+    public function blogCategory($slug){
         $data['nav'] = 'blogs';
-        $data['titleImg'] = 'services.jpg';
         if(!empty($_GET['page'])){
             $data['tags'] = '1';
         }
+        $data['categories'] = Categories::all();
         $category = Categories::where('slug', $slug)->first();
         if(!empty($category->id)){
             $data['title'] = $category->name;
             $data['type'] = 'category';
-            $data['page'] = '- Blogs';
             $data['data'] = Blogs::where('status', '1')
                                     ->where('category_id', $category->id)
                                     ->orderBy('created_at', 'desc')
-                                    ->paginate(8);
+                                    ->paginate(10);
 
             return view('web.blogs.index')->with($data);
         }else{
@@ -75,11 +71,11 @@ class BlogController extends Controller
     public function experience(){
         $data['nav'] = 'experience';
         $data['title'] = 'My Experience';
-
+        if(!empty($_GET['page'])){
+            $data['nofollow'] = '1';
+        }
         $data['data'] = Blogs::where('status', '1')->where('experience', '1')->orderBy('created_at', 'desc')->paginate(10);
-        $data['popular_series'] = Playlists::where('popular', '1')->first();
 
-        $data['top_stories'] = TopStories::all();
         $data['categories'] = Categories::all();
         //dd($data['data']);
         return view('web.experience.index')->with($data);

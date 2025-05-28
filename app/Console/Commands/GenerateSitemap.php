@@ -45,11 +45,11 @@ class GenerateSitemap extends Command
             $sitmap->add(Url::create("/experience")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
 
         //Categories
-            /*Categories::get()->each(function (Categories $cat) use ($sitmap) {
+            Categories::get()->each(function (Categories $cat) use ($sitmap) {
                 if(count($cat->blogs) > 0){
                     $sitmap->add(Url::create("/blogs/".$cat->slug)->setPriority(0.51)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setLastModificationDate(Carbon::now()));
                 }
-            });*/
+            });
 
         //Blogs
             Blogs::get()->each(function (Blogs $blog) use ($sitmap) {

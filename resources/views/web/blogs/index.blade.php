@@ -1,5 +1,9 @@
 @extends('web.includes.master')
-
+@section('metaAddition')
+@if(!empty($nofollow))
+<meta name="robots" content="noindex, follow">
+@endif
+@endsection
 @section('content')
 @php
     $firstBlogChunk = $data->slice(0, 3);
@@ -12,7 +16,7 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Blogs</h2>
+          <h2>{{!empty($type) && $type == 'category' ? $title.' - ' : ''}}Blogs</h2>
           <p>
             Travel Guides, Adventure Tips & Insider Knowledge
             <br>
@@ -24,7 +28,7 @@
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          @if(count($featured) > 0)
+          @if(!empty($featured) && count($featured) > 0)
             <div class="row g-3">
 
               <div class="col-lg-4 d-flex flex-column gap-3">
@@ -77,7 +81,9 @@
                     <p>Search by destination or topic to find exactly what you need.</p>
                     <ul>
                       @foreach($categories as $val)
-                        <li><a href="">{{$val->name}}</a></li>
+                        @if(count($val->blogs) > 0)
+                          <li><a href="{{URL::to('/blogs/'.$val->slug)}}">{{$val->name}} <small>({{count($val->blogs)}})</small></a></li>
+                        @endif
                       @endforeach
                     </ul>
                   </div>
@@ -123,6 +129,10 @@
 
                           
                         </div>
+                      </div>
+                      <div class="col-lg-12 blog-pagination">
+                        <br>
+                        {!! $data->withQueryString()->links('pagination::bootstrap-5') !!}
                       </div>
                     </div>
                   </div>

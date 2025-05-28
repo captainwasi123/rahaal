@@ -1,5 +1,9 @@
 @extends('web.includes.master')
-
+@section('metaAddition')
+@if(!empty($nofollow))
+<meta name="robots" content="noindex, follow">
+@endif
+@endsection
 @section('content')
 @php
     $firstBlogChunk = $data->slice(0, 3);
@@ -38,7 +42,9 @@
                     <p>Explore the destinations I've filmed and be inspired to discover them for yourself.</p>
                     <ul>
                       @foreach($categories as $val)
-                        <li><a href="">{{$val->name}}</a></li>
+                        @if(count($val->blogs) > 0)
+                          <li><a href="{{URL::to('/blogs/'.$val->slug)}}">{{$val->name}} <small>({{count($val->blogs)}})</small></a></li>
+                        @endif
                       @endforeach
                     </ul>
                   </div>

@@ -573,6 +573,27 @@ a > * {
     margin-bottom: 4px !important;
     margin-top: 8px !important;
 }
+.blog-pagination p {
+    margin: 0;
+}
+.blog-pagination .pagination {
+    margin: 0;
+}
+.blog-pagination .page-link {
+    color: #0f7dc2;
+}
+.blog-pagination .active>.page-link, .blog-pagination .page-link.active {
+    background-color: #0f7dc2;
+    border-color: #0f7dc2;
+    color: #fff;
+}
+.blog-pagination .pagination .page-item {
+    margin-left: 10px;
+    padding: 0;
+}
+.blog-pagination .pagination .page-item .page-link {
+    padding: 2px 17px;
+}
 
 
 

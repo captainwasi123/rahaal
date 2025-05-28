@@ -8,6 +8,8 @@ use App\Models\SnippetCode;
 use App\Models\MetaTags;
 use App\Models\Services;
 use App\Models\Categories;
+use App\Models\Playlists;
+use App\Models\TopStories;
 
 class ViewServiceProvider extends ServiceProvider
 {
@@ -48,6 +50,8 @@ class ViewServiceProvider extends ServiceProvider
                                                                 ->orwhere('page_url', $data['actual_link']);
                                                 })->get();
 
+            $data['popular_series'] = Playlists::where('popular', '1')->first();
+            $data['top_stories'] = TopStories::all();
             $data['header_services'] = Services::where('parent_id', '0')->get();
             $data['blog_categories'] = Categories::all();
             
