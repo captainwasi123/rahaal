@@ -594,7 +594,13 @@ a > * {
 .blog-pagination .pagination .page-item .page-link {
     padding: 2px 17px;
 }
-
+.blog-card .blog-card-head ul li.active a {
+    background-color: #0f7dc2;
+    color: #fff;
+}
+.blog-card .blog-card-head ul li.active a small {
+    color: #e6e6e6;
+}
 
 
 

@@ -82,7 +82,7 @@
                     <ul>
                       @foreach($categories as $val)
                         @if(count($val->blogs) > 0)
-                          <li><a href="{{URL::to('/blogs/'.$val->slug)}}">{{$val->name}} <small>({{count($val->blogs)}})</small></a></li>
+                          <li class="{{!empty($type) && $type == 'category' && $title == $val->name ? 'active' : ''}}"><a href="{{URL::to('/blogs/'.$val->slug)}}">{{$val->name}} <small>({{count($val->blogs)}})</small></a></li>
                         @endif
                       @endforeach
                     </ul>
