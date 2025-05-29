@@ -601,7 +601,26 @@ a > * {
 .blog-card .blog-card-head ul li.active a small {
     color: #e6e6e6;
 }
-
+.blog-content table {
+    width: 100%;
+    text-align: left;
+    border: 1px solid;
+}
+.blog-content table tr td p {
+    text-align: left !important;
+    margin: 0 !important;
+}
+.blog-content table tr td{
+    background-color: #ffeed69c;
+    border: 1px solid;
+}
+.blog-content table tr td p span {
+    font-style: italic !important;
+}
+.blog-content .table {
+    padding: 8px;
+    background-color: #ffeed69c;
+}
 
 
 
