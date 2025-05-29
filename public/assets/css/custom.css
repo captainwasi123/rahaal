@@ -605,7 +605,7 @@ a > * {
     color: #e6e6e6;
 }
 .blog-content table {
-    width: 100%;
+    width: 100% !important;
     text-align: left;
     border: 1px solid;
 }
