@@ -46,7 +46,7 @@
   <ul>
     @foreach($all_playlists as $val)
       @if(count($val->episodes) > 0)
-        <li><a href="{{$val->visit_link}}">{{$val->title}} <small>({{count($val->episodes)}})</small></a></li>
+        <li><a href="{{$val->visit_link}}" target="_blank">{{$val->title}} <small>({{count($val->episodes)}})</small></a></li>
       @endif
     @endforeach
   </ul>
