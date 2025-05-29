@@ -624,7 +624,16 @@ a > * {
     padding: 8px;
     background-color: #ffeed69c;
 }
-
+.blog-cat ul li {
+    list-style-type: none;
+    background-color: #d1d1d178;
+    margin-bottom: 4px;
+    padding: 2px 8px;
+}
+.blog-cat ul {
+    padding: 0;
+    margin: 0;
+}
 
 
 /* Episodes */

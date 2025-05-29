@@ -34,6 +34,26 @@
 </div>
 
 
+
+<div class="aside-ad">
+  <div class="ad-item">
+    <img src="{{URL::to('public/your_ad_here.png')}}">
+  </div>
+</div>
+
+<div class="popular-section blog-cat">
+  <h5 class="text-thorn">Playlists</h5>
+  <ul>
+    @foreach($all_playlists as $val)
+      @if(count($val->episodes) > 0)
+        <li><a href="{{$val->visit_link}}">{{$val->title}} <small>({{count($val->episodes)}})</small></a></li>
+      @endif
+    @endforeach
+  </ul>
+
+</div>
+
+
 <div class="aside-ad">
   <div class="ad-item">
     <img src="{{URL::to('public/your_ad_here.png')}}">
@@ -54,5 +74,24 @@
       </div>
     </a>
   @endforeach
+
+</div>
+
+
+<div class="aside-ad">
+  <div class="ad-item">
+    <img src="{{URL::to('public/your_ad_here.png')}}">
+  </div>
+</div>
+
+<div class="popular-section blog-cat">
+  <h5 class="text-thorn">Categories</h5>
+  <ul>
+    @foreach($blog_categories as $val)
+      @if(count($val->blogs) > 0)
+        <li><a href="{{URL::to('/blogs/'.$val->slug)}}">{{$val->name}} <small>({{count($val->blogs)}})</small></a></li>
+      @endif
+    @endforeach
+  </ul>
 
 </div>
