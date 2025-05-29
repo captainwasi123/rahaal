@@ -74,7 +74,7 @@ class BlogController extends Controller
                     $mt = new MetaTags;
                     $mt->url = $meta_url;
                     $mt->title = $data['meta_title'];
-                    $mt->keywords = $data['tags'];
+                    $mt->keywords = '';
                     $mt->description = $data['short_description'];
                     $mt->created_by = Auth::guard('admin')->id();
                     $mt->save();
