@@ -81,6 +81,12 @@
                 <br>
                 <strong>Leave a comment</strong> and share your thoughts—I’d love to hear from you.
               </p>
+
+
+              
+              <div class="row g-3 mt-4">
+                @include('web.includes.elements.topStories')
+              </div>
             </div>
 
             <div class="col-lg-3 d-flex flex-column gap-3">
@@ -92,9 +98,6 @@
             </div>
           </div>
 
-          <div class="row g-3 mt-4">
-            @include('web.includes.elements.topStories')
-          </div>
 
           <div class="row g-3 mt-4">
             @include('web.includes.elements.v-ad')

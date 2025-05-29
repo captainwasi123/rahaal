@@ -51,7 +51,7 @@ class ViewServiceProvider extends ServiceProvider
                                                 })->get();
 
             $data['popular_series'] = Playlists::where('popular', '1')->first();
-            $data['top_stories'] = TopStories::all();
+            $data['top_stories'] = TopStories::limit(6)->get();
             $data['header_services'] = Services::where('parent_id', '0')->get();
             $data['blog_categories'] = Categories::all();
             
