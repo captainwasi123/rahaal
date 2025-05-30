@@ -5,8 +5,8 @@
 
     RewriteEngine On
 
-    RewriteCond %{HTTP_HOST} ^www.datamysite.com [NC]
-    RewriteRule ^(.*)$ http://datamysite.com/$1 [L,R=301]
+    RewriteCond %{HTTP_HOST} ^www.rahaal-theexplorer.com [NC]
+    RewriteRule ^(.*)$ http://rahaal-theexplorer.com/$1 [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
