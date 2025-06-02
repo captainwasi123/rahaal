@@ -34,7 +34,9 @@
             <h4>Blog Categories</h4>
             <ul>
               @foreach($blog_categories as $val)
-                <li><a href="{{URL::to('/'.$val->slug)}}">{{$val->name}}</a></li>
+                @if(count($val->blogs) > 0)
+                  <li><a href="{{URL::to('/blogs/'.$val->slug)}}">{{$val->name}} <small>({{count($val->blogs)}})</small></a></li>
+                @endif
               @endforeach
             </ul>
           </div>
@@ -49,7 +51,7 @@
 
             
             <!-- <p class="mt-4"><strong>Phone:</strong> <span>+971 00 0000000</span></p> -->
-            <p class="mt-4"><strong>Email:</strong> <span>contact@rahaal-theexplorer.com</span></p>
+            <p class="mt-4"><a href="mailto:contact@rahaal-theexplorer.com"><strong>Email:</strong> <span>contact@rahaal-theexplorer.com</span></a></p>
           </div>
 
         </div>
