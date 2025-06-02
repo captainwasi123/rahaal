@@ -30,6 +30,8 @@
   <meta name="twitter:image" content="{{empty($og_img) ? URL::to('/public/youtube-cover.jpg') : $og_img}}" />
   <meta name="twitter:site" content="@RahaalTheExplorer" />
 
+  <link rel="canonical" href="{{@URL::current()}}" />
+  
   <!-- Favicons -->
   <link href="{{URL::to('/public')}}/favicon.png" rel="icon">
   <link href="{{URL::to('/public')}}/favicon.png" rel="apple-touch-icon">
