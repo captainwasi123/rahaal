@@ -20,10 +20,7 @@
     </nav>
 
     <div class="header-social-links">
-      <a href="https://www.youtube.com/@rahaal_01" target="_blank"><i class="bi bi-youtube"></i></a>
-      <a href="https://www.instagram.com/rahaal_01" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.facebook.com/rahaal01" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.tiktok.com/@rahaal_01" target="_blank"><i class="bi bi-tiktok"></i></a>
+      <button type="button"  class="header-search"><i class="bi bi-search"></i> Search</button>
     </div>
 
   </div>

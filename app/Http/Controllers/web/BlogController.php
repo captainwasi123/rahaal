@@ -31,6 +31,13 @@ class BlogController extends Controller
         return view('web.blogs.index')->with($data);
     }
 
+    public function search($val){
+
+        $data['data'] = Blogs::where('heading', 'LIKE', '%'.$val.'%')->orderBy('created_at', 'desc')->limit(4)->get();
+
+        return view('web.includes.elements.search')->with($data);
+    }
+
     public function blogCategory($slug){
         $data['nav'] = 'blogs';
         if(!empty($_GET['page'])){

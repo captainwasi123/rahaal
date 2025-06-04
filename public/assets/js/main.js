@@ -1,13 +1,26 @@
-/**
-* Template Name: Kelly
-* Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+var host = $("meta[name='host']").attr("content");  
 
 (function() {
   "use strict";
+
+
+  $('.header-search').click(function(){
+    $('#searchmodal').modal('show');
+  });
+
+   $('#searchmodal .close').click(function(){
+    $('#searchmodal').modal('hide');
+  });
+
+
+   $('#searchfield').keyup(function(){
+    var val = $(this).val();
+    $.get(host+"/blog/search/"+val, function(data, status){
+      $('#searchmodal .blog-card-body').html(data);
+    });
+  });
+
+
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down

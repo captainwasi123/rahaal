@@ -31,7 +31,7 @@
 	        <div class="row gy-4 justify-content-center">
 	          <div class="col-lg-6">
 	          	<div class="about-img-div box-shadow">
-		            <img src="{{URL::to('/public/about.jpg')}}" class="img-fluid" alt="About me">
+		            <img src="{{URL::to('/public/web-img/home.jpg')}}" class="img-fluid" alt="About me">
 		        </div>
 	          </div>
 	          <div class="col-lg-6 content">

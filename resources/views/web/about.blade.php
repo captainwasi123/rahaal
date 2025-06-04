@@ -24,7 +24,7 @@
 
 	        <div class="row gy-4 justify-content-center">
 	          <div class="col-lg-4">
-	            <img src="{{URL::to('/public/about.jpg')}}" class="img-fluid" alt="">
+	            <img src="{{URL::to('/public/web-img/about-me.jpg')}}" class="img-fluid" alt="About me">
 	          </div>
 	          <div class="col-lg-8 content">
 	            <h2>Who I Am</h2>

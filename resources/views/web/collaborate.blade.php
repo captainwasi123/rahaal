@@ -25,7 +25,7 @@
 
 	        <div class="row gy-4 justify-content-center">
 	          <div class="col-lg-6">
-	          	<img src="{{URL::to('/public')}}/about.jpg" class="collab-img" alt="">
+	          	<img src="{{URL::to('/public')}}/web-img/collab1.jpg" class="collab-img" alt="Collab with Rahaal">
 	          </div>
 	          <div class="col-lg-6 content">
 	          	<h2>Why Collaborate With Us?</h2>
@@ -73,7 +73,7 @@
 				</ul>
 	          </div>
 	          <div class="col-lg-6">
-	          	<img src="{{URL::to('/public')}}/about.jpg" class="collab-img2" alt="">
+	          	<img src="{{URL::to('/public')}}/web-img/collab2.jpg" class="collab-img2" alt="collab with Rahaal">
 	          </div>
 	        </div>
 

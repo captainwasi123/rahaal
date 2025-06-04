@@ -1,4 +1,5 @@
 <!-- Vendor JS Files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="{{URL::to('/public')}}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="{{URL::to('/public')}}/assets/vendor/php-email-form/validate.js"></script>
 <script src="{{URL::to('/public')}}/assets/vendor/aos/aos.js"></script>
