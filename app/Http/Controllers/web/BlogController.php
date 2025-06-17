@@ -41,7 +41,7 @@ class BlogController extends Controller
     public function blogCategory($slug){
         $data['nav'] = 'blogs';
         if(!empty($_GET['page'])){
-            $data['tags'] = '1';
+            $data['nofollow'] = '1';
         }
         $data['categories'] = Categories::all();
         $category = Categories::where('slug', $slug)->first();
