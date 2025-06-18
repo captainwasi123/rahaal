@@ -63,7 +63,9 @@ class BlogController extends Controller
         $data['nav'] = 'blogs';
         
         $data['data'] = Blogs::where('slug', $blog_slug)->where('status', '1')->first();
-
+        if(empty($data['data']->id)){
+            return redirect(route('blogs'));
+        }
         $data['og_img'] = URL::to('public/storage/blogs/'.$data['data']->banner);
         $data['popular_series'] = Playlists::where('popular', '1')->first();
         $data['top_stories'] = TopStories::all();
