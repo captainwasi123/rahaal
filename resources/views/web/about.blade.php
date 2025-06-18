@@ -36,7 +36,7 @@
 	              <div class="col-lg-8">
 	                <ul>
 	                  <li><strong>Birthday:</strong> <span>20 Nov 1994</span></li>
-	                  <li><strong>Website:</strong> <a href="www.rahaal-theexplorer.com"><span>www.rahaal-theexplorer.com</span></a></li>
+	                  <li><strong>Website:</strong> <a href="https://rahaal-theexplorer.com"><span>www.rahaal-theexplorer.com</span></a></li>
 	                  <li><strong>Email:</strong> <a href="mailto:contact@rahaal-theexplorer.com"><span>contact@rahaal-theexplorer.com</span></a></li>
 	                  <li><strong>City:</strong> <span>Dubai (Originally from Pakistan)</span></li>
 	                  <li><strong>Freelance/Collabs:</strong> <span>Open to brand partnerships & creative collaborations</span></li>
