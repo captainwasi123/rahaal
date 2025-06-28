@@ -11,4 +11,6 @@
 <script src="{{URL::to('/public')}}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
 <!-- Main JS File -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{URL::to('/public')}}/assets/js/main.js"></script>
+<script src="{{URL::to('/public')}}/assets/js/enquiry.js"></script>
