@@ -55,7 +55,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="http://localhost/rahaal/public/logo-black.png" alt="Rahaal logo" height="60px">
+            <img src="https://rahaal-theexplorer.com/public/logo-black.png" alt="Rahaal logo" height="60px">
             <hr>
             <div class="header-title">Thank You for Contacting Us!</div>
         </div>
