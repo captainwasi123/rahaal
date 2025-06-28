@@ -27,7 +27,7 @@ class EnquiryController extends Controller
 
 
         $mail = Mailer::sendMail('Thank You for Contacting Me | Rahaal - The Explorer', array($data['email']), 'Rahaal', 'web.emails.response', $data);
-        $mail = Mailer::sendMail('#'.$n->id.' - New Inquiry Received! | Rahaal - The Explorer', ['rahaal.seo@gmail.com'], 'Rahaal - The Explorer', 'web.emails.enquiry', $data);
+        $mail = Mailer::sendMail('#'.$n->id.' - New Inquiry Received! | Rahaal - The Explorer', ['osamausmani.cell@gmail.com ', 'rahaal.seo@gmail.com'], 'Rahaal - The Explorer', 'web.emails.enquiry', $data);
 
 
         $response['success'] = 'success';
