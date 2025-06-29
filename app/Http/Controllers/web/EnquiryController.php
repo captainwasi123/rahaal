@@ -38,26 +38,29 @@ class EnquiryController extends Controller
         return response()->json($response, 200);
     }
 
-    public function enquiryHelp(HelpRequest $request){
+    public function enquiryCollab(HelpRequest $request){
         $data = $request->all();
         $response = [];
         $status = 200;
 
+        $data['subject'] = 'Display Ads & Collaboration';
 
         $n = new Enquiry;
         $n->name = $data['name'];
         $n->email = $data['email'];
         $n->phone = $data['phone'];
+        $n->subject = $data['subject'];
+        $n->description = $data['description'];
         $n->save();
 
 
 
-        $mail = Mailer::sendMail('Thank You for Contacting Us | DMS', array($data['email']), 'DMS', 'web.emails.response', $data);
-        $mail = Mailer::sendMail('#'.$n->id.' - New Inquiry Received! | DMS', ['waseem@datamysite.com', 'satish.b@datamysite.com', 'abhishek@datamysite.com'], 'DMS', 'web.emails.enquiry', $data);
+        $mail = Mailer::sendMail('Thank You for Contacting Me | Rahaal - The Explorer', array($data['email']), 'Rahaal', 'web.emails.response', $data);
+        $mail = Mailer::sendMail('#'.$n->id.' - New Inquiry Received! (Collab) | Rahaal - The Explorer', ['osamausmani.cell@gmail.com ', 'rahaal.seo@gmail.com'], 'Rahaal - The Explorer', 'web.emails.enquiry', $data);
 
 
         $response['success'] = 'success';
-        $response['message'] = 'Success! You successfully subscribe our newsletter.';
+        $response['message'] = 'Success! You successfully Submitted.';
 
 
 

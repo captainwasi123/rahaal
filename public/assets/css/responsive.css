@@ -256,6 +256,9 @@
 	.hero .btn-get-started:hover{
 		box-shadow: none;
 	}
+	#newsletterModal .col-lg-6:first-child{
+	    border-right:0;
+	}
 }
 @media (max-width: 390px) {
 

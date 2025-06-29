@@ -15,15 +15,6 @@ class EnquiryRequest extends FormRequest
             'description' => ['required', 'string', function ($attribute, $value, $fail) {
 
                 $keywords = [
-                                'CV', 
-                                'Resume', 
-                                'Job application',
-                                 'Employment request',
-                                 'Work visa',
-                                 'Internship',
-                                 'Career opportunity',
-                                 'Cover letter',
-                                 'Hiring inquiry',
 
                                  'Loan',
                                  'Mortgage',
@@ -50,19 +41,6 @@ class EnquiryRequest extends FormRequest
                                  'Visa assistance',
                                  'Immigration',
                                  'Lottery',
-                                 'Social media',
-
-                                 'Promotion request',
-                                 'Apply for a job',
-                                'Career opportunity',
-                                'Fresh graduate',
-                                'HR department',
-                                'Recruitment request',
-                                'Open positions',
-                                'Work from home',
-                                'Part-time job',
-                                'Full-time job',
-                                'Work visa',
 
                                 'loan',
                                 'loans',
@@ -115,6 +93,7 @@ class EnquiryRequest extends FormRequest
                                 'Logo design',
                                 'Graphic design',
                                 'Free email',
+                                'script.google'
                             ];
 
                 foreach ($keywords as $keyword) {

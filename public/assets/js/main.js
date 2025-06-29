@@ -4,6 +4,13 @@ var host = $("meta[name='host']").attr("content");
   "use strict";
 
 
+ /* setTimeout(function(){
+    $('#newsletterModal').modal('show');
+  }, 1000);*/
+  $('#newsletterModal .close').click(function(){
+    $('#newsletterModal').modal('hide');
+  });
+  
   $('.header-search').click(function(){
     $('#searchmodal').modal('show');
   });

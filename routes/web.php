@@ -31,6 +31,7 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
 
     //Enquiry
     Route::post('/enquiry', 'EnquiryController@enquiry')->name('enquiry.submit');
+    Route::post('/enquiry-collab', 'EnquiryController@enquiryCollab')->name('enquiry.collab.submit');
 
     //Aside
     Route::get('/get-aside', 'WebController@getAside');

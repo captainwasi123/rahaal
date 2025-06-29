@@ -10,7 +10,23 @@
 <script src="{{URL::to('/public')}}/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="{{URL::to('/public')}}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
+<script src="{{URL::to('/public')}}/assets/input-master/js/intlTelInputWithUtils.js"></script>
 <!-- Main JS File -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{URL::to('/public')}}/assets/js/main.js"></script>
 <script src="{{URL::to('/public')}}/assets/js/enquiry.js"></script>
+
+<script>
+
+const inputh = document.querySelector("#phone-field2");
+const hiddenInputh = document.querySelector("#fullphone-field2");
+const itih = window.intlTelInput(inputh, {
+  initialCountry: "ae",
+  separateDialCode: true,
+});
+
+inputh.addEventListener('keyup', () => {
+  const fullNumber = itih.getNumber();
+  hiddenInputh.value = fullNumber;
+});
+</script>

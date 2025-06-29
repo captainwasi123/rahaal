@@ -37,7 +37,7 @@
 
 <div class="aside-ad">
   <div class="ad-item">
-    <img src="{{URL::to('public/your_ad_here.png')}}">
+    <a href="{{route('collaborate')}}"><img src="{{URL::to('public/your_ad_here.png')}}" alt="Ads"></a>
   </div>
 </div>
 
@@ -56,7 +56,7 @@
 
 <div class="aside-ad">
   <div class="ad-item">
-    <img src="{{URL::to('public/your_ad_here.png')}}">
+    <a href="{{route('collaborate')}}"><img src="{{URL::to('public/your_ad_here.png')}}" alt="Ads"></a>
   </div>
 </div>
 
@@ -80,7 +80,7 @@
 
 <div class="aside-ad">
   <div class="ad-item">
-    <img src="{{URL::to('public/your_ad_here.png')}}">
+    <a href="{{route('collaborate')}}"><img src="{{URL::to('public/your_ad_here.png')}}" alt="Ads"></a>
   </div>
 </div>
 

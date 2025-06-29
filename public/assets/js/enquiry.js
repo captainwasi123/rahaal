@@ -73,17 +73,16 @@ $(document).on("submit", "#enquiry-form", function (event) {
     event.preventDefault();
 });
 
-
-$(document).on("submit", "#enquiry-help-form", function (event) {
+$(document).on("submit", "#enquiry-form-collab", function (event) {
 
     var form = $(this);
-    var formData = new FormData($("#enquiry-help-form")[0]);
+    var formData = new FormData($("#enquiry-form-collab")[0]);
 
     let isValid = true;
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Email validation
-    let email = $(".help-email").val().trim();
+    let email = $(".aside-email").val().trim();
     if (email === "" || !emailPattern.test(email)) {
         Toast.fire({
             icon: "warning",
@@ -96,7 +95,7 @@ $(document).on("submit", "#enquiry-help-form", function (event) {
 
     if (isValid) {
         $(".errors").css({ display: "none" });
-        $(".help-loading").css({opacity:"1"});
+        $(".loading").css({display:"block"});
         $.ajax({
             type: "POST",
             url: form.attr("action"),
@@ -127,10 +126,10 @@ $(document).on("submit", "#enquiry-help-form", function (event) {
                     title: data.message,
                 });
             }
-            $(".help-loading").css({opacity:"0"});
+            $(".loading").css({display:"none"});
         })
         .fail(function (e) {
-            $(".help-loading").css({opacity:"0"});
+            $(".loading").css({display:"none"});
             Toast.fire({
                 icon: "warning",
                 title: 'Something went wrong! Try again later.',
@@ -142,13 +141,13 @@ $(document).on("submit", "#enquiry-help-form", function (event) {
 
 
 
+
 //Newsletter Popup
-/*document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const popupKey = "popup_shown_time"; 
 
     function showPopup() {
-        $('#newsletter-modal').addClass('show');
-        $('#newsletter-modal').css({display: 'block'});
+        $('#newsletterModal').modal('show');
         
         localStorage.setItem(popupKey, new Date().getTime()); // Store timestamp
     }
@@ -161,7 +160,7 @@ $(document).on("submit", "#enquiry-help-form", function (event) {
     }
 
     if (!hasSeenPopupToday()) {
-        setTimeout(showPopup, 10000); // Show popup after 20 seconds
+        setTimeout(showPopup, 8000); // Show popup after 20 seconds
     }
 
-});*/
+});

@@ -19,15 +19,13 @@
 				View my portfolio of past work and visual storytelling.
 	        	
 	        </p>
+	        <hr>
 	      </div><!-- End Section Title -->
 
 	      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
 	        <div class="row gy-4 justify-content-center">
-	          <div class="col-lg-6">
-	          	<img src="{{URL::to('/public')}}/web-img/collab1.jpg" class="collab-img" alt="Collab with Rahaal">
-	          </div>
-	          <div class="col-lg-6 content">
+	          <div class="col-lg-7 content">
 	          	<h2>Why Collaborate With Us?</h2>
 		        <p>
 		        	Let’s Create Stories That Matter — Stories That Connect, Inspire, and Leave a Lasting Impact.	        	
@@ -42,6 +40,28 @@
 					<li>Collaborations with local businesses, causes, and brands</li>
 					<li>Tailored storytelling for your message</li>
 				</ul>
+	          </div>
+	          <div class="col-lg-5">
+	          	 <div class="aside-form">
+                      <h3>Advertise with Rahaal</h3>
+                      <h4>Reach real travelers, fast.</h4>
+                      <form action="{{route('enquiry.collab.submit')}}" id="enquiry-form-collab">
+                          @csrf
+                          <input type="text" name="name" placeholder="Name" class="form-control" required>
+                          
+                          <input type="tel" name="mailphone" id="phone-field2" class="form-control" required>
+        									<input type="hidden" name="phone" id="fullphone-field2" required="">
+
+                          <input type="email" name="email" placeholder="Email" class="form-control aside-email" required>
+                          
+                          <input type="hidden" name="service" value="SEO Services">
+                          
+                          <textarea class="form-control" name="description" rows="4" placeholder="Describe Your Requirement" required></textarea>
+                          
+                          <button class="btn btn-theme">Submit Your Enquiry</button>
+                          <div class="loading"><img src="{{URL::to('/public/loader-gif.gif')}}" width="80px" class="newsletter-loader"></div>
+                      </form>
+                  </div>
 	          </div>
 	        </div>
 
@@ -82,8 +102,6 @@
 	    </section><!-- /Stats Section -->
 
 	   	@include('web.includes.elements.youtube-statistics')
-
-	    @include('web.includes.elements.lets-connect')
 
 	  </main>
 @endsection

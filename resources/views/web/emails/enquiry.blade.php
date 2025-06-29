@@ -66,6 +66,9 @@
             </p>
             <p style="margin-top:0;">
                 <strong>Name: </strong>{{$name}}<br>
+                @if(!empty($phone))
+                    <strong>Phone:</strong>{{$phone}}<br>
+                @endif
                 <strong>Email: </strong>{{$email}}<br>
                 <strong>Subject: </strong>{{$subject}}<br>
                 @if(!empty($description))
