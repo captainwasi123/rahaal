@@ -15,14 +15,6 @@ class MainController extends Controller
     public function index(){
         $data['menu'] = 'dashboard';
 
-        $data['main_services'] = Services::where('parent_id', '')->count();
-        $data['sub_services'] = Services::where('parent_id', '!=', '')->count();
-
-        $data['blogs'] = Blogs::count();
-
-        $data['newsletter'] = Newsletter::count();
-        $data['enquiries'] = Enquiry::where('service','!=', '')->count();
-        $data['call_back'] = Enquiry::where('service', null)->count();
 
         return view('admin.dashboard')->with($data);
     }
