@@ -34,8 +34,8 @@
   <link rel="canonical" href="{{@URL::current()}}" />
   
   <!-- Favicons -->
-  <link href="{{URL::to('/public')}}/favicon.png" rel="icon">
-  <link href="{{URL::to('/public')}}/favicon.png" rel="apple-touch-icon">
+  <link href="{{URL::to('/public')}}/efavicon.png" rel="icon">
+  <link href="{{URL::to('/public')}}/efavicon.png" rel="apple-touch-icon">
 
   @include('web.includes.style')
 
