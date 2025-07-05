@@ -996,3 +996,8 @@ input#phone-field2::placeholder {
 #newsletterModal .col-lg-6:first-child{
     border-right: 6px solid #fff;
 }
+#searchmodal .newsletter-loader {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0px;
+}

@@ -34,8 +34,11 @@ class BlogController extends Controller
     public function search($val){
 
         $data['data'] = Blogs::where('heading', 'LIKE', '%'.$val.'%')->orderBy('created_at', 'desc')->limit(4)->get();
-
-        return view('web.includes.elements.search')->with($data);
+        if(count($data['data']) == 0){
+            return 'not-found';
+        }else{
+            return view('web.includes.elements.search')->with($data);
+        }
     }
 
     public function blogCategory($slug){

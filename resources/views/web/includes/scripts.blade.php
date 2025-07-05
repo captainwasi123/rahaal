@@ -16,17 +16,3 @@
 <script src="{{URL::to('/public')}}/assets/js/main.js"></script>
 <script src="{{URL::to('/public')}}/assets/js/enquiry.js"></script>
 
-<script>
-
-const inputh = document.querySelector("#phone-field2");
-const hiddenInputh = document.querySelector("#fullphone-field2");
-const itih = window.intlTelInput(inputh, {
-  initialCountry: "ae",
-  separateDialCode: true,
-});
-
-inputh.addEventListener('keyup', () => {
-  const fullNumber = itih.getNumber();
-  hiddenInputh.value = fullNumber;
-});
-</script>

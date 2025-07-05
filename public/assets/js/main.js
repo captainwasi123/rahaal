@@ -1,5 +1,4 @@
-var host = $("meta[name='host']").attr("content");  
-
+const host = $("meta[name='host']").attr("content");  
 (function() {
   "use strict";
 
@@ -22,11 +21,18 @@ var host = $("meta[name='host']").attr("content");
 
    $('#searchfield').keyup(function(){
     var val = $(this).val();
-    $.get(host+"/blog/search/"+val, function(data, status){
-      $('#searchmodal .blog-card-body').html(data);
-    });
+    if (val.length !== 0) {
+      $('#searchmodal .blog-card-body').html('<div class="newsletter-loader"><img src="'+host+'/public/loader-gif.gif" width="150px"></div>');
+      
+      $.get(host+"/blog/search/"+val, function(data, status){
+        if(data == 'not-found'){
+          $('#searchmodal .blog-card-body').html('<div class="newsletter-loader"><img src="'+host+'/public/not-found.png" width="350px"></div>');
+        }else{
+          $('#searchmodal .blog-card-body').html(data);
+        }
+      });
+    }
   });
-
 
 
   /**

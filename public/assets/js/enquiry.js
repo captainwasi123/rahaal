@@ -1,4 +1,3 @@
-var host = $("meta[name='home_url']").attr("content");
 var Toast = Swal.mixin({
   toast: true,
   position: 'top-end',

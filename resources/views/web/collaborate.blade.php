@@ -105,3 +105,19 @@
 
 	  </main>
 @endsection
+@section('addScript')
+	<script>
+
+	const inputh2 = document.querySelector("#phone-field2");
+	const hiddenInputh2 = document.querySelector("#fullphone-field2");
+	const itih2 = window.intlTelInput(inputh2, {
+	  initialCountry: "ae",
+	  separateDialCode: true,
+	});
+
+	inputh2.addEventListener('keyup', () => {
+	  const fullNumber = itih2.getNumber();
+	  hiddenInputh.value = fullNumber;
+	});
+	</script>
+@endsection
