@@ -15,7 +15,7 @@
             <div class="blog-author">
                 <span>{{date('M d, Y', strtotime($data->created_at))}}</span>
                 <div>
-                    <img src="{{URL::to('public/dragon-avatar.jpg')}}">
+                    <img src="{{URL::to('public/blog-author2.jpg')}}" alt="Auther - Rahaal The Explorer">
                 </div>
                 <span>{{$data->author->name}}</span>
             </div>

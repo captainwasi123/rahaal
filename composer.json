@@ -7,10 +7,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "dymantic/laravel-instagram-feed": "^3.3",
         "laravel/framework": "^11.31",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
+        "phpfastcache/phpfastcache": "^9.2",
         "phpmailer/phpmailer": "^6.9",
+        "raiym/instagram-php-scraper": "^0.5.0",
         "spatie/laravel-sitemap": "7.2.0"
     },
     "require-dev": {
