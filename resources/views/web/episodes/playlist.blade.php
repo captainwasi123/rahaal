@@ -18,15 +18,7 @@
                 <img src="{{URL::to('public/youtube-cover.jpg')}}" >
                 <div class="blog-header-overlay"></div>
             </div>
-            <!-- <div class="episode-author">
-                <div>
-                    <img src="{{URL::to('public/yt-dp.jpg')}}">
-                </div>
-                <div>
-                    <h4>Rahaal - The Explorer</h4>
-                    <a href="">Youtube Channel <i class="bi bi-box-arrow-up-right"></i></a>
-                </div>
-            </div> -->
+          
         </div><!-- End Section Title -->
 
       </section><!-- /About Section -->
