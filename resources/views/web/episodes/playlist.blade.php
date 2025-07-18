@@ -8,21 +8,17 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Watch the latest episodes now</h2>
+            <h2>{{$playlist->title}} - Episodes</h2>
             <p>
-                Real Stories. Unfiltered Journeys. Visually Told.
-                <br>
-                Each episode is more than just a travel vlog—it's a cinematic story blending raw landscapes, local characters, and immersive experiences.
-                <br>
-                Here, you'll find full travel episodes, expedition series, behind-the-scenes footage, and deep dives into the stories that rarely make it to the spotlight.
+                {{$playlist->description}}
 
                 <br><br>
             </p>
-            <div class="blog-header">
+            <div class="blog-header blog-header2">
                 <img src="{{URL::to('public/youtube-cover.jpg')}}" >
                 <div class="blog-header-overlay"></div>
             </div>
-            <div class="episode-author">
+            <!-- <div class="episode-author">
                 <div>
                     <img src="{{URL::to('public/yt-dp.jpg')}}">
                 </div>
@@ -30,7 +26,7 @@
                     <h4>Rahaal - The Explorer</h4>
                     <a href="">Youtube Channel <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
-            </div>
+            </div> -->
         </div><!-- End Section Title -->
 
       </section><!-- /About Section -->
@@ -43,23 +39,14 @@
           <div class="row g-3">
 
             <div class="col-lg-9">
-              @foreach($playlists as $val)
-                @if(count($val->episodes) !== 0)
-                  @php $s = 1; @endphp
-                  <div class="episode-playlist">
-                      <div class="playlist-heading">
-                          <a href="{{route('episodes.playlist', $val->slug)}}"><h3 class="text-thorn">{{$val->title}}</h3></a>
-                          <a href="{{$val->visit_link}}">Open on Youtube  <i class="bi bi-box-arrow-up-right"></i></a>
-                      </div>
-                      <br>
+                  <div class="episode-playlist episode-playlist2">
                       <div class="playlist-data blog-portrait-card row">
-                        @foreach($val->episodes_desc as $ep)
-                          @if($s <= 6)
+                        @foreach($playlist->episodes_desc as $ep)
                           <div class="col-lg-4">
                             <a href="{{$ep->visit_link}}" target="_blank">
                               <div class="popular-card blog-card-2 flex-grow-1">
                                 <div class="card-image">
-                                  <img src="{{URL::to('public/storage/episodes/'.$ep->image)}}" alt="{{$val->img_alt}}">
+                                  <img src="{{URL::to('public/storage/episodes/'.$ep->image)}}" alt="{{$ep->title}}">
                                 </div>
                                 <div class="popular-text">
                                   <h6 class="mt-2 mmb-5">{{$ep->title}}</h6>
@@ -68,25 +55,20 @@
                               </div>
                             </a>
                           </div>
-                          @php $s++; @endphp
-                          @endif
                         @endforeach
                       </div>
                       <br>
                       <img class="ending-line" src="{{URL::to('public/ending-line.png')}}">
                   </div>
-                @endif
-              @endforeach
-              <p class="text-center">
-                <br>
-                <strong>Leave a comment</strong> and share your thoughts—I’d love to hear from you.
-              </p>
 
+                  <div class="blog-content">
+                      {!! $playlist->description_long !!}
+                  </div>
 
-              
-              <div class="row g-3 mt-4">
-                @include('web.includes.elements.topStories')
-              </div>
+                  
+                  <div class="row g-3 mt-4">
+                    @include('web.includes.elements.topStories')
+                  </div>
             </div>
 
             <div class="col-lg-3 d-flex flex-column gap-3">

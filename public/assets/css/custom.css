@@ -56,7 +56,12 @@
 a > * {
     color: #696969;
 }
-
+a > h3 {
+    color: #000;
+}
+a > h3:hover {
+    color: #0f7dc2;
+}
 
 .padding-h-6 {
     padding: 0 6px;
@@ -500,6 +505,12 @@ a > * {
     height: 125px;
 }
 
+.blog-header2{
+    height: 235px !important; 
+}
+.blog-header2 > img{
+    height: 235px !important;
+}
 .blog-share {
     background-color: #e9e8e6;
     margin-top: 14px;
@@ -677,6 +688,9 @@ a > * {
 }
 .episode-playlist{
     margin-top: 25px;
+}
+.episode-playlist2{
+    margin-top: -14px !important;
 }
 .ending-line {
     width: 250px;

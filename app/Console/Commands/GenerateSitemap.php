@@ -10,6 +10,7 @@ use App\Models\Services;
 use App\Models\Categories;
 use App\Models\Blogs;
 use App\Models\BlogTags;
+use App\Models\Playlists;
 
 class GenerateSitemap extends Command
 {
@@ -43,6 +44,13 @@ class GenerateSitemap extends Command
             $sitmap->add(Url::create("/reach-out")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
             $sitmap->add(Url::create("/yt-episodes")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
             $sitmap->add(Url::create("/experience")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
+
+        //Playlists
+            Playlists::get()->each(function (Playlists $pl) use ($sitmap) {
+                if(count($pl->episodes) > 0){
+                    $sitmap->add(Url::create("/playlist/".$pl->slug)->setPriority(0.51)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setLastModificationDate(Carbon::now()));
+                }
+            });
 
         //Categories
             Categories::get()->each(function (Categories $cat) use ($sitmap) {
