@@ -1016,3 +1016,7 @@ input#phone-field2::placeholder {
     text-align: center;
     padding: 60px 0px;
 }
+.aside-bg{
+    background-color: #e9e8e6 !important;
+    box-shadow: none !important;
+}

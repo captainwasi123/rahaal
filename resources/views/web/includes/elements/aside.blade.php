@@ -1,4 +1,5 @@
-<div class="social-follow">
+
+<!-- <div class="social-follow">
   <div>
     <a href="https://www.youtube.com/@rahaal_01" target="_blank">
       <span class="bi bi-youtube"></span>
@@ -31,9 +32,24 @@
       </div>
     </a>
   </div>
+</div> -->
+
+<div class="aside-form aside-bg">
+    <h3>Got Something to Say?</h3>
+    <h4>Ask me anything</h4>
+    <form action="{{route('enquiry.submit')}}" id="enquiry-form">
+        @csrf
+        <input type="text" name="name" placeholder="Name" class="form-control" required>
+        
+        <input type="email" name="email" placeholder="Email" class="form-control aside-email" required>
+
+        <input type="text" name="subject" placeholder="Subject" class="form-control" required>
+                                    
+        <textarea class="form-control" name="description" rows="4" placeholder="You Message" required></textarea>
+        
+        <button class="btn btn-theme">Submit Now</button>
+    </form>
 </div>
-
-
 
 <div class="aside-ad">
   <div class="ad-item">
