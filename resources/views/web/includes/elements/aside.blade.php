@@ -48,6 +48,7 @@
         <textarea class="form-control" name="description" rows="4" placeholder="You Message" required></textarea>
         
         <button class="btn btn-theme">Submit Now</button>
+        <div class="loading"><img src="{{URL::to('/public/loader-gif.gif')}}" width="80px" class="newsletter-loader"></div>
     </form>
 </div>
 
