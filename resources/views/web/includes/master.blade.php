@@ -103,20 +103,16 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body blog-card-body">
-          <h3 class="text-center text-theme text-thorn">Work With Rahaal</h3>
-          <p class="text-center">Partner with us to advertise your brand or support our journey of real, human travel stories. Whether you’re a company looking to collaborate or an individual who believes in our mission — we’d love to hear from you.</p>
+
+          <div>
+            <h4 class="text-bold"><i class="bi bi-rocket-takeoff"></i> Let’s Make an Impact Together</h4>
+            <p class="">Whether you're a brand looking for real visibility or a supporter of honest, human adventures — this is your chance to be part of something meaningful. Click below, take the first step, and let’s create something unforgettable.</p>
+          </div>
+          
+          <h3 class="text-center text-theme text-thorn"> Support the Journey</h3>
           <div class="row">
-            <div class="col-lg-6 text-center">
-              <h4 class=" text-theme text-bold"><i class="bi bi-person-hearts"></i> Advertise or Collaborate</h4>
-              <p>
-                Want to feature your brand on our website, YouTube, or social media?<br>
-                Click below to submit your <strong>collaboration inquiry</strong>.
-                <br>
-              </p>
-              <a href="{{route('collaborate')}}" target="_blank"><i class="bi bi-ui-checks"></i> Enquire Now</a>
-            </div>
-            <div class="col-lg-6 text-center">
-              <h4 class=" text-theme text-bold"><i class="bi bi-envelope-heart"></i> Support the Journey</h4>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 text-center">
               <p>
                 Believe in authentic travel content? Help me keep exploring and telling stories that matter.<br>
                 You can <strong>contribute directly via PayPal</strong>.
@@ -124,10 +120,9 @@
               </p>
               <a href="https://www.paypal.com/paypalme/rahaal01" target="_blank"><i class="bi bi-paypal"></i> Support via PayPal</a>
             </div>
+            <div class="col-lg-1"></div>
           </div>
           <br>
-          <h4 class="text-bold"><i class="bi bi-rocket-takeoff"></i> Let’s Make an Impact Together</h4>
-          <p class="">Whether you're a brand looking for real visibility or a supporter of honest, human adventures — this is your chance to be part of something meaningful. Click below, take the first step, and let’s create something unforgettable.</p>
         </div>
       </div>
 
