@@ -19,6 +19,14 @@ class WebController extends Controller
         
         return view('web.index')->with($data);
     }
+    public function indexNew(){
+        $data['nav'] = 'home';
+        $data['sub_footer'] = 'visible';
+        $data['blogs'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->limit(4)->get();
+        $data['episodes'] = Episodes::orderBy('id', 'desc')->limit(8)->get();
+        
+        return view('web.index-new')->with($data);
+    }
 
 
     public function collaborate(){

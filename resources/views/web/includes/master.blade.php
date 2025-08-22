@@ -38,7 +38,8 @@
   <link href="{{URL::to('/public')}}/efavicon.png" rel="apple-touch-icon">
 
   @include('web.includes.style')
-
+  @yield('addStyle')
+  
   @foreach($headSnippet as $val)
     @if($val->position == 'Head')
       <!-- {{$val->name}} // Start -->
@@ -108,7 +109,7 @@
             <h4 class="text-bold"><i class="bi bi-rocket-takeoff"></i> Let’s Make an Impact Together</h4>
             <p class="">Whether you're a brand looking for real visibility or a supporter of honest, human adventures — this is your chance to be part of something meaningful. Click below, take the first step, and let’s create something unforgettable.</p>
           </div>
-          
+
           <h3 class="text-center text-theme text-thorn"> Support the Journey</h3>
           <div class="row">
             <div class="col-lg-1"></div>

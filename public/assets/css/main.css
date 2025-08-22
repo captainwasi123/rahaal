@@ -704,7 +704,7 @@ section,
   }
 }
 
-.hero img {
+.hero .hero-background {
   position: absolute;
   inset: 0;
   display: block;

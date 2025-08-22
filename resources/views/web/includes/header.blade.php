@@ -8,9 +8,9 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="{{URl::to('/')}}"  class="{{!empty($nav) && $nav == 'home' ? 'active' : ''}}">HOM<span class="text-theme">E</span></a></li>
-        <li><a href="{{route('experience')}}"  class="{{!empty($nav) && $nav == 'experience' ? 'active' : ''}}">MY E<span class="text-theme">X</span>PERIENCE</a></li>
-        <li class="dropdown"><a href="{{route('episodes')}}" class="{{!empty($nav) && $nav == 'episodes' ? 'active' : ''}}">E<span class="text-theme">P</span>ISODES <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li><a href="{{URl::to('/')}}"  class="{{!empty($nav) && $nav == 'home' ? 'active' : ''}}">HOM<span class="text-theme2">E</span></a></li>
+        <li><a href="{{route('experience')}}"  class="{{!empty($nav) && $nav == 'experience' ? 'active' : ''}}">MY E<span class="text-theme2">X</span>PERIENCE</a></li>
+        <li class="dropdown"><a href="{{route('episodes')}}" class="{{!empty($nav) && $nav == 'episodes' ? 'active' : ''}}">E<span class="text-theme2">P</span>ISODES <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             @foreach($all_playlists as $val)
                 @if(count($val->episodes) !== 0)
@@ -19,10 +19,10 @@
             @endforeach
           </ul>
         </li>
-        <li><a href="{{route('blogs')}}"  class="{{!empty($nav) && $nav == 'blogs' ? 'active' : ''}}">B<span class="text-theme">L</span>OGS</a></li>
-        <li><a href="{{route('about')}}"  class="{{!empty($nav) && $nav == 'about' ? 'active' : ''}}">AB<span class="text-theme">O</span>UT ME</a></li>
-        <li><a href="{{route('collaborate')}}"  class="{{!empty($nav) && $nav == 'collaborate' ? 'active' : ''}}">COLLABO<span class="text-theme">R</span>ATE</a></li>
-        <li><a href="{{route('reach-out')}}"  class="{{!empty($nav) && $nav == 'contact' ? 'active' : ''}}">R<span class="text-theme">E</span>ACH OUT</a></li>
+        <li><a href="{{route('blogs')}}"  class="{{!empty($nav) && $nav == 'blogs' ? 'active' : ''}}">B<span class="text-theme2">L</span>OGS</a></li>
+        <li><a href="{{route('about')}}"  class="{{!empty($nav) && $nav == 'about' ? 'active' : ''}}">AB<span class="text-theme2">O</span>UT ME</a></li>
+        <li><a href="{{route('collaborate')}}"  class="{{!empty($nav) && $nav == 'collaborate' ? 'active' : ''}}">COLLABO<span class="text-theme2">R</span>ATE</a></li>
+        <li><a href="{{route('reach-out')}}"  class="{{!empty($nav) && $nav == 'contact' ? 'active' : ''}}">R<span class="text-theme2">E</span>ACH OUT</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>

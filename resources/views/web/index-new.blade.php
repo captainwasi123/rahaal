@@ -1,4 +1,39 @@
 @extends('web.includes.master')
+@section('metaAddition')
+<meta name="robots" content="noindex, follow">
+@endsection
+
+@section('addStyle')
+	<style>
+		.header{
+			background-color: transparent;
+		}
+		.hero{
+			min-height: 101vh;
+			margin-top: -89px;
+		}
+		.navmenu a, .navmenu a:focus{
+			color: #fff;
+		}
+		.navmenu li:hover>a, .navmenu .active, .navmenu .active:focus {
+        border-bottom: 1px solid #ffffff;
+    }
+    .hero-main-content h2 {
+		    background-color: #ffffff40;
+		    color: #83c341;
+		    position: relative;
+		    width: fit-content;
+		    margin: auto;
+		    margin-top: -80px;
+		    font-size: 42px;
+		    padding: 1px 18px;
+		    border-radius: 7px;
+		}
+		.hero-main-content img{
+			animation: pop 4s ease-in-out infinite;
+		}
+	</style>
+@endsection
 
 @section('content')
 	<main class="main">
@@ -6,11 +41,21 @@
 	    <!-- Hero Section -->
 	    <section id="hero" class="hero section">
 
-	      <img src="{{URL::to('/public')}}/rahaal-bg-ai2.jpg" class="hero-background" alt="" data-aos="fade-in">
-	      <div class="bubble-block">
-		      <div class='speech-bubble text-GamblerTown'>Every <span class="text-theme">journey</span> begins with a <span class="text-theme">wild</span> thought.</div>
-		  </div>
-	        <div class="row hero-content">
+	      <img src="{{URL::to('/public')}}/assets/img/bg.jpg" class="hero-background" alt="" data-aos="fade-in">
+	        
+	      <div class="row hero-main-content">
+	      	<div class="col-lg-12 text-center">
+	      		<img src="{{URL::to('/public')}}/assets/img/hero-picture.png" width="420px" alt="" >
+	      		<h2 class="text-theme2 text-shadow text-thorn text-center">Rahaal - The Explorer</h2>
+
+	            <p class="text-shadow text-white home-para text-center" style="max-width: 720px;">
+	              I’m a travel filmmaker capturing raw human stories and the soul of places—beyond tourist trails, with authenticity and emotion.
+	            </p>
+	            <a href="https://www.youtube.com/@rahaal_01" target="_blank" class="btn-get-started text-secrets text-shadow text-center"><i class="bi bi-youtube"></i> Watch My Journey</a>
+	      	</div>
+	      </div>
+
+	        <!-- <div class="row hero-content">
 	          <div class="col-lg-12">
 	          	<span class="text-white">Welcome to </span>
 	            <h2 class="text-theme2 text-shadow text-thorn">Rahaal - The Explorer</h2>
@@ -19,7 +64,7 @@
 	            </p>
 	            <a href="https://www.youtube.com/@rahaal_01" target="_blank" class="btn-get-started text-secrets text-shadow"><i class="bi bi-youtube"></i> Watch My Journey</a>
 	          </div>
-	        </div>
+	        </div> -->
 
 	    </section><!-- /Hero Section -->
 

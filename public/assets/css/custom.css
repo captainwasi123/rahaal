@@ -733,6 +733,17 @@ a > h3:hover {
     width: 100%;
 }
 
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 
 
@@ -1019,4 +1030,7 @@ input#phone-field2::placeholder {
 .aside-bg{
     background-color: #e9e8e6 !important;
     box-shadow: none !important;
+}
+.hero-main-content {
+    z-index: 99;
 }
