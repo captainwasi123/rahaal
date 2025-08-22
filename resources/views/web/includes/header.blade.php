@@ -3,7 +3,8 @@
 
     <a href="{{URL::to('/')}}" class="logo d-flex align-items-center me-auto me-xl-0">
       <!-- Uncomment the line below if you also wish to use an image logo -->
-      <img src="{{URL::to('/public')}}/logo-black.png" alt="">
+      <img src="{{URL::to('/public')}}/logo-black.png" class="brand-logo-dark" alt="Logo">
+      <img src="{{URL::to('/public')}}/logo-w.png" class="brand-logo-white" alt="Logo">
     </a>
 
     <nav id="navmenu" class="navmenu">
