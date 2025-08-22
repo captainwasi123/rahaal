@@ -42,6 +42,7 @@
 	    <section id="hero" class="hero section">
 
 	      <img src="{{URL::to('/public')}}/assets/img/bg.jpg" class="hero-background" alt="" data-aos="fade-in">
+	      <img src="{{URL::to('/public')}}/assets/img/hero-forground.png" class="hero-background" alt="" data-aos="fade-in">
 	        
 	      <div class="row hero-main-content">
 	      	<div class="col-lg-12 text-center">

@@ -1034,3 +1034,7 @@ input#phone-field2::placeholder {
 .hero-main-content {
     z-index: 99;
 }
+.modal.show .modal-dialog {
+    height: 100vh;
+    align-content: center;
+}
