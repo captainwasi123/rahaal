@@ -117,6 +117,9 @@
 			.header-search span {
 			    display: none;
 			}
+			.about-support a{
+				padding: 8px 16px;
+			}
 		}
 	</style>
 @endsection
