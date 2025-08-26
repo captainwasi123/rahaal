@@ -18,7 +18,6 @@ Route::get('/update-sitemap', function () {
 
 Route::namespace('App\Http\Controllers\web')->group(function(){
     Route::get('/', 'WebController@index')->name('home');
-    Route::get('/new', 'WebController@indexNew');
     Route::get('/collaborate', 'WebController@collaborate')->name('collaborate');
     Route::get('/about-us', 'WebController@about')->name('about');
     Route::get('/reach-out', 'WebController@contact')->name('reach-out');
