@@ -96,10 +96,26 @@
 			}
 
 			.hero{
-				min-height: 104vh;
+				min-height: 106vh;
 			}
 			h2.text-wild-trails{
 				font-size: 18px;
+			}
+			.navmenu a, .navmenu a:focus {
+			    color: #000000;
+			}
+			.header-search {
+			    color: transparent;
+			    border: none !important;
+			}
+			.header-search i {
+			    color: #ffffff;
+			}
+			.dark-header .header-search i {
+			    color: #444444;
+			}
+			.header-search span {
+			    display: none;
 			}
 		}
 	</style>

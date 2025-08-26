@@ -29,7 +29,7 @@
     </nav>
 
     <div class="header-social-links">
-      <button type="button"  class="header-search"><i class="bi bi-search"></i> Search</button>
+      <button type="button"  class="header-search"><i class="bi bi-search"></i> <span>Search</span></button>
     </div>
 
   </div>
