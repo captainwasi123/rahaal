@@ -96,7 +96,7 @@
 			}
 
 			.hero{
-				min-height: 106vh;
+				min-height: 104vh;
 			}
 			h2.text-wild-trails{
 				font-size: 18px;
