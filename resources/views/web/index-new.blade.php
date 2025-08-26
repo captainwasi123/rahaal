@@ -1,6 +1,6 @@
 @extends('web.includes.master')
 @section('metaAddition')
-<meta name="robots" content="noindex, follow">
+
 @endsection
 
 @section('addStyle')
@@ -22,7 +22,7 @@
     }
     .hero-main-content h2 {
 		    background-color: #ffffff40;
-		    color: #83c341;
+		    color: #83c341 !important;
 		    position: relative;
 		    width: fit-content;
 		    margin: auto;
@@ -69,6 +69,38 @@
 			background-image: url('{{URL::to("/public/assets/img/about/bg.png")}}');
 			background-size: cover;
 			background-position: bottom;
+		}
+		.mobile-nav-toggle{
+			color: #fff;
+		}
+
+		.dark-header .mobile-nav-toggle{
+			color: #444444;
+		}
+		@media (max-width: 780px) {
+			.header{
+				padding: 15px 0 !important;
+			}
+			.hero-main-content img {
+			    width: 70%;
+			}
+			.hero-main-content h2{
+				    color: #83c341 !important;
+				    margin-top: -50px;
+    				font-size: 32px;
+			}
+			.hero-main-content p {
+			    color: #fff !important;
+			    margin-top: 30px;
+			    margin-bottom: -60px;
+			}
+
+			.hero{
+				min-height: 104vh;
+			}
+			h2.text-wild-trails{
+				font-size: 18px;
+			}
 		}
 	</style>
 @endsection

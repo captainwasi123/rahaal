@@ -17,7 +17,7 @@ class WebController extends Controller
         $data['blogs'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->limit(4)->get();
         $data['episodes'] = Episodes::orderBy('id', 'desc')->limit(8)->get();
         
-        return view('web.index')->with($data);
+        return view('web.index-new')->with($data);
     }
     public function indexNew(){
         $data['nav'] = 'home';
