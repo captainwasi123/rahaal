@@ -237,7 +237,7 @@
 		text-align: center;
 	}
 	.hero img {
-        margin-left: -410px;
+        margin-left: 0px;
     }
     .hero p br {
 	    display: none;
@@ -263,7 +263,7 @@
 @media (max-width: 390px) {
 
 	.hero img {
-        margin-left: -350px;
+        margin-left: 0px;
     }
 }
 
@@ -300,7 +300,7 @@
 		text-align: center;
 	}
 	.hero img {
-        margin-left: -295px;
+        margin-left: 0px;
     }
     .hero p br {
 	    display: none;
