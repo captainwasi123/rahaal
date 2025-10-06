@@ -140,6 +140,129 @@ $(document).on("submit", "#enquiry-form-collab", function (event) {
 
 
 
+$(document).on("submit", "#sign-up-form", function (event) {
+
+    var form = $(this);
+    var formData = new FormData($("#sign-up-form")[0]);
+
+    let isValid = true;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Email validation
+    let email = $(".signup-email").val().trim();
+    if (email === "" || !emailPattern.test(email)) {
+        Toast.fire({
+            icon: "warning",
+            title: "Please Enter valid Email address",
+        });
+        isValid = false;
+    } else {
+        isValid = true;
+    }
+
+    if (isValid) {
+        $("#sign-up-modal .loading").css({display:"block"});
+        $.ajax({
+            type: "POST",
+            url: form.attr("action"),
+            data: formData,
+            dataType: "json",
+            encode: true,
+            processData: false,
+            contentType: false,
+        })
+        .done(function (data) {
+            if (data.success == "success") {
+                Toast.fire({
+                    icon: "success",
+                    title: data.message,
+                });
+
+                setTimeout(function () {
+                    location.reload();
+                }, 1000);
+            } else {
+                Toast.fire({
+                    icon: "warning",
+                    title: data.message,
+                });
+            }
+            $("#sign-up-modal .loading").css({display:"none"});
+        })
+        .fail(function (e) {
+            $("#sign-up-modal .loading").css({display:"none"});
+            Toast.fire({
+                icon: "warning",
+                title: 'Something went wrong! Try again later.',
+            });
+        });
+    }
+    event.preventDefault();
+});
+
+
+$(document).on("submit", "#sign-in-form", function (event) {
+
+    var form = $(this);
+    var formData = new FormData($("#sign-in-form")[0]);
+
+    let isValid = true;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Email validation
+    let email = $(".signin-email").val().trim();
+    if (email === "" || !emailPattern.test(email)) {
+        Toast.fire({
+            icon: "warning",
+            title: "Please Enter valid Email address",
+        });
+        isValid = false;
+    } else {
+        isValid = true;
+    }
+
+    if (isValid) {
+        $("#sign-in-modal .loading").css({display:"block"});
+        $.ajax({
+            type: "POST",
+            url: form.attr("action"),
+            data: formData,
+            dataType: "json",
+            encode: true,
+            processData: false,
+            contentType: false,
+        })
+        .done(function (data) {
+            if (data.success == "success") {
+                Toast.fire({
+                    icon: "success",
+                    title: data.message,
+                });
+
+                setTimeout(function () {
+                    location.reload();
+                }, 1000);
+            } else {
+                Toast.fire({
+                    icon: "warning",
+                    title: data.message,
+                });
+            }
+            $("#sign-in-modal .loading").css({display:"none"});
+        })
+        .fail(function (e) {
+            $("#sign-in-modal .loading").css({display:"none"});
+            Toast.fire({
+                icon: "warning",
+                title: 'Something went wrong! Try again later.',
+            });
+        });
+    }
+    event.preventDefault();
+});
+
+
+
 
 //Newsletter Popup
 document.addEventListener("DOMContentLoaded", function () {

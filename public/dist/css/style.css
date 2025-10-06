@@ -870,3 +870,9 @@ input[type="file"]{
     font-size: 18px;
     margin-top: -5px;
 }
+
+.alert-warning a {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+}

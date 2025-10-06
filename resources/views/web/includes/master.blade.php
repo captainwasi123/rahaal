@@ -94,7 +94,7 @@
     </div>
   </div>
 
-  <div id="newsletterModal" class="modal fade modal-lg" role="dialog">
+  <div id="newsletterModal" class="newsletterModal modal fade modal-lg" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -122,6 +122,94 @@
               <a href="https://www.paypal.com/paypalme/rahaal01" target="_blank"><i class="bi bi-paypal"></i> Support via PayPal</a>
             </div>
             <div class="col-lg-1"></div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="sign-in-modal" class="newsletterModal modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="{{URL::to('/public/newsletter.jpg')}}" width="100%" alt="Newsletter Image">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body blog-card-body">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h4>Welcome Back!</h4>
+              <p>
+                Log in to access your account and continue where you left off.
+                <br>
+              </p>
+              <form id="sign-in-form" action="{{route('user.login')}}">
+                @csrf
+
+                <input type="email" class="form-control signin-email" name="email" placeholder="Email" required>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                <input type="submit" class="btn btn-theme" value="Sign in">
+              </form>
+
+              <p class="login-para">Don’t have an account yet? <a href="javascript:void(0)" class="sign-up-btn">Sign up</a> now.</p>
+              <div class="loading"><img src="{{URL::to('/public/loader-gif.gif')}}" width="80px" class="newsletter-loader"></div>
+
+              <div class="">
+                  <a href="{{route('auth.google')}}" class="login-google-btn">
+                      <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" width="15px" loading="lazy" alt="google logo">
+                      <span>Login with Google</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="sign-up-modal" class="newsletterModal modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="{{URL::to('/public/newsletter.jpg')}}" width="100%" alt="Newsletter Image">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body blog-card-body">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h4>Join Us Today!</h4>
+              <p>
+                Create your account in just a few steps and start enjoying all the features we offer. It’s quick, easy, and free!
+                <br>
+              </p>
+              <form id="sign-up-form" action="{{route('user.create')}}">
+                @csrf
+
+                <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                <input type="email" class="form-control signup-email" name="email" placeholder="Email" required>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                <input type="submit" class="btn btn-theme" value="Sign up">
+              </form>
+
+              <p class="login-para">Already have an account yet? <a href="javascript:void(0)" class="sign-in-btn">Sign in</a> now.</p>
+              <div class="loading"><img src="{{URL::to('/public/loader-gif.gif')}}" width="80px" class="newsletter-loader"></div>
+              
+              <div class="">
+                  <a href="{{route('auth.google')}}" class="login-google-btn">
+                      <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" width="15px" loading="lazy" alt="google logo">
+                      <span>Sign up with Google</span>
+                  </a>
+              </div>
+            </div>
           </div>
           <br>
         </div>

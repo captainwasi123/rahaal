@@ -29,7 +29,12 @@
     </nav>
 
     <div class="header-social-links">
-      <button type="button"  class="header-search"><i class="bi bi-search"></i> <span>Search</span></button>
+      @if(Auth::check())
+        <a href="{{route('user.dashboard')}}" class="header-search"><i class="bi bi-person"></i> <span>Profile</span></a>
+      @else
+        <a href="{{route('write-for-us')}}" class="header-search"><i class="bi bi-pencil"></i> &nbsp;<span>Write For Us</span></a>
+      @endif
+      <button type="button"  class="header-search Search-btn"><i class="bi bi-search"></i> <span>Search</span></button>
     </div>
 
   </div>

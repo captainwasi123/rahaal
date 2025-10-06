@@ -57,6 +57,16 @@ class WebController extends Controller
     }
 
 
+    public function writeForUs(){
+        $data['nav'] = 'write-for-us';
+        $data['titleImg'] = 'about.png';
+        $data['title'] = 'Write For Us';
+        $data['sub_footer'] = 'visible';
+        
+        return view('web.guest-post')->with($data);
+    }
+
+
     public function contact(){
         $data['nav'] = 'contact';
         $data['titleImg'] = 'contact.jpg';

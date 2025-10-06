@@ -12,6 +12,22 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
+    protected $table = 'users';
+
+
+
+    public static function create(array $data){
+        $u = new User;
+        $u->name = $data['name'];
+        $u->email = $data['email'];
+        $u->email_otp = random_int(100000, 999999);
+        $u->password = bcrypt($data['password']);
+        $u->save();
+
+        return $u;
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *

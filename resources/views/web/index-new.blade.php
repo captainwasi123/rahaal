@@ -4,6 +4,8 @@
 @endsection
 
 @section('addStyle')
+
+	<link href="{{URL::to('/public')}}/assets/css/gauge.css" rel="stylesheet">
 	<style>
 		.header{
 			background-color: transparent;
@@ -20,7 +22,7 @@
 		.navmenu li:hover>a, .navmenu .active, .navmenu .active:focus {
         border-bottom: 1px solid #ffffff;
     }
-    .hero-main-content h2 {
+    .hero-main-content h1 {
 		    background-color: #ffffff40;
 		    color: #83c341 !important;
 		    position: relative;
@@ -77,6 +79,17 @@
 		.dark-header .mobile-nav-toggle{
 			color: #444444;
 		}
+		.yt-section{
+			background-image: url('{{URL::to("/public/assets/img/yt-bg.jpg")}}');
+			background-size: cover;
+			background-position: bottom;
+		}
+		.light-background .header-search span, .light-background .header-search i {
+		    color: #fff;
+		}
+
+
+
 		@media (max-width: 780px) {
 			.header{
 				padding: 15px 0 !important;
@@ -84,7 +97,7 @@
 			.hero-main-content img {
 			    width: 70%;
 			}
-			.hero-main-content h2{
+			.hero-main-content h1{
 				    color: #83c341 !important;
 				    margin-top: -50px;
     				font-size: 32px;
@@ -136,7 +149,7 @@
 	      <div class="row hero-main-content">
 	      	<div class="col-lg-12 text-center">
 	      		<img src="{{URL::to('/public')}}/assets/img/hero-picture.png" width="420px" alt="" >
-	      		<h2 class="text-theme2 text-shadow text-thorn text-center">Rahaal - The Explorer</h2>
+	      		<h1 class="text-theme2 text-shadow text-thorn text-center">Rahaal - The Explorer</h1>
 
 	            <p class="text-shadow text-white home-para text-center" style="max-width: 720px;">
 	              I’m a travel filmmaker capturing raw human stories and the soul of places—beyond tourist trails, with authenticity and emotion.

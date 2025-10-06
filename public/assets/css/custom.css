@@ -952,6 +952,7 @@ a > h3:hover {
 
 .loading{
     display: none;
+    margin: 0px 0 12px 0px;
 }
 .aside-form {
     background-color: #fff;
@@ -996,23 +997,60 @@ input#phone-field2::placeholder {
     color: #9999;
 }
 
-
-
-#newsletterModal .modal-content {
+.newsletterModal input[type="submit"]:hover {
+    background-color: #e6e6e6;
+}
+.newsletterModal input {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.login-para {
+    font-size: 14px;
+    margin-top: 8px;
+}
+.login-para a {
+    border: none !important;
+    padding: 0 !important;
+}
+.login-para a:hover {
+    color: #0f7dc2 !important;
+    background-color: transparent !important;
+}
+.login-google-btn {
+    border: 1px solid #777 !important;
+    width: 230px !important;
+    margin: auto;
+}
+.login-google-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login-google-btn:hover {
+    border-color: #0f7dc2 !important;
+}
+.login-google-btn:hover span {
+    color: #fff !important;
+}
+.login-google-btn:hover img {
+    filter: brightness(100);
+}
+.newsletterModal .modal-content {
     overflow: hidden;
 }
-#newsletterModal .modal-header{
+.newsletterModal .modal-header{
     padding: 0;
 }
-#newsletterModal .close {
+.newsletterModal .close {
     margin-left: -40px;
-    margin-top: -80px;
+    margin-top: -40px;
     background-color: transparent;
     border: 0;
     color: #fff;
     font-size: 42px;
 }
-#newsletterModal a{
+.newsletterModal a{
     color: #0f7dc2;
     background: transparent;
     border: 1px solid #0f7dc2;
@@ -1021,22 +1059,22 @@ input#phone-field2::placeholder {
     border-radius: 8px;
     font-weight: 600;
 }
-#newsletterModal a i{
+.newsletterModal a i{
     color: #0f7dc2;
 }
 
-#newsletterModal a:hover{
+.newsletterModal a:hover{
     color: #fff;
     background: #0f7dc2;
 }
-#newsletterModal .row {
+.newsletterModal .row {
     margin-top: 15px;
 }
-#newsletterModal .col-lg-6 {
+.newsletterModal .col-lg-6 {
     background-color: #efefef;
     padding: 16px 12px;
 }
-#newsletterModal .col-lg-6:first-child{
+.newsletterModal .col-lg-6:first-child{
     border-right: 6px solid #fff;
 }
 #searchmodal .newsletter-loader {
@@ -1074,4 +1112,46 @@ input#phone-field2::placeholder {
 .about-support a i {
     font-size: 26px;
     color: #0f7dc2;
+}
+
+.header-search span, .header-search i {
+    color: #fff;
+}
+
+.dark-header .header-search span, .dark-header .header-search i {
+    color: #444444 !important;
+}
+.dark-header .header-search:hover span, .dark-header .header-search:hover i {
+    color: #fff !important;
+}
+
+.light-background .header-search span, .light-background .header-search i {
+    color: #444444;
+}
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.striped-section{
+    background-color: #e9e8e6;
+}
+.guest-signin {
+    background-color: #e9e8e6;
+    height: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px;
+}
+.guest-signin div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.guest-signin div button {
+    background-color: #0f7dc2;
+    color: #fff;
+    margin: 0 5px;
+    padding: 5px 30px;
 }
