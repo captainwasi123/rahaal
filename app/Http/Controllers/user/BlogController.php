@@ -20,7 +20,7 @@ class BlogController extends Controller
     {
         //$data['menu'] = 'blogs';
 
-        $data['data'] = Blogs::orderBy('id', 'desc')->with('category')->with('author')->paginate(10);
+        $data['data'] = Blogs::where('is_local', '0')->where('author_id', Auth::id())->orderBy('id', 'desc')->with('category')->with('author')->paginate(10);
         $data['categories'] = Categories::where('parent_id', 0)->where('status', 1)->get();
         $tagsData = TagData::all();
         $data['authors'] = Author::get();
