@@ -44,6 +44,7 @@ class GenerateSitemap extends Command
             $sitmap->add(Url::create("/reach-out")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
             $sitmap->add(Url::create("/yt-episodes")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
             $sitmap->add(Url::create("/experience")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
+            $sitmap->add(Url::create("/write-for-us")->setPriority(0.80)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)->setLastModificationDate(Carbon::now()));
 
         //Playlists
             Playlists::get()->each(function (Playlists $pl) use ($sitmap) {
