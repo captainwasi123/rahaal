@@ -46,3 +46,8 @@
   </td>
 </tr>
 @endforeach
+@if(count($data) == 0)
+<tr>
+  <td colspan="8">No Article Found.</td>
+</tr>
+@endif
