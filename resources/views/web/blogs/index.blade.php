@@ -101,7 +101,7 @@
                               <div class="popular-text">
                                 <h6 class="mt-2">{{$val->heading}}</h6>
                                 <p>{{$val->short_description}}</p>
-                                <small>by <font class="text-theme2">{{@$val->author->name}}</font> - <font class="text-bold">{{date('d-M-Y', strtotime($val->created_at))}}</font></small>
+                                <small>by <font class="text-theme2">{{ $val->is_local == '1' ? $val->author->name : $val->userauthor->name}}</font> - <font class="text-bold">{{date('d-M-Y', strtotime($val->created_at))}}</font></small>
                               </div>
                             </div>
                           </a>
@@ -121,7 +121,7 @@
                                 <div class="popular-text">
                                   <h6 class="mt-2">{{$val->heading}}</h6>
                                   <p class="line-break-3">{{$val->short_description}}</p>
-                                  <small>by <font class="text-theme2">{{@$val->author->name}}</font> - <font class="text-bold">{{date('d-M-Y', strtotime($val->created_at))}}</font></small>
+                                  <small>by <font class="text-theme2">{{ $val->is_local == '1' ? $val->author->name : $val->userauthor->name}}</font> - <font class="text-bold">{{date('d-M-Y', strtotime($val->created_at))}}</font></small>
                                 </div>
                               </div>
                             </a>
