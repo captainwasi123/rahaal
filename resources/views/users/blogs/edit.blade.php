@@ -1,4 +1,4 @@
-<form id="edit_blog_form" action="{{route('admin.blog.update')}}">
+<form id="edit_blog_form" action="{{route('user.blog.update')}}">
   @csrf
   <input type="hidden" name="blog_id" value="{{base64_encode($data->id)}}">
   <div class="modal-header">
@@ -16,20 +16,18 @@
         </div>
       </div>
       <div class="col-md-4 blog-img-alt">
-        <div class="form-group">
-          <label>Image alt:</label>
-          <input type="text" class="form-control" name="banner_alt" value="{{$data->banner_alt}}" required>
-        </div>
 
-        <div class="form-group">
-          <input type="checkbox" name="experience" id="eforexperience" {{$data->experience == '1' ? 'checked' : ''}} value="1" >
-          <label for="eforexperience">&nbsp;My Experience</label>
-        </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Image alt:</label>
+          <input type="text" class="form-control" name="banner_alt" value="{{$data->banner_alt}}" required>
+        </div>
+      </div>
+      <div class="col-md-6">
         <div class="form-group">
           <label>Blog Category</label>
           <select class="form-control" name="category_id" required>
@@ -40,23 +38,6 @@
           </select>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label>Blog Author</label>
-          <select class="form-control" name="author_id" required>
-            <option value="">Select Blog Author</option>
-            @foreach ($data['authors'] as $author)
-            <option value="{{ $author->id }}" {{ $author->id == $data->author_id ? 'selected' : '' }} >{{ $author->name }}</option>
-            @endforeach
-          </select>
-        </div>
-      </div>
-      <div class="col-md-4">
-              <div class="form-group">
-                <label>Reading Time</label>
-                <input type="number" class="form-control" name="read_time" placeholder="Enter reading time in minutes" required value="{{$data->read_time}}">
-              </div>
-            </div>
     </div>
 
     <div class="row">
@@ -64,11 +45,7 @@
         <div class="form-group">
           <label>Heading</label>
           <input type="text" class="form-control eblogHeading" value="{{$data->heading}}" name="heading" required>
-        </div>
-
-        <div class="form-group">
-          <label>Meta Title:</label>
-          <input type="text" class="form-control blogMetaTitle" value="{{@$data['meta_title']->title}}" name="meta_title" required>
+          <input type="hidden" class="blogMetaTitle" value="{{@$data['meta_title']->title}}" name="meta_title" required>
         </div>
       </div>
     </div>

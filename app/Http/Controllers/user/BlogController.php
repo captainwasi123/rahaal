@@ -137,13 +137,21 @@ class BlogController extends Controller
         $data = $request->all();
         $response = [];
 
-        if (empty($data['heading']) || empty($data['slug']) || empty($data['description']) || empty($data['read_time']) || empty($data['short_description']) || empty($data['category_id']) || empty($data['author_id'])) {
+        if (empty($data['heading']) || empty($data['slug']) || empty($data['description']) || empty($data['short_description']) || empty($data['category_id'])) {
             $response['success'] = false;
             $response['errors'] = 'Please Fill all required fields.';
         } else {
 
-            $id = Blogs::blog_update(base64_decode($data['blog_id']), $data);
+            $b = Blogs::find(base64_decode($data['blog_id']));
+            $b->heading = $data['heading'];
+            $b->banner_alt = $data['banner_alt'];
+            $b->slug = $data['slug'];
+            $b->description = $data['description'];
+            $b->short_description = $data['short_description'];
+            $b->category_id = $data['category_id'];
+            $b->save();
 
+            $id = $b->id;
 
             //Meta Title -- Start
 
@@ -152,12 +160,12 @@ class BlogController extends Controller
                 if(empty($mt->id)){
                     $mt = new MetaTags;
                     $mt->url = $meta_url;
-                    $mt->created_by = Auth::guard('admin')->id();
+                    $mt->created_by = '1';
                 }
                 $mt->title = $data['meta_title'];
                 $mt->keywords = '';
                 $mt->description = $data['short_description'];
-                $mt->created_by = Auth::guard('admin')->id();
+                $mt->created_by = '1';
                 $mt->save();
 
 
@@ -201,7 +209,7 @@ class BlogController extends Controller
         
        
 
-        return view('admin.blogs.edit', ['data' => $data]);
+        return view('users.blogs.edit', ['data' => $data]);
     }
 
 
