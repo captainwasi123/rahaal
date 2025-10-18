@@ -1137,12 +1137,13 @@ input#phone-field2::placeholder {
     background-color: #e9e8e6;
 }
 .guest-signin {
-    background-color: #e9e8e6;
+        background-color: #e9e8e6;
     height: -webkit-fill-available;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 8px;
+    align-items: center;
 }
 .guest-signin div {
     display: flex;
