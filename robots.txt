@@ -1,20 +1,7 @@
-# Allow Google and major crawlers full access
-User-agent: Googlebot
-Disallow:
+User-agent: *
+Disallow: /tag/
 
-User-agent: googlebot-image
-Disallow:
-
-User-agent: googlebot-mobile
-Disallow:
-
-User-agent: Bingbot
-Disallow:
-
-User-agent: Slurp
-Disallow:
-
-# Block low-quality or obsolete bots
+# Block low-value bots
 User-agent: psbot
 Disallow: /
 User-agent: baiduspider
@@ -23,15 +10,14 @@ User-agent: naverbot
 Disallow: /
 User-agent: yeti
 Disallow: /
-User-agent: Teoma
+User-agent: ia_archiver
 Disallow: /
 User-agent: Gigabot
 Disallow: /
-User-agent: ia_archiver
+User-agent: Teoma
 Disallow: /
 
-# Major AI crawlers - explicit allowance for clarity
-
+# Allow major AI crawlers (optional)
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User
@@ -45,9 +31,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# General rule for all others
-User-agent: *
-Disallow: /tag/
-
-# Sitemap location 
-Sitemap: https://rahaal-theexplorer.com/sitemap.xml
+Sitemap: https://rahaal-the-explorer.com/sitemap.xml
