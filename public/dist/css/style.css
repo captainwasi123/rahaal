@@ -1,3 +1,6 @@
+.album-file {
+    opacity: 1 !important;
+}
 .admin h3 {
     font-size: 52px !important;
     margin: 0;
@@ -869,4 +872,10 @@ input[type="file"]{
 .user-profile-block > span > strong {
     font-size: 18px;
     margin-top: -5px;
+}
+
+.alert-warning a {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
 }

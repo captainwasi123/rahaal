@@ -22,11 +22,11 @@
           <div class="col-lg-2 col-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="{{URL::to('/')}}">Home</a></li>
-              <li><a href="{{route('about')}}">About us</a></li>
-              <li><a href="{{route('episodes')}}">Episodes</a></li>
-              <li><a href="{{route('experience')}}">My Experience</a></li>
-              <li><a href="{{route('blogs')}}">Blogs</a></li>
+              <li><a href="{{URL::to('/')}}">HOME</a></li>
+              <li><a href="{{route('about')}}">ABOUT</a></li>
+              <li><a href="{{route('vlogs')}}">VLOGS</a></li>
+              <li><a href="{{route('blogs')}}">BLOGS</a></li>
+              <li><a href="{{route('reach-out')}}">REACH OUT</a></li>
             </ul>
           </div>
 

@@ -20,4 +20,17 @@ class EpisodeController extends Controller
 
         return view('web.episodes.index')->with($data);
     }
+
+    public function episodePlaylist($slug){
+        $data['nav'] = 'episodes';
+        $data['title'] = 'Episodes';
+        $data['playlist'] = Playlists::where('slug', $slug)->first();
+        if(empty($data['playlist'])){
+            return redirect(route('vlogs'));
+        }
+        $data['popular_series'] = Playlists::where('popular', '1')->first();
+        $data['top_stories'] = TopStories::all();
+
+        return view('web.episodes.playlist')->with($data);
+    }
 }

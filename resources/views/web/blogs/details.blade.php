@@ -15,9 +15,13 @@
             <div class="blog-author">
                 <span>{{date('M d, Y', strtotime($data->created_at))}}</span>
                 <div>
-                    <img src="{{URL::to('public/blog-author2.jpg')}}" alt="Auther - Rahaal The Explorer">
+                    @if($data->is_local == '1')
+                        <img src="{{URL::to('public/blog-author2.jpg')}}" alt="Auther - Rahaal The Explorer">
+                    @else
+                        <img src="{{URL::to('public/efavicon.png')}}" alt="Auther Image">
+                    @endif
                 </div>
-                <span>{{$data->author->name}}</span>
+                <span>{{ $data->is_local == '1' ? $data->author->name : $data->userauthor->name}}</span>
             </div>
 
             <div class="blog-heading">

@@ -32,6 +32,15 @@
           </a>
         </li>
 
+        <li class="nav-item">
+          <a href="{{route('admin.map')}}" class="nav-link {{$menu == 'map' ? 'active' : ''}}">
+            <i class="nav-icon fas fa-map-marker"></i>
+            <p>
+              Map
+            </p>
+          </a>
+        </li>
+
           
           <li class="nav-item {{$menu == 'blogs' || $menu == 'admin.author'  ? 'menu-open' : ''}}">
             <a href="javascript:void(0)" class="nav-link">

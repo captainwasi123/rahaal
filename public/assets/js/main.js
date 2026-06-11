@@ -10,12 +10,31 @@ const host = $("meta[name='host']").attr("content");
     $('#newsletterModal').modal('hide');
   });
   
-  $('.header-search').click(function(){
+  $('.Search-btn').click(function(){
+    $('.modal').modal('hide');
     $('#searchmodal').modal('show');
   });
 
    $('#searchmodal .close').click(function(){
     $('#searchmodal').modal('hide');
+  });
+
+   $('.sign-in-btn').click(function(){
+    $('.modal').modal('hide');
+    $('#sign-in-modal').modal('show');
+  });
+
+   $('#sign-in-modal .close').click(function(){
+    $('#sign-in-modal').modal('hide');
+  });
+
+   $('.sign-up-btn').click(function(){
+    $('.modal').modal('hide');
+    $('#sign-up-modal').modal('show');
+  });
+
+   $('#sign-up-modal .close').click(function(){
+    $('#sign-up-modal').modal('hide');
   });
 
 

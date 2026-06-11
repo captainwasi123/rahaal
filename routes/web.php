@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\adminAuth;
+use App\Http\Middleware\userAuth;
 
 
 
@@ -21,10 +22,12 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
     Route::get('/collaborate', 'WebController@collaborate')->name('collaborate');
     Route::get('/about-us', 'WebController@about')->name('about');
     Route::get('/reach-out', 'WebController@contact')->name('reach-out');
+    Route::get('/write-for-us', 'WebController@writeForUs')->name('write-for-us');
 
 
     //Episodes
-    Route::get('/yt-episodes', 'EpisodeController@index')->name('episodes');
+    Route::get('/vlogs', 'EpisodeController@index')->name('vlogs');
+    Route::get('/playlist/{slug}', 'EpisodeController@episodePlaylist')->name('episodes.playlist');
 
     //Newsletter
     Route::post('/subscribe', 'NewsletterController@subscribe')->name('newsletter.subscribe');
@@ -51,6 +54,57 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
 });
 
 
+    //Users
+    Route::prefix('user')->namespace('App\Http\Controllers\user')->group(function () {
+        Route::post('create', 'UserController@create')->name('user.create');
+
+        Route::post('login', 'UserController@login')->name('user.login');
+
+        Route::post('forgotPassword', 'UserController@forgotPassword')->name('user.forgotPassword');
+        Route::get('resetPassword/{id}/{email}', 'UserController@resetPassword')->name('user.resetPassword');
+        Route::post('updatePassword', 'UserController@updatePassword')->name('user.updatePassword');
+
+        Route::get('logout', 'UserController@logout')->name('user.logout');
+
+        Route::get('/google', 'GoogleLoginController@redirectToGoogle')->name('auth.google');
+        Route::get('/google/callback', 'GoogleLoginController@handleGoogleCallback');
+
+
+        Route::middleware([userAuth::class])->group(function () {
+
+            Route::get('dashboard', 'UserController@index')->name('user.dashboard');
+
+            //Blogs
+            Route::prefix('articles')->group(function () {
+
+                Route::get('/', 'BlogController@index')->name('user.blog');
+                Route::get('/load', 'BlogController@load')->name('user.blog.load');
+                Route::get('/search/{val}', 'BlogController@search');
+                Route::post('/create', 'BlogController@create')->name('user.blog.create');
+                Route::get('/delete/{id}', 'BlogController@delete');
+                Route::get('/edit/{id}', 'BlogController@edit');
+                Route::post('/update', 'BlogController@update_blog')->name('user.blog.update');
+
+            });
+
+            // Route::get('profile', 'UserController@profile')->name('user.profile');
+            Route::post('verify_email', 'UserController@verify_email')->name('user.verify_email');
+
+            Route::prefix('claim-cashback')->group(function () {
+                Route::get('/', 'UserController@claimCashback')->name('user.claimCashback');
+                Route::post('/request', 'UserController@claimCashbackRequest')->name('user.claimCashback.request');
+            });
+
+
+            Route::prefix('settings')->group(function () {
+                Route::get('/', 'UserController@settings')->name('user.settings');
+                Route::post('/update', 'UserController@settings_update')->name('user.settings.update');
+                Route::post('/bank_details', 'UserController@bank_details')->name('user.settings.bank_details');
+            });
+        });
+    });
+
+
 //Administration
 
 Route::prefix('admin/panel')->namespace('App\Http\Controllers\admin')->group(function () {
@@ -65,6 +119,19 @@ Route::prefix('admin/panel')->namespace('App\Http\Controllers\admin')->group(fun
     Route::middleware([adminAuth::class])->group(function () {
         Route::get('/', 'MainController@index')->name('admin.dashboard');
 
+
+        //Map
+        Route::prefix('map')->group(function () {
+
+            Route::get('/', 'MapController@index')->name('admin.map');
+            Route::get('/load', 'MapController@load')->name('admin.map.load');
+            Route::get('/search/{val}', 'MapController@search');
+            Route::post('/create', 'MapController@create')->name('admin.map.create');
+            Route::get('/delete/{id}', 'MapController@delete');
+            Route::get('/edit/{id}', 'MapController@edit');
+            Route::post('/update', 'MapController@update_blog')->name('admin.map.update');
+
+        });
 
         
         //Blogs

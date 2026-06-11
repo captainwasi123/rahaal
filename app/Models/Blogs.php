@@ -8,6 +8,7 @@ use Auth;
 use App\Models\Countries;
 use App\Models\Author;
 use App\Models\BlogTags;
+use App\Models\User;
 
 class Blogs extends Model
 {
@@ -58,6 +59,10 @@ class Blogs extends Model
 
     public function author(){
         return $this->belongsTo(Author::class, 'author_id', 'id');
+    }
+
+    public function userauthor(){
+        return $this->belongsTo(User::class, 'author_id', 'id');
     }
 
     public function tags(){

@@ -8,6 +8,7 @@ use App\Models\Categories;
 use App\Models\Services;
 use App\Models\Blogs;
 use App\Models\Episodes;
+use App\Models\Map;
 
 class WebController extends Controller
 {
@@ -16,8 +17,17 @@ class WebController extends Controller
         $data['sub_footer'] = 'visible';
         $data['blogs'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->limit(4)->get();
         $data['episodes'] = Episodes::orderBy('id', 'desc')->limit(8)->get();
+        $data['map'] = Map::all();
         
         return view('web.index')->with($data);
+    }
+    public function indexNew(){
+        $data['nav'] = 'home';
+        $data['sub_footer'] = 'visible';
+        $data['blogs'] = Blogs::where('status', '1')->orderBy('created_at', 'desc')->limit(4)->get();
+        $data['episodes'] = Episodes::orderBy('id', 'desc')->limit(8)->get();
+        
+        return view('web.index-new')->with($data);
     }
 
 
@@ -46,6 +56,16 @@ class WebController extends Controller
         $data['sub_footer'] = 'visible';
         
         return view('web.about')->with($data);
+    }
+
+
+    public function writeForUs(){
+        $data['nav'] = 'write-for-us';
+        $data['titleImg'] = 'about.png';
+        $data['title'] = 'Write For Us';
+        $data['sub_footer'] = 'visible';
+        
+        return view('web.guest-post')->with($data);
     }
 
 

@@ -1,4 +1,34 @@
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
+Disallow: /tag/
+
+# Block low-value bots
+User-agent: psbot
+Disallow: /
+User-agent: baiduspider
+Disallow: /
+User-agent: naverbot
+Disallow: /
+User-agent: yeti
+Disallow: /
+User-agent: ia_archiver
+Disallow: /
+User-agent: Gigabot
+Disallow: /
+User-agent: Teoma
+Disallow: /
+
+# Allow major AI crawlers (optional)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://rahaal-theexplorer.com/sitemap.xml

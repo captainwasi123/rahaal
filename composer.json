@@ -10,6 +10,7 @@
         "dymantic/laravel-instagram-feed": "^3.3",
         "laravel/framework": "^11.31",
         "laravel/sanctum": "^4.0",
+        "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.9",
         "phpfastcache/phpfastcache": "^9.2",
         "phpmailer/phpmailer": "^6.9",
