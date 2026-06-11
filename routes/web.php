@@ -26,11 +26,7 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
 
 
     //Episodes
-<<<<<<< HEAD
     Route::get('/vlogs', 'EpisodeController@index')->name('vlogs');
-=======
-    Route::get('/yt-episodes', 'EpisodeController@index')->name('episodes');
->>>>>>> 7a5a5628b0deba30815a0e08931f7e411ed8e582
     Route::get('/playlist/{slug}', 'EpisodeController@episodePlaylist')->name('episodes.playlist');
 
     //Newsletter
