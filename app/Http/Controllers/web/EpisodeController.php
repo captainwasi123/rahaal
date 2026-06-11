@@ -26,7 +26,11 @@ class EpisodeController extends Controller
         $data['title'] = 'Episodes';
         $data['playlist'] = Playlists::where('slug', $slug)->first();
         if(empty($data['playlist'])){
+<<<<<<< HEAD
             return redirect(route('vlogs'));
+=======
+            return redirect(route('episodes'));
+>>>>>>> 7a5a5628b0deba30815a0e08931f7e411ed8e582
         }
         $data['popular_series'] = Playlists::where('popular', '1')->first();
         $data['top_stories'] = TopStories::all();
