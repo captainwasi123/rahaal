@@ -7,6 +7,35 @@
 <meta name="description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}">
 <meta name="keywords" content="{{@$metaTags->keywords}}{{@$ametaTags['keywords']}}">
 <meta name="host" content="{{URL::to('/')}}">
+
+ <!-- Basic OG Tags -->
+  <meta property="og:title" content="{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
+  <meta property="og:description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}" />
+  <meta property="og:url" content="{{@URL::current()}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rahaal - The Explorer" />
+
+  <!-- Image OG Tag -->
+  <meta property="og:image" content="{{empty($og_img) ? URL::to('/public/youtube-cover.jpg') : $og_img}}" />
+  <meta property="og:image:alt" content="Image - {{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
+  <meta property="og:image:type" content="image/*" />
+  <meta property="og:image:width" content="620" />
+  <meta property="og:image:height" content="340" />
+
+
+  <!-- Additional Tags for Social Platforms -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{@$metaTags->title}}{{@$ametaTags['title']}}{{empty($metaTags->title) && empty($ametaTags['title']) ? env('APP_NAME') : ''}}" />
+  <meta name="twitter:description" content="{{@$metaTags->description}}{{@$ametaTags['description']}}" />
+  <meta name="twitter:image" content="{{empty($og_img) ? URL::to('/public/youtube-cover.jpg') : $og_img}}" />
+  <meta name="twitter:site" content="@RahaalTheExplorer" />
+
+  <link rel="canonical" href="{{@URL::current()}}" />
+  
+  <!-- Favicons -->
+  <link href="{{URL::to('/public')}}/efavicon.png" rel="icon">
+  <link href="{{URL::to('/public')}}/efavicon.png" rel="apple-touch-icon">
+  
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Bebas+Neue&family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet"/>
