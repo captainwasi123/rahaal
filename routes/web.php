@@ -24,6 +24,9 @@ Route::namespace('App\Http\Controllers\web')->group(function(){
     Route::get('/reach-out', 'WebController@contact')->name('reach-out');
     Route::get('/write-for-us', 'WebController@writeForUs')->name('write-for-us');
 
+    Route::view('/privacy-policy', 'web.privacy-policy')->name('privacy-policy');
+    Route::view('/terms', 'web.terms')->name('terms');
+    Route::view('/disclaimer', 'web.disclaimer')->name('disclaimer');
 
     //Episodes
     Route::get('/vlogs', 'EpisodeController@index')->name('vlogs');

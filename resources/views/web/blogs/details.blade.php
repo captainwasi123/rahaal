@@ -16,16 +16,16 @@
                 <span>{{date('M d, Y', strtotime($data->created_at))}}</span>
                 <div>
                     @if($data->is_local == '1')
-                        <img src="{{URL::to('public/blog-author2.jpg')}}" alt="Auther - Rahaal The Explorer">
+                        <img src="{{URL::to('public/blog-author3.png')}}" alt="Rahaal The Explorer, travel filmmaker">
                     @else
-                        <img src="{{URL::to('public/efavicon.png')}}" alt="Auther Image">
+                        <img src="{{URL::to('public/efavicon.png')}}" alt="Guest author">
                     @endif
                 </div>
                 <span>{{ $data->is_local == '1' ? $data->author->name : $data->userauthor->name}}</span>
             </div>
 
             <div class="blog-heading">
-                
+
                 <h1 class="text-thorn">{{$data->heading}}</h1>
               </div>
         </div><!-- End Section Title -->
@@ -44,7 +44,41 @@
                   {!! $data->description !!}
               </div>
 
-              
+              {{-- Author box (shown on Rahaal's own posts only) --}}
+              @if($data->is_local == '1')
+                @php
+                  // Keep these in one place. Use the same number as the About page.
+                  $authorJourneys   = '30+';
+                  $authorYoutubeUrl = 'https://www.youtube.com/@YOUR-CHANNEL-HANDLE'; // TODO: replace with your channel URL
+                  $authorInstaUrl   = 'https://www.instagram.com/rahaal_01';
+                @endphp
+                <aside class="author-box d-flex flex-column flex-sm-row align-items-sm-center gap-3 p-4 mt-4 border rounded-3" aria-label="About the author">
+                  <img src="{{ URL::to('public/blog-author3.png') }}"
+                       alt="Rahaal, travel filmmaker based in Dubai"
+                       class="rounded-circle flex-shrink-0" width="88" height="88" loading="lazy" style="object-fit: cover;">
+                  <div>
+                    <p class="mb-1 fw-bold">
+                      <a href="{{ url('/about-us') }}" rel="author">Rahaal The Explorer</a>
+                    </p>
+                    <p class="mb-2">
+                      Rahaal is a Pakistani travel filmmaker based in Dubai who has documented {{ $authorJourneys }} journeys
+                      across Northern Pakistan and the UAE on YouTube. Every guide here comes from a trip he took himself,
+                      with real costs and photos.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center gap-3">
+                      <a href="{{ url('/about-us') }}">Read more about Rahaal &rarr;</a>
+                      <a href="{{ $authorYoutubeUrl }}" target="_blank" rel="noopener me" aria-label="Rahaal on YouTube">
+                        <i class="bi bi-youtube"></i> YouTube
+                      </a>
+                      <a href="{{ $authorInstaUrl }}" target="_blank" rel="noopener me" aria-label="Rahaal on Instagram">
+                        <i class="bi bi-instagram"></i> Instagram
+                      </a>
+                    </div>
+                  </div>
+                </aside>
+              @endif
+              {{-- /Author box --}}
+
               <div class="row g-3 mt-4">
                 @include('web.includes.elements.topStories')
               </div>
@@ -52,7 +86,7 @@
 
             <div class="col-lg-3 d-flex flex-column gap-3">
               <div class="blog-aside">
-                
+
                 @include('web.includes.elements.aside')
 
                 <div class="blog-share">

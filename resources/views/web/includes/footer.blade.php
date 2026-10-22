@@ -27,6 +27,7 @@
               <li><a href="{{route('vlogs')}}">VLOGS</a></li>
               <li><a href="{{route('blogs')}}">BLOGS</a></li>
               <li><a href="{{route('reach-out')}}">REACH OUT</a></li>
+
             </ul>
           </div>
 
@@ -60,6 +61,15 @@
 
   <div class="container">
     <div class="copyright text-center ">
+      <p>
+          <a href="{{ route('privacy-policy') }}">Privacy Policy</a>
+          &nbsp;|&nbsp;
+          <a href="{{ route('terms') }}">Terms of Use</a>
+          &nbsp;|&nbsp;
+          <a href="{{ url('/reach-out') }}">Contact</a>
+          &nbsp;|&nbsp;
+          <a href="{{ route('disclaimer') }}">Disclaimer</a>
+        </p>
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Rahaal - The Explorer</strong>. <span>All Rights Reserved<br></span></p>
     </div>
   </div>

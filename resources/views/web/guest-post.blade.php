@@ -8,11 +8,10 @@
 
 	      <!-- Section Title -->
 	      <div class="container section-title pb-0" data-aos="fade-up">
-	        <h2>Write for Us</h2>
-	        <h4>Guest Posting on Rahaal – The Explorer </h4>
+	        <h1>Write for Us</h1>
+	        <h4>Guest Guides on Rahaal – The Explorer</h4>
 	        <p>
-	        	Welcome to <strong>Rahaal – The Explorer</strong>, a space for dreamers, travelers, storytellers, and explorers who believe that every journey has a story worth sharing.
-
+	        	I accept a small number of guest guides from travellers with first-hand experience of Pakistan, the UAE or nearby destinations.
 	        </p>
 	      </div><!-- End Section Title -->
 
@@ -27,15 +26,11 @@
 
 	        <div class="row">
 	          <div class="col-lg-8 content">
-	          	
+
 	            <p>
-	            	If you’re passionate about travel blogging, love discovering new cultures, or enjoy writing about adventure, nature, and people — you’re in the right place! This is your opportunity to become a guest writer on a growing travel blogging platform that connects explorers from all around the world.
+	            	Rahaal – The Explorer is a travel site built on real trips: how to get there, what it costs, when to go and what to watch out for. If you have travelled somewhere I haven't covered yet, or know a place better than most, your guide can help other travellers plan their trip.
 	            	<br>
-	            	We’re now accepting guest blogging contributions from travel enthusiasts worldwide — whether you’re from the USA, UK, Canada, UAE, Pakistan, or India, we’d love to feature your voice on our platform.
-	            	<br>
-	            	Our guest posting opportunities are open to all — beginners, professionals, vloggers, or just travel lovers who want to share their experiences. And the best part? It’s completely free (1 guest post per month per contributor). You can submit guest posts about your adventures, guides, or travel tips and get a valuable high DA guest post backlink from a niche-relevant travel blog.
-	            	<br>
-	            	So, let’s get started and turn your ideas into an inspiring story that reaches thousands of global readers!
+	            	Contributing is free, and I accept up to one guide per contributor per month. Every guide is edited before it is published, and I may decline any submission that doesn't fit the site.
 	            </p>
 	          </div>
 	          <div class="col-lg-4">
@@ -62,23 +57,19 @@
 
 	        <div class="row">
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/3.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/3.png')}}" width="100%" alt="Illustration of a traveller writing a guide">
 	        	</div>
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">Why Write for Rahaal – The Explorer?</h4>
+	          	<h2 class="h4 text-thorn text-theme">Why Write for Rahaal – The Explorer?</h2>
 	            <p>
-	            	Guest blogging is more than just writing — it’s about connecting with a community that shares your love for adventure. Here’s why writing a guest post with us is worth it:
+	            	Writing a guide here is about sharing a trip that genuinely helps someone else. Here's what you get:
 	            </p>
 	            <ul>
-	            	<li><strong>Boost Your SEO</strong>: Get a do-follow backlink through your guest article submission from a high DA travel website that’s trusted by explorers worldwide.</li>
-					<li><strong>Reach Global Readers</strong>: Our platform attracts readers from across the USA, UK, Canada, UAE, Pakistan, and India — so your travel stories reach a diverse audience.</li>
-					<li><strong>Build Your Voice</strong>: Whether you’re guest posting for beginners or an experienced blogger, sharing here helps you build your personal brand and authority.</li>
-					<li><strong>Free Guest Posting Opportunity</strong>: We believe everyone deserves a platform, which is why we allow free guest posting — no hidden costs.</li>
-					<li><strong>Grow Your Connections</strong>: Connect with other travelers, writers, and bloggers through guest blogging communities and guest posting sites lists.</li>
+	            	<li><strong>A byline and author bio</strong>: your name on the guide and a short bio with one link to your own site or profile.</li>
+					<li><strong>Careful editing</strong>: I edit every guide for clarity and accuracy and send you the final version before it goes live.</li>
+					<li><strong>Readers who are planning trips</strong>: people come here to plan journeys in Pakistan, the UAE and nearby, so practical guides get used.</li>
+					<li><strong>No fees</strong>: contributing is free.</li>
 	            </ul>
-	            <p>
-	            	<i>If you’ve been searching for “best guest post sites” or “guest blogging opportunities” in the travel niche, Rahaal – The Explorer is the perfect platform for you.</i>
-	            </p>
 	          </div>
 	        </div>
 
@@ -95,28 +86,24 @@
 
 	        <div class="row">
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">About Rahaal – The Explorer</h4>
+	          	<h2 class="h4 text-thorn text-theme">About Rahaal – The Explorer</h2>
 	            <p>
-	            	Rahaal – The Explorer is a blog dedicated to nature, travel, and adventure. From mountains and lakes to hidden cultural gems, we highlight places that inspire curiosity and connection.
+	            	Rahaal – The Explorer is a travel site and YouTube channel by Rahaal, a Pakistani travel filmmaker based in Dubai. The guides cover mountains, lakes, cities and adventures, written from my own trips with real costs and photos.
 	            	<br>
-	            	We believe in eco-friendly travel, cultural understanding, and the thrill of discovering something new. Our stories are read by adventure lovers, travel photographers, and explorers across the globe — making this a great home for your next guest post on blog.
-	            	<br>
-	            	Our content features:
+	            	The site focuses on:
 	            </p>
 	            <ul>
-	            	<li>Forests, lakes, waterfalls, and mountains </li>
-					<li>Adventure and cultural travel experiences </li>
-					<li>Sustainable and eco-tourism guides</li>
-					<li>Solo travel and family travel tips</li>
-
-
+	            	<li>Northern Pakistan: valleys, lakes, treks and road trips</li>
+					<li>Dubai and the UAE: day trips, outdoor spots and adventure activities</li>
+					<li>Practical planning: routes, costs, seasons and visas for travellers from Pakistan and the Gulf</li>
+					<li>Responsible travel and respect for local culture</li>
 	            </ul>
 	            <p>
-	            	By sharing your experiences here, you’re not just submitting a guest post — you’re inspiring thousands of travelers to explore more.
+	            	Read <a href="{{ url('/about-us') }}">how I write these guides</a> before you pitch. Guest guides follow the same standards.
 	            </p>
 	          </div>
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/5.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/5.png')}}" width="100%" alt="Illustration of mountains and a lake">
 	        	</div>
 	        </div>
 
@@ -133,27 +120,19 @@
 
 	        <div class="row">
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/6.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/6.png')}}" width="100%" alt="Illustration of travellers sharing stories">
 	        	</div>
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">Who Can Contribute?</h4>
+	          	<h2 class="h4 text-thorn text-theme">Who Can Contribute?</h2>
 	            <p>
-	            	We welcome everyone who’s passionate about travel storytelling! You can become a contributor if you’re one of the following:
+	            	You don't need to be a professional writer. You do need to have been there. Good contributors include:
 	            </p>
 	            <ul>
-	            	<li>A travel blogger or vlogger looking for guest post outreach</li>
-					<li>A nature writer or adventure enthusiast</li>
-					<li>A photographer with a story behind every picture</li>
-					<li>A tourism professional or travel guide</li>
-					<li>A student or beginner who wants to start guest blogging for traffic</li>
-
-
+	            	<li>Travellers who have recently done a trip and kept track of costs and routes</li>
+					<li>Trekkers, climbers and outdoor guides with local knowledge</li>
+					<li>Photographers with their own photos and the story behind them</li>
+					<li>People who live in a destination and know it beyond the usual spots</li>
 	            </ul>
-	            <p>
-	            	If your words can move people, inspire journeys, and create wanderlust — we’d love to feature you.
-					<br>
-					Whether you’re writing your first guest post idea or a detailed long-form guest post, Rahaal – The Explorer is your space to grow as a storyteller.
-	            </p>
 	          </div>
 	        </div>
 
@@ -170,25 +149,23 @@
 
 	        <div class="row">
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">Guest Posting Guidelines</h4>
+	          	<h2 class="h4 text-thorn text-theme">Guest Guide Guidelines</h2>
 	            <p>
-	            	We maintain high standards for quality and originality. Please follow these guest post submission guidelines before sending your article:
+	            	Please read these before you pitch:
 	            </p>
 	            <ul>
-	            	<li><strong>Original Content Only</strong>: We accept guest posts that are 100% unique, unpublished, and plagiarism-free.</li>
-					<li><strong>Content Length</strong>: Minimum 1,000 words, ideally 1,200–2,000 words for strong SEO results.</li>
-					<li><strong>Relevance</strong>: Topics must relate to travel, adventure, nature, culture, or tourism.</li>
-					<li><strong>Tone</strong>: Friendly, inspiring, and easy to read — avoid overly promotional content.</li>
-					<li><strong>Images</strong>: Use high-quality, royalty-free or original travel photos.</li>
-					<li><strong>Backlinks</strong>: You may include 1 do-follow link (related to your niche). Extra links can be no-follow.</li>
-					<li><strong>Formatting</strong>: Use headings (H2/H3), bullet points, and short paragraphs.</li>
-					<li><strong>Language</strong>: English only, written in a clear and engaging style.</li>
-					<li><strong>Guest Blogger Guidelines</strong>: Respect the travel theme and maintain authenticity in every post.</li>
+	            	<li><strong>First-hand only</strong>: original, unpublished writing based on your own trip, with your own photos.</li>
+					<li><strong>Practical details</strong>: how you got there, what it cost, when you went and what you'd do differently.</li>
+					<li><strong>No AI-generated or spun content</strong>: guides must be written by you.</li>
+					<li><strong>Links</strong>: one author bio link is allowed. Links in guest posts are marked nofollow or sponsored.</li>
+					<li><strong>Not promotional</strong>: no paid placements, hidden ads or "best agency" lists.</li>
+					<li><strong>Formatting</strong>: clear headings, short paragraphs, and a costs table if you can.</li>
+					<li><strong>Language</strong>: English.</li>
+					<li><strong>Editing</strong>: I edit every post and may decline any submission.</li>
 	            </ul>
-	            <p>We’re currently accepting guest posts now, so feel free to submit article write for us anytime!</p>
 	          </div>
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/4.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/4.png')}}" width="100%" alt="Illustration of a checklist for guest guides">
 	        	</div>
 	        </div>
 
@@ -205,24 +182,18 @@
 
 	        <div class="row">
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/7.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/7.png')}}" width="100%" alt="Illustration of a world map with travel pins">
 	        	</div>
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">Countries & Audiences We Target</h4>
+	          	<h2 class="h4 text-thorn text-theme">Destinations I'm Looking For</h2>
 	            <p>
-	            	Our platform has readers from all over the world, but we focus strongly on:
+	            	Guides on these places fit the site best:
 	            </p>
 	            <ul>
-	            	<li><strong>USA</strong>: National parks, hiking trails, and road trips</li>
-					<li><strong>UK</strong>: Countryside escapes, cultural tours, and festivals</li>
-					<li><strong>Canada</strong>: Mountains, eco-tourism, and adventure guides</li>
-					<li><strong>UAE</strong>: Desert safaris, hidden gems, and city travel</li>
-					<li><strong>Pakistan</strong>: Northern areas, valleys, and natural wonders</li>
-					<li><strong>India</strong>: Beaches, temples, festivals, and offbeat places</li>
+	            	<li><strong>Northern Pakistan</strong>: Gilgit-Baltistan, Swat, Kaghan, Chitral, Azad Kashmir and the Galiyat</li>
+					<li><strong>UAE and Oman</strong>: hikes, wadis, desert trips and lesser-known spots</li>
+					<li><strong>Trips from Pakistan and the Gulf</strong>: Turkey, Georgia, Azerbaijan, Central Asia, Malaysia and similar</li>
 	            </ul>
-	            <p>
-	            	Your guest article submission here can reach travelers from these regions and beyond — expanding your online visibility through genuine guest blogging benefits.
-	            </p>
 	          </div>
 	        </div>
 
@@ -238,45 +209,31 @@
 
 	        <div class="row">
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">Guest Post Topics & Ideas</h4>
+	          	<h2 class="h4 text-thorn text-theme">Guide Ideas</h2>
 	            <p>
-	            	Need inspiration? Here are some popular guest post topics to get you started:
+	            	Some examples of guides I'd like to publish:
 	            </p>
 	            <ul>
-	            	<li>Best hiking trails in your country</li>
-					<li>Hidden gems and offbeat destinations</li>
-					<li>Adventure travel experiences (camping, trekking, safaris)</li>
-					<li>Budget travel tips for solo travelers</li>
-					<li>Eco-friendly and sustainable tourism tips</li>
-					<li>Cultural festivals and local traditions</li>
-					<li>Photography and travel storytelling</li>
-					<li>Food and cultural experiences around the world</li>
-					<li>Family travel and safety tips</li>
-
-
+	            	<li>A trek or hike you've done, with route, difficulty and costs</li>
+					<li>A road trip itinerary with daily distances and stops</li>
+					<li>A lesser-known valley, lake or village and how to reach it</li>
+					<li>Budget travel: what a trip really cost, day by day</li>
+					<li>Local food, festivals and traditions, explained by someone who was there</li>
+					<li>Travelling with family, or solo, in a specific region</li>
 	            </ul>
-	            <p>
-	            	Still unsure? Check other guest blogging sites to see trending topics, or browse our latest posts for ideas. You can also contact us for guest post requests or to pitch a topic through our guest post request form.
-	            </p>
 	          </div>
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/1.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/1.png')}}" width="100%" alt="Illustration of a notebook with travel ideas">
 	        	</div>
 	        	<div class="col-lg-12">
-	        		<h4 class="text-thorn text-theme">How to Submit a Guest Post</h4>
-	        		<p>We’ve made our guest article submission process simple and smooth:</p>
-	        		<ul>
-	        			<li>Prepare your article following our guest post guidelines.</li>
-						<li>Include 1 relevant backlink and 2–3 royalty-free images.</li>
-						<li>Send your guest post submission through our contact form or email (mentioned below).</li>
-						<li>Our editors will review it and get back to you within a few days.</li>
-
-	        		</ul>
-	        		<p>
-	        			Once approved, your article will be published under your name with credit and a dofollow backlink — helping you gain recognition and SEO value.
-						<br>
-						Guest blogging on Rahaal – The Explorer is the easiest way to submit content blog posts, build authority, and share your love for travel with a global audience.
-	        		</p>
+	        		<h2 class="h4 text-thorn text-theme">How to Pitch</h2>
+	        		<p>Please pitch before you write the full guide:</p>
+	        		<ol>
+	        			<li>Email <a href="mailto:contact@rahaal-theexplorer.com">contact@rahaal-theexplorer.com</a> with your topic and a 3-line outline.</li>
+						<li>Include two links to your previous writing (a blog, Instagram captions or a published article are fine).</li>
+						<li>If the idea fits, I'll reply with notes and a deadline.</li>
+						<li>Send the finished guide with your own photos. I'll edit it and send you the final version before it goes live.</li>
+	        		</ol>
 	        	</div>
 	        </div>
 
@@ -292,23 +249,16 @@
 
 	        <div class="row">
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/8.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/8.png')}}" width="100%" alt="Illustration of an editor reviewing an article">
 	        	</div>
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">Benefits of Guest Posting on Rahaal – The Explorer</h4>
-	          	<p>Here’s what makes our guest blogging platform stand out:</p>
+	          	<h2 class="h4 text-thorn text-theme">What Happens After You Submit</h2>
 	            <ul>
-	            	<li><strong>Free Guest Posting</strong>: 1 article per month — no cost, no limits on creativity.</li>
-					<li><strong>High DA Guest Post</strong>: Get backlinks from an authoritative domain in the travel niche.</li>
-					<li><strong>SEO Advantage</strong>: Gain visibility and enjoy genuine guest post SEO benefits.</li>
-					<li><strong>Traffic Growth</strong>: Our guest blogging services help you reach real, interested readers.</li>
-					<li><strong>Networking</strong>: Build relationships with fellow guest bloggers and travel enthusiasts.</li>
-					<li><strong>Affordable Guest Posting Alternative</strong>: While other sites charge, we keep it open and free for everyone.</li>
-
+	            	<li><strong>Review</strong>: I read every pitch and reply within a few days.</li>
+					<li><strong>Editing</strong>: I may shorten, restructure or fact-check your guide, and I'll check changes with you.</li>
+					<li><strong>Credit</strong>: the guide is published under your name with your author bio.</li>
+					<li><strong>Updates</strong>: if prices or rules change, I may update the guide later and note the date.</li>
 	            </ul>
-	            <p>
-	            	If you’ve been looking for guest posts accepted in the travel niche or wondering how to find guest post sites, Rahaal – The Explorer is your perfect starting point.
-	            </p>
 	          </div>
 	        </div>
 
@@ -324,31 +274,14 @@
 
 	        <div class="row">
 	          <div class="col-lg-8 content vertical-center">
-	          	<h4 class="text-thorn text-theme">Final Words</h4>
-	          	<p>
-	          		If you are looking for:
-	          	</p>
-	            <ul>
-	            	<li>Free guest posting travel websites</li>
-					<li>Write for us travel blogs</li>
-					<li>High DA guest post sites</li>
-					<li>Guest blogging opportunities</li>
-					<li>Or simply a place where your travel stories can shine —</li>
-
-	            </ul>
+	          	<h2 class="h4 text-thorn text-theme">Ready to Share Your Trip?</h2>
 	            <p>
-	            	Then you’ve found the right home!<br>
-					Join Rahaal – The Explorer, contribute your stories, and become part of a community that values authenticity, adventure, and creativity.
-					So what are you waiting for? 
-					<br><br>
-					Submit your first guest post today and become a contributor to one of the most engaging travel guest blogging platforms on the web.
-					<br>
-					Let’s inspire the world, one story at a time. 
-
+	            	If you've been somewhere worth writing about and kept good notes, I'd love to hear from you.
+	            	Email <a href="mailto:contact@rahaal-theexplorer.com">contact@rahaal-theexplorer.com</a> with your idea.
 	            </p>
 	          </div>
 	        	<div class="col-lg-4">
-	        		<img src="{{URL::to('/public/assets/img/guest-posting/2.png')}}" width="100%" alt="Write for us">
+	        		<img src="{{URL::to('/public/assets/img/guest-posting/2.png')}}" width="100%" alt="Illustration of a traveller with a backpack">
 	        	</div>
 	        </div>
 
